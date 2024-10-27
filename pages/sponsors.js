@@ -7,14 +7,14 @@ export default function SponsorsPage() {
   const styles = {
     overflowY: "hidden",
     h1: {
-      mt: "100px",
-      mb: "50px",
+      mt: { lg: "100px", xs: "60px" }, // Adjust top margin for mobile
+      mb: { lg: "50px", xs: "20px" }, // Adjust bottom margin for mobile
       fontSize: {
         lg: "54px",
         sm: "50px",
-        xs: "40px",
+        xs: "32px", // Smaller font size on mobile
       },
-      height: "10vh",
+      height: "auto", // Allow dynamic height
     },
     gradientBackground: {
       position: "absolute",
@@ -38,6 +38,12 @@ export default function SponsorsPage() {
       maxWidth: "1200px",
       width: "90%",
       boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+    },
+    cardsContainer: {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: { xs: 2, md: 4 }, // Adjust gap for mobile
     },
   };
 
@@ -89,27 +95,25 @@ export default function SponsorsPage() {
 
   return (
     <>
-      {/* Gradient Background */}
       <Box sx={styles.gradientBackground} />
 
-      {/* Glass Overlay */}
       <Box sx={styles.glassOverlay}>
         <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1">Title Sponsor</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor1} />
           </Box>
           <Typography variant="h1">Co-Sponsor</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor2} />
             <SponsorCard sponsor={sponsor.sponsor3} />
           </Box>
           <Typography variant="h1">Media Partner</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor4} />
           </Box>
           <Typography variant="h1">Event Partner</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor5} />
             <SponsorCard sponsor={sponsor.sponsor6} />
             <SponsorCard sponsor={sponsor.sponsor7} />
@@ -118,15 +122,15 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor14} />
           </Box>
           <Typography variant="h1">Technology Partner</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor10} />
           </Box>
           <Typography variant="h1">Gaming Partner</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor13} />
           </Box>
           <Typography variant="h1">Learning Partner</Typography>
-          <Box className="cards">
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor11} />
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
@@ -158,7 +162,6 @@ export default function SponsorsPage() {
         <Contact />
       </Box>
 
-      {/* Gradient Animation Keyframes */}
       <style jsx global>{`
         @keyframes gradientAnimation {
           0% { background-position: 0% 50%; }
@@ -169,3 +172,4 @@ export default function SponsorsPage() {
     </>
   );
 }
+
