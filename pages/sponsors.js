@@ -5,16 +5,21 @@ import SponsorCard from "../components/SponsorCard";
 
 export default function SponsorsPage() {
   const styles = {
-    overflowY: "hidden",
-    h1: {
-      mt: { lg: "100px", xs: "60px" }, // Adjust top margin for mobile
-      mb: { lg: "50px", xs: "20px" }, // Adjust bottom margin for mobile
-      fontSize: {
-        lg: "54px",
-        sm: "50px",
-        xs: "32px", // Smaller font size on mobile
-      },
-      height: "auto", // Allow dynamic height
+    pageContainer: {
+      position: "relative",
+      overflow: "hidden",
+    },
+    backgroundImage: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundImage: "url('/images/impetusBS7.jpeg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      zIndex: -3,
+      opacity: 0.4, // Adjust opacity for better readability
     },
     gradientBackground: {
       position: "absolute",
@@ -26,6 +31,7 @@ export default function SponsorsPage() {
       background: "linear-gradient(120deg, #ff7e5f, #feb47b, #ff6a88, #d7644e, #fc6767)",
       backgroundSize: "400% 400%",
       animation: "gradientAnimation 15s ease infinite",
+      opacity: 0.9, // Adjust opacity for gradient overlay
     },
     glassOverlay: {
       position: "relative",
@@ -39,11 +45,21 @@ export default function SponsorsPage() {
       width: "90%",
       boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
     },
+    h1: {
+      mt: { lg: "100px", xs: "60px" },
+      mb: { lg: "50px", xs: "20px" },
+      fontSize: {
+        lg: "54px",
+        sm: "50px",
+        xs: "32px",
+      },
+      height: "auto",
+    },
     cardsContainer: {
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "center",
-      gap: { xs: 2, md: 4 }, // Adjust gap for mobile
+      gap: { xs: 2, md: 4 },
     },
   };
 
@@ -94,25 +110,30 @@ export default function SponsorsPage() {
   ];
 
   return (
-    <>
+    <Box sx={styles.pageContainer}>
+      {/* Background Image */}
+      <Box sx={styles.backgroundImage} />
+
+      {/* Gradient Background */}
       <Box sx={styles.gradientBackground} />
 
+      {/* Glass Overlay */}
       <Box sx={styles.glassOverlay}>
-        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-          <Typography variant="h1">Title Sponsor</Typography>
+        <Box className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1" sx={styles.h1}>Title Sponsor</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor1} />
           </Box>
-          <Typography variant="h1">Co-Sponsor</Typography>
+          <Typography variant="h1" sx={styles.h1}>Co-Sponsor</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor2} />
             <SponsorCard sponsor={sponsor.sponsor3} />
           </Box>
-          <Typography variant="h1">Media Partner</Typography>
+          <Typography variant="h1" sx={styles.h1}>Media Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor4} />
           </Box>
-          <Typography variant="h1">Event Partner</Typography>
+          <Typography variant="h1" sx={styles.h1}>Event Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor5} />
             <SponsorCard sponsor={sponsor.sponsor6} />
@@ -121,23 +142,23 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor9} />
             <SponsorCard sponsor={sponsor.sponsor14} />
           </Box>
-          <Typography variant="h1">Technology Partner</Typography>
+          <Typography variant="h1" sx={styles.h1}>Technology Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor10} />
           </Box>
-          <Typography variant="h1">Gaming Partner</Typography>
+          <Typography variant="h1" sx={styles.h1}>Gaming Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor13} />
           </Box>
-          <Typography variant="h1">Learning Partner</Typography>
+          <Typography variant="h1" sx={styles.h1}>Learning Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor11} />
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
         </Box>
 
-        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-          <Typography variant="h1">Past Sponsors</Typography>
+        <Box className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
           <Box
             className="slideshow-container"
             sx={{
@@ -169,7 +190,7 @@ export default function SponsorsPage() {
           100% { background-position: 0% 50%; }
         }
       `}</style>
-    </>
+    </Box>
   );
 }
 
