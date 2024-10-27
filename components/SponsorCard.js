@@ -1,26 +1,47 @@
-import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
-// import "../components/a.css"
 
-const styles = {
-  height: "250px",
-  width: "400px",
-  margin: "auto 0",
-  padding: "auto 0",
-};
+const styles = (hoverEffect, dimmed) => ({
+  height: { xs: "160px", md: "200px" }, // Reduced box height
+  width: { xs: "240px", md: "300px" }, // Reduced box width
+  margin: "10px", // Smaller margin to bring boxes closer
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: dimmed ? "rgba(30, 30, 30, 0.85)" : "rgba(40, 40, 40, 0.9)", // Slightly shaded black
+  borderRadius: "15px",
+  padding: "5px 10px", // Reduced padding for minimal top/bottom spacing
+  cursor: hoverEffect ? "pointer" : "default",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease",
+  opacity: dimmed ? 0.5 : 1,
+  "&:hover": hoverEffect
+    ? {
+        transform: "scale(1.05)",
+        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+      }
+    : {},
+});
 
-const SponsorCard = ({ sponsor }) => {
+const SponsorCard = ({ sponsor, isPastSponsor, isDimmed }) => {
+  const handleClick = () => {
+    if (sponsor.link) {
+      window.open(sponsor.link, "_blank");
+    }
+  };
+
   return (
-    <Box sx={styles} className="card">
+    <Box sx={styles(!isPastSponsor, isDimmed)} onClick={handleClick}>
       <Image
-        onClick={() => window.open(`${sponsor.link}`, "_blank")}
         src={`/images/${sponsor.imgname}`}
-        alt="card"
-        width="300"
-        height="210"
+        alt={sponsor.altText || "Sponsor logo"}
+        width={220} // Adjusted logo width to fit box
+        height={150} // Adjusted logo height to fit box
+        style={{ objectFit: "contain" }}
       />
     </Box>
   );
 };
+
 export default SponsorCard;
+
+
