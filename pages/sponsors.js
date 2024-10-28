@@ -15,11 +15,11 @@ export default function SponsorsPage() {
       left: 0,
       width: "100%",
       height: "100%",
-      backgroundImage: "url('/images/ImpetusBS7.jpeg')",
-      backgroundSize: "cover",
+      backgroundImage: "url('/images/impetusBS7.jpeg')",
+      backgroundSize: { xs: "150%", sm: "cover" }, // Zoom out for mobile view
       backgroundPosition: "center",
       zIndex: 0,
-      opacity: 0.4, // Adjusted for better readability
+      opacity: 0.4,
     },
     gradientBackground: {
       position: "absolute",
@@ -31,7 +31,7 @@ export default function SponsorsPage() {
       background: "linear-gradient(120deg, #ff7e5f, #feb47b, #ff6a88, #d7644e, #fc6767)",
       backgroundSize: "400% 400%",
       animation: "gradientAnimation 15s ease infinite",
-      opacity: 0.9, // Adjust opacity for gradient overlay
+      opacity: 0.9,
     },
     glassOverlay: {
       position: "relative",
