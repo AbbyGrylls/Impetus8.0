@@ -15,7 +15,7 @@ export default function SponsorsPage() {
       left: 0,
       width: "100%",
       height: "100%",
-      backgroundImage: "url('/images/impetusBS7.jpeg')",
+      backgroundImage: "url('/images/ImpetusBS7.jpeg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       zIndex: 0,
