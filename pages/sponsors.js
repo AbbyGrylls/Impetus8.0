@@ -18,8 +18,8 @@ export default function SponsorsPage() {
       backgroundImage: "url('/images/impetusBS7.jpeg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      zIndex: -3,
-      opacity: 0.4, // Adjust opacity for better readability
+      zIndex: 0,
+      opacity: 0.4, // Adjusted for better readability
     },
     gradientBackground: {
       position: "absolute",
@@ -54,6 +54,11 @@ export default function SponsorsPage() {
         xs: "32px",
       },
       height: "auto",
+      background: "linear-gradient(90deg, #ffd700, #ff6347)", // Gold to red gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      fontWeight: 700,
+      fontFamily: "'Roboto Slab', serif",
     },
     cardsContainer: {
       display: "flex",
@@ -188,6 +193,14 @@ export default function SponsorsPage() {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
+        }
+
+        /* Import the Roboto Slab font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+        /* Apply the font globally for headings */
+        h1 {
+          font-family: 'Roboto Slab', serif;
         }
       `}</style>
     </Box>
