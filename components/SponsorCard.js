@@ -2,22 +2,16 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 
 const styles = (hoverEffect, dimmed) => ({
-  height: { xs: "150px", md: "180px" }, // Adjusted box height
-  width: { xs: "220px", md: "270px" }, // Adjusted box width
-  margin: "8px", // Reduced margin to bring boxes closer
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: dimmed ? "rgba(30, 30, 30, 0.85)" : "rgba(40, 40, 40, 0.9)",
-  borderRadius: "10px", // Decreased box border radius
-  padding: "5px", // Reduced padding
-  cursor: hoverEffect ? "pointer" : "default",
+  height: { xs: "180px", md: "250px" },
+  width: { xs: "280px", md: "400px" },
+  margin: "auto",
+  cursor: hoverEffect ? "pointer" : "default", // Disable cursor for past sponsors
   transition: "transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease",
-  opacity: dimmed ? 0.5 : 1,
+  opacity: dimmed ? 0.5 : 1, // Reduce opacity for dimmed effect
   "&:hover": hoverEffect
     ? {
-        transform: "scale(1.05)",
-        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+        transform: "scale(1.05)", // Scale up the card on hover
+        boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)", // Add a shadow on hover
       }
     : {},
 });
@@ -30,18 +24,16 @@ const SponsorCard = ({ sponsor, isPastSponsor, isDimmed }) => {
   };
 
   return (
-    <Box sx={styles(!isPastSponsor, isDimmed)} onClick={handleClick}>
+    <Box sx={styles(!isPastSponsor, isDimmed)} className="card" onClick={handleClick}>
       <Image
         src={`/images/${sponsor.imgname}`}
         alt={sponsor.altText || "Sponsor logo"}
-        width={210} // Adjusted logo width to fit box
-        height={140} // Adjusted logo height to fit box
-        style={{ objectFit: "contain", borderRadius: "10px" }} // Added logo border radius
+        width={300}
+        height={210}
       />
     </Box>
   );
 };
 
 export default SponsorCard;
-
 
