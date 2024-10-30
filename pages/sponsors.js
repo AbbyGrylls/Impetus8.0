@@ -164,13 +164,15 @@ export default function SponsorsPage() {
 
         <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
+          // Update for Past Sponsors section grid layout
           <Box
             className="slideshow-container"
             sx={{
-              display: "flex",
-              justifyContent: "center",
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 1fr 1fr" },
+              gap: 2,
+              justifyItems: "center",
               alignItems: "center",
-              gap: 4,
               overflow: "hidden",
             }}
           >
@@ -179,10 +181,11 @@ export default function SponsorsPage() {
                 key={index}
                 sponsor={sponsor}
                 isPastSponsor
-                isDimmed={index !== 1}
+                isDimmed={false} // Remove dimming for a consistent grid look
               />
             ))}
           </Box>
+
         </Box>
 
         <Contact />
@@ -206,4 +209,3 @@ export default function SponsorsPage() {
     </Box>
   );
 }
-
