@@ -1,5 +1,4 @@
-import { Typography, useTheme } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography, Box } from "@mui/material";
 import Contact from "../components/Contact";
 import SponsorCard from "../components/SponsorCard";
 
@@ -15,26 +14,49 @@ export default function SponsorsPage() {
         xs: "40px",
       },
       height: "10vh",
-      background: "linear-gradient(to right, gold, red)",
+      background: "linear-gradient(to right, gold, red)", // Gradient color for headings
       WebkitBackgroundClip: "text",
       color: "transparent",
-      textAlign: "center", // Center align text
     },
-    h3: { mt: "100px", mb: "50px", fontSize: "54px" },
+    gradientBackground: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      zIndex: -2,
+      background: "linear-gradient(120deg, #ff7e5f, #feb47b, #ff6a88, #d7644e, #fc6767)",
+      backgroundSize: "400% 400%",
+      animation: "gradientAnimation 15s ease infinite",
+    },
+    glassOverlay: {
+      position: "relative",
+      zIndex: 1,
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      backdropFilter: "blur(10px)",
+      borderRadius: "15px",
+      padding: "20px",
+      margin: "auto",
+      maxWidth: "1000px", // Reduced max width
+      width: "80%", // Smaller width
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+    },
+    cardContainer: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexWrap: "wrap",
+      gap: 2,
+      maxWidth: "90%", // Reduced width of container
+      margin: "auto",
+    },
   };
 
   const sponsor = {
-    sponsor1: {
-      imgname: "Gainwell.png",
-      link: "https://www.gainwellengineering.com/",
-    },
+    sponsor1: { imgname: "Gainwell.png", link: "https://www.gainwellengineering.com/" },
     sponsor2: { imgname: "Mahr.jpg", link: "https://www.mahr.com/en-us/" },
-    sponsor3: {
-      imgname: "Purahsara.png", link: "https://www.linkedin.com/company/purahsara/about/",
-    },
-    sponsor4: {
-      imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph",
-    },
+    sponsor3: { imgname: "Purahsara.png", link: "https://www.linkedin.com/company/purahsara/about/" },
+    sponsor4: { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
     sponsor5: { imgname: "IOCL.jpg", link: "https://iocl.com/" },
     sponsor6: { imgname: "ISHRAE.jpg", link: "https://ishrae.in/" },
     sponsor7: { imgname: "Cognitive.jpg", link: "#" },
@@ -47,70 +69,87 @@ export default function SponsorsPage() {
     sponsor14: { imgname: "McPro.png", link: "" },
   };
 
-  const sponsorData = {
-    sponsor1: { imgname: "Logiczap.png" },
-    sponsor2: { imgname: "elearnmarkets.jpg" },
-    sponsor3: { imgname: "idp.jpg" },
-    sponsor4: { imgname: "iic.jpg" },
-    sponsor7: { imgname: "moople.jpg" },
-    sponsor8: { imgname: "ThinkAgainLab.jpg" },
-    sponsor9: { imgname: "Alo bus.png" },
-    sponsor10: { imgname: "Asawa insulation.png" },
-    sponsor11: { imgname: "Dyna Temp.png" },
-    sponsor12: { imgname: "Roasted.png" },
-    sponsor13: { imgname: "7Spices.png" },
-  };
+  const sponsorData = [
+    { imgname: "Logiczap.png", link: "#" },
+    { imgname: "elearnmarkets.jpg", link: "#" },
+    { imgname: "idp.jpg", link: "#" },
+    { imgname: "iic.jpg", link: "#" },
+    { imgname: "moople.jpg", link: "#" },
+    { imgname: "ThinkAgainLab.jpg", link: "#" },
+    { imgname: "Alo bus.png", link: "#" },
+    { imgname: "Asawa insulation.png", link: "#" },
+    { imgname: "Dyna Temp.png", link: "#" },
+    { imgname: "Roasted.png", link: "#" },
+    { imgname: "7Spices.png", link: "#" },
+  ];
 
   return (
     <>
-      <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-        <Typography variant="h1">Title Sponsor</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor1} />
+      {/* Gradient Background */}
+      <Box sx={styles.gradientBackground} />
+
+      {/* Glass Overlay */}
+      <Box sx={styles.glassOverlay}>
+        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1">Title Sponsor</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor1} />
+          </Box>
+          <Typography variant="h1">Co-Sponsor</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor2} />
+            <SponsorCard sponsor={sponsor.sponsor3} />
+          </Box>
+          <Typography variant="h1">Media Partner</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor4} />
+          </Box>
+          <Typography variant="h1">Event Partner</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor5} />
+            <SponsorCard sponsor={sponsor.sponsor6} />
+            <SponsorCard sponsor={sponsor.sponsor7} />
+            <SponsorCard sponsor={sponsor.sponsor8} />
+            <SponsorCard sponsor={sponsor.sponsor9} />
+            <SponsorCard sponsor={sponsor.sponsor14} />
+          </Box>
+          <Typography variant="h1">Technology Partner</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor10} />
+          </Box>
+          <Typography variant="h1">Gaming Partner</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor13} />
+          </Box>
+          <Typography variant="h1">Learning Partner</Typography>
+          <Box sx={styles.cardContainer}>
+            <SponsorCard sponsor={sponsor.sponsor11} />
+            <SponsorCard sponsor={sponsor.sponsor12} />
+          </Box>
         </Box>
-        <Typography variant="h1">Co-Sponsor</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor2} />
-          <SponsorCard sponsor={sponsor.sponsor3} styles={{ border: "solid white 2px" }} />
+
+        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1">Past Sponsors</Typography>
+          <Box sx={styles.cardContainer}>
+            {sponsorData.map((sponsor, index) => (
+              <SponsorCard key={index} sponsor={sponsor} isPastSponsor />
+            ))}
+          </Box>
         </Box>
-        <Typography variant="h1">Media Partner</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor4} />
-        </Box>
-        <Typography variant="h1">Event Partner</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor5} />
-          <SponsorCard sponsor={sponsor.sponsor6} />
-          <SponsorCard sponsor={sponsor.sponsor7} />
-          <SponsorCard sponsor={sponsor.sponsor8} />
-          <SponsorCard sponsor={sponsor.sponsor9} />
-          <SponsorCard sponsor={sponsor.sponsor14} />
-        </Box>
-        <Typography variant="h1">Technology Partner</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor10} />
-        </Box>
-        <Typography variant="h1">Gaming Partner</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor13} />
-        </Box>
-        <Typography variant="h1">Learning Partner</Typography>
-        <Box className="cards">
-          <SponsorCard sponsor={sponsor.sponsor11} />
-          <SponsorCard sponsor={sponsor.sponsor12} />
-        </Box>
-      </Box>
-      <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-        <Typography variant="h1">Past Sponsors</Typography>
-        <Box className="cards">
-          {Object.values(sponsorData).map((sponsor, index) => (
-            <SponsorCard key={index} sponsor={sponsor} />
-          ))}
-        </Box>
+
+        <Contact />
       </Box>
 
-      <Contact />
+      {/* Gradient Animation Keyframes */}
+      <style jsx global>{`
+        @keyframes gradientAnimation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </>
   );
 }
+
 
