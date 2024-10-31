@@ -51,10 +51,10 @@ export default function SponsorsPage() {
       paddingBottom: "0px",
     },
     cardsContainer: {
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
+      display: "grid",
+      gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(auto-fit, minmax(200px, 1fr))" },
       gap: { xs: 0.3, md: 0.5 },
+      justifyItems: "center",
     },
   };
 
