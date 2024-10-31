@@ -52,9 +52,17 @@ export default function SponsorsPage() {
     },
     cardsContainer: {
       display: "grid",
-      gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(auto-fit, minmax(200px, 1fr))" },
-      gap: { xs: 0.3, md: 0.5 },
-      justifyItems: "center",
+      gridTemplateColumns: {
+        xs: "repeat(2, 1fr)", // Two columns on mobile
+        sm: "repeat(3, 1fr)", // Three columns on tablet
+        md: "repeat(4, 1fr)", // Four columns on desktop
+      },
+      gap: { xs: 1, md: 2 },
+      padding: { xs: 1, sm: 2, md: 3 }, // Padding adjustments for different viewports
+    },
+    sponsorCard: {
+      padding: "10px", // Prevent logo cropping by adding padding
+      boxSizing: "border-box",
     },
   };
 
