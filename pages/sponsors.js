@@ -4,51 +4,57 @@ import SponsorCard from "../components/SponsorCard";
 
 export default function SponsorsPage() {
   const styles = {
-    overflowY: "hidden",
-    h1: {
-      mt: "100px",
-      mb: "50px",
-      fontSize: {
-        lg: "54px",
-        sm: "50px",
-        xs: "40px",
-      },
-      height: "10vh",
-      background: "linear-gradient(to right, gold, red)", // Gradient color for headings
-      WebkitBackgroundClip: "text",
-      color: "transparent",
+    pageContainer: {
+      position: "relative",
+      overflow: "hidden",
     },
-    gradientBackground: {
-      position: "absolute",
+    backgroundImage: {
+      position: "fixed",
       top: 0,
       left: 0,
       width: "100%",
       height: "100%",
-      zIndex: -2,
-      background: "linear-gradient(120deg, #ff7e5f, #feb47b, #ff6a88, #d7644e, #fc6767)",
-      backgroundSize: "400% 400%",
-      animation: "gradientAnimation 15s ease infinite",
+      backgroundImage: "url('/images/ImpetusBS7.jpeg')",
+      backgroundSize: { xs: "150%", sm: "cover" }, // Zoom out for mobile view
+      backgroundPosition: "center",
+      zIndex: 0,
+      opacity: 0.4,
     },
     glassOverlay: {
       position: "relative",
       zIndex: 1,
       backgroundColor: "rgba(255, 255, 255, 0.1)",
       backdropFilter: "blur(10px)",
-      borderRadius: "15px",
       padding: "20px",
       margin: "auto",
-      maxWidth: "1000px", // Reduced max width
-      width: "80%", // Smaller width
+      maxWidth: "1200px",
+      width: "90%",
       boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+      borderRadius: "0",
     },
-    cardContainer: {
+    h1: {
+      mt: { lg: "100px", xs: "60px" },
+      mb: { lg: "50px", xs: "20px" },
+      fontSize: {
+        lg: "54px",
+        sm: "50px",
+        xs: "32px",
+      },
+      height: "auto",
+      background: "linear-gradient(90deg, #ffd700, #ff6347)", // Gold to red gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      fontWeight: 700,
+      fontFamily: "'Rowdies'",
+      fontWeight: 'bold', // Updated font
+      lineHeight: 1.5, // Adjust line height to prevent clipping
+      paddingBottom: "0px",
+    },
+    cardsContainer: {
       display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
       flexWrap: "wrap",
-      gap: 2,
-      maxWidth: "90%", // Reduced width of container
-      margin: "auto",
+      justifyContent: "center",
+      gap: { xs: 0.3, md: 0.5 },
     },
   };
 
@@ -69,7 +75,7 @@ export default function SponsorsPage() {
     sponsor14: { imgname: "McPro.png", link: "" },
   };
 
-  const sponsorData = [
+  const pastSponsors = [
     { imgname: "Logiczap.png", link: "#" },
     { imgname: "elearnmarkets.jpg", link: "#" },
     { imgname: "idp.jpg", link: "#" },
@@ -84,28 +90,28 @@ export default function SponsorsPage() {
   ];
 
   return (
-    <>
-      {/* Gradient Background */}
-      <Box sx={styles.gradientBackground} />
+    <Box sx={styles.pageContainer}>
+      {/* Background Image */}
+      <Box sx={styles.backgroundImage} />
 
       {/* Glass Overlay */}
       <Box sx={styles.glassOverlay}>
-        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-          <Typography variant="h1">Title Sponsor</Typography>
-          <Box sx={styles.cardContainer}>
+        <Box className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1" sx={styles.h1}>Title Sponsor</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor1} />
           </Box>
-          <Typography variant="h1">Co-Sponsor</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Co-Sponsor</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor2} />
             <SponsorCard sponsor={sponsor.sponsor3} />
           </Box>
-          <Typography variant="h1">Media Partner</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Media Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor4} />
           </Box>
-          <Typography variant="h1">Event Partner</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Event Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor5} />
             <SponsorCard sponsor={sponsor.sponsor6} />
             <SponsorCard sponsor={sponsor.sponsor7} />
@@ -113,43 +119,36 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor9} />
             <SponsorCard sponsor={sponsor.sponsor14} />
           </Box>
-          <Typography variant="h1">Technology Partner</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Technology Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor10} />
           </Box>
-          <Typography variant="h1">Gaming Partner</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Gaming Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor13} />
           </Box>
-          <Typography variant="h1">Learning Partner</Typography>
-          <Box sx={styles.cardContainer}>
+          <Typography variant="h1" sx={styles.h1}>Learning Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor11} />
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
         </Box>
 
-        <Box sx={styles} className="center1" style={{ marginTop: "100px" }}>
-          <Typography variant="h1">Past Sponsors</Typography>
-          <Box sx={styles.cardContainer}>
-            {sponsorData.map((sponsor, index) => (
+        {/* Past Sponsors - Static Display */}
+        <Box className="center1" style={{ marginTop: "100px" }}>
+          <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
+          <Box sx={styles.cardsContainer}>
+            {pastSponsors.map((sponsor, index) => (
               <SponsorCard key={index} sponsor={sponsor} isPastSponsor />
             ))}
           </Box>
         </Box>
-
-        <Contact />
+        <Box sx={{
+          margin:"-20px",
+        }}>
+          <Contact />
+        </Box>
       </Box>
-
-      {/* Gradient Animation Keyframes */}
-      <style jsx global>{`
-        @keyframes gradientAnimation {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
-    </>
+    </Box>
   );
 }
-
-
