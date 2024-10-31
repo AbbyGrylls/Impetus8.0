@@ -59,7 +59,7 @@ export default function SponsorsPage() {
   };
 
   const sponsor = {
-    sponsor1: { imgname: "Gainwell.png", link: "https://www.gainwellengineering.com/" },
+    /* sponsor1: { imgname: "Gainwell.png", link: "https://www.gainwellengineering.com/" },
     sponsor2: { imgname: "Mahr.jpg", link: "https://www.mahr.com/en-us/" },
     sponsor3: { imgname: "Purahsara.png", link: "https://www.linkedin.com/company/purahsara/about/" },
     sponsor4: { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
@@ -72,10 +72,24 @@ export default function SponsorsPage() {
     sponsor11: { imgname: "StockEdge.jpg", link: "https://stockedge.com/" },
     sponsor12: { imgname: "GEMS.jpg", link: "https://www.linkedin.com/company/genex-engineering-management-solutions/about/" },
     sponsor13: { imgname: "Virel.jpg", link: "https://www.facebook.com/VIREL.Kolkata/about" },
-    sponsor14: { imgname: "McPro.png", link: "" },
+    sponsor14: { imgname: "McPro.png", link: "" }, */
   };
 
   const pastSponsors = [
+    { imgname: "Gainwell.png", link: "https://www.gainwellengineering.com/" },
+    { imgname: "Mahr.jpg", link: "https://www.mahr.com/en-us/" },
+    { imgname: "Purahsara.png", link: "https://www.linkedin.com/company/purahsara/about/" },
+    { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
+    { imgname: "IOCL.jpg", link: "https://iocl.com/" },
+    { imgname: "ISHRAE.jpg", link: "https://ishrae.in/" },
+    { imgname: "Cognitive.jpg", link: "#" },
+    { imgname: "lal.jpeg", link: "https://lalbabagroup.com/" },
+    { imgname: "IMechE.jpg", link: "https://www.imeche.org/" },
+    { imgname: "BlackbirdRobotix_1.png", link: "https://blackbirdrobotix.in/" },
+    { imgname: "StockEdge.jpg", link: "https://stockedge.com/" },
+    { imgname: "GEMS.jpg", link: "https://www.linkedin.com/company/genex-engineering-management-solutions/about/" },
+    { imgname: "Virel.jpg", link: "https://www.facebook.com/VIREL.Kolkata/about" }, 
+    { imgname: "McPro.png", link: "#" },
     { imgname: "Logiczap.png", link: "#" },
     { imgname: "elearnmarkets.jpg", link: "#" },
     { imgname: "idp.jpg", link: "#" },
@@ -93,10 +107,9 @@ export default function SponsorsPage() {
     <Box sx={styles.pageContainer}>
       {/* Background Image */}
       <Box sx={styles.backgroundImage} />
-
       {/* Glass Overlay */}
       <Box sx={styles.glassOverlay}>
-        <Box className="center1" style={{ marginTop: "100px" }}>
+        {/* <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Title Sponsor</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor1} />
@@ -132,7 +145,7 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor11} />
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
-        </Box>
+        </Box> */}..............................COMING SOON!
 
         {/* Past Sponsors - Static Display */}
         <Box className="center1" style={{ marginTop: "100px" }}>
