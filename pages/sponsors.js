@@ -57,12 +57,19 @@ export default function SponsorsPage() {
       gap: { xs: 0.3, md: 0.5 },
     },
     paragraph: {
-      fontSize: "16px",
-      lineHeight: 1.6,
-      color: "#E0E0E0",
-      mb: 3,
-      textAlign: "center",
-    },
+        textAlign: "center",
+        fontSize: { xs: "16px", md: "18px" }, 
+        lineHeight: 1.6,
+        fontWeight: 500,
+        color: "#E0E0E0",
+        fontFamily: "'Roboto', sans-serif",
+        maxWidth: "800px",
+        mx: "auto", // Centers the text box horizontally
+        mt: 2,
+        mb: 3,
+        marginTop: "-12px",
+        p: { xs: 1, md: 2 }, // Adds padding for a neat layout
+    }, 
     button: {
       mt: 2,
       mb: 4,
@@ -174,21 +181,30 @@ export default function SponsorsPage() {
         </Box> */}..............................COMING SOON!
         <Box className="center1" style={{ marginTop: "100px" }}>
         <Typography sx={styles.sectionTitle}>Why Sponsor Us?</Typography>
-        <Typography sx={styles.paragraph}>
-        Sponsoring Impetus 8.0 offers a unique chance to align your brand with innovation and the future of engineering. Gain access to students, professionals, and tech enthusiasts, with your brand featured in extensive media coverage. Join us to Engage directly with your target audience through customized sponsorship packages, on-site activations, product displays, and interactive sessions.
-        </Typography>
-        {/* <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
+        <Typography sx={(styles.paragraph)}>
+    Partnering with us at Impetus 8.0 lets you showcase your brand to future innovators in engineering and technology. Gain visibility, connect with engaged audiences, and make a memorable impact. Let’s build the future together.
+  </Typography>
         <Button 
           variant="contained" 
           color="primary" 
-          sx={styles.button} 
+          sx={{
+            ...styles.button,
+            mt: 0.1,  // Reduced top margin
+            mb: 2,
+            transition: "transform 0.3s ease, box-shadow 0.3s ease", // Smooth transition for hover effects
+            "&:hover": {
+              transform: "scale(1.05)", // Slightly enlarge the button
+              boxShadow: "0px 6px 20px rgba(255, 105, 135, 0.4)", // Add shadow for depth
+              background: "linear-gradient(45deg, #FF3CAC, #FF8E53)", // Reverse gradient colors on hover
+            },
+          }} 
           href="#" 
           target="_blank"
         >
           Download Brochure
         </Button>
         
-        
+        {/* 
         <Typography sx={styles.sectionTitle}>About Our College</Typography>
         <Typography sx={styles.paragraph}>
           Founded in 1856, IIEST, Shibpur is one of India’s oldest engineering colleges...
