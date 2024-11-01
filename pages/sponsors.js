@@ -180,6 +180,7 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
         </Box> */}..............................COMING SOON!
+
         <Box className="center1" style={{ marginTop: "100px" }}>
         <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
         <Typography sx={(styles.paragraph)}>
@@ -219,10 +220,8 @@ export default function SponsorsPage() {
           We offer a range of sponsorship tiers, including Title Sponsor, Co-Sponsor, Robowar Arena Partner...
         </Typography>
         </Box>
-        <Box sx={{ marginTop: "50px", textAlign: "center" }}>
-          <Typography sx={styles.sectionTitle}>Sponsorship Tiers</Typography>
           <SponsorCats /> {/* Adding the SponsorCats component here */}
-        </Box>
+        
         {/* Past Sponsors - Static Display */}
         <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
