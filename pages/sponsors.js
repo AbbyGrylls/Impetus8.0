@@ -1,4 +1,4 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import Contact from "../components/Contact";
 import SponsorCard from "../components/SponsorCard";
 
@@ -56,6 +56,32 @@ export default function SponsorsPage() {
       justifyContent: "center",
       gap: { xs: 0.3, md: 0.5 },
     },
+    paragraph: {
+      fontSize: "16px",
+      lineHeight: 1.6,
+      color: "#E0E0E0",
+      mb: 3,
+      textAlign: "center",
+    },
+    button: {
+      mt: 2,
+      mb: 4,
+      background: "linear-gradient(45deg, #FF8E53, #FF3CAC)",
+      color: "#FFFFFF",
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+    sectionTitle: {
+      fontSize: { xs: "24px", md: "32px" },
+      fontWeight: "bold",
+      mt: 4,
+      mb: 2,
+      background: "#000080", // Blue gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      fontFamily: "'Rowdies'",
+      textAlign: "center",
+    }
   };
 
   const sponsor = {
@@ -146,7 +172,40 @@ export default function SponsorsPage() {
             <SponsorCard sponsor={sponsor.sponsor12} />
           </Box>
         </Box> */}..............................COMING SOON!
-
+        <Box className="center1" style={{ marginTop: "100px" }}>
+        <Typography sx={styles.sectionTitle}>Why Sponsor Us?</Typography>
+        <Typography sx={styles.paragraph}>
+        Sponsoring Impetus 8.0 offers a unique chance to align your brand with innovation and the future of engineering. Gain access to students, professionals, and tech enthusiasts, with your brand featured in extensive media coverage. Engage directly with your target audience through customized sponsorship packages, on-site activations, product displays, and interactive sessions. Join us and make a lasting impact on the next generation of innovators.
+        </Typography>
+        {/* <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          sx={styles.button} 
+          href="#" 
+          target="_blank"
+        >
+          Download Brochure
+        </Button>
+        
+        
+        <Typography sx={styles.sectionTitle}>About Our College</Typography>
+        <Typography sx={styles.paragraph}>
+          Founded in 1856, IIEST, Shibpur is one of India’s oldest engineering colleges...
+        </Typography>
+        
+        
+        <Typography sx={styles.sectionTitle}>About IMPETUS</Typography>
+        <Typography sx={styles.paragraph}>
+          IMPETUS is an annual technical event organized by the Society of Mechanical Engineers...
+        </Typography> */} 
+        
+        {/* Section: Sponsor Categories */}
+        <Typography sx={styles.sectionTitle}>Sponsor Categories</Typography>
+        <Typography sx={styles.paragraph}>
+          We offer a range of sponsorship tiers, including Title Sponsor, Co-Sponsor, Robowar Arena Partner...
+        </Typography>
+        </Box>
         {/* Past Sponsors - Static Display */}
         <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
