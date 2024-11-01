@@ -76,7 +76,7 @@ export default function SponsorsPage() {
       fontWeight: "bold",
       mt: 4,
       mb: 2,
-      background: "#000080", // Blue gradient
+      background: "linear-gradient(90deg, #ffd700, #ff6347)", // Blue gradient
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       fontFamily: "'Rowdies'",
@@ -175,7 +175,7 @@ export default function SponsorsPage() {
         <Box className="center1" style={{ marginTop: "100px" }}>
         <Typography sx={styles.sectionTitle}>Why Sponsor Us?</Typography>
         <Typography sx={styles.paragraph}>
-        Sponsoring Impetus 8.0 offers a unique chance to align your brand with innovation and the future of engineering. Gain access to students, professionals, and tech enthusiasts, with your brand featured in extensive media coverage. Engage directly with your target audience through customized sponsorship packages, on-site activations, product displays, and interactive sessions. Join us and make a lasting impact on the next generation of innovators.
+        Sponsoring Impetus 8.0 offers a unique chance to align your brand with innovation and the future of engineering. Gain access to students, professionals, and tech enthusiasts, with your brand featured in extensive media coverage. Join us to Engage directly with your target audience through customized sponsorship packages, on-site activations, product displays, and interactive sessions.
         </Typography>
         {/* <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
         <Button 
