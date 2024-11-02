@@ -58,19 +58,19 @@ export default function SponsorsPage() {
       gap: { xs: 0.3, md: 0.5 },
     },
     paragraph: {
-        textAlign: "center",
-        fontSize: { xs: "16px", md: "18px" }, 
-        lineHeight: 1.6,
-        fontWeight: 500,
-        color: "#E0E0E0",
-        fontFamily: "'Roboto', sans-serif",
-        maxWidth: "800px",
-        mx: "auto", // Centers the text box horizontally
-        mt: 2,
-        mb: 3,
-        marginTop: "-12px",
-        p: { xs: 1, md: 2 }, // Adds padding for a neat layout
-    }, 
+      textAlign: "center",
+      fontSize: { xs: "16px", md: "18px" },
+      lineHeight: 1.6,
+      fontWeight: 500,
+      color: "#E0E0E0",
+      fontFamily: "'Roboto', sans-serif",
+      maxWidth: "800px",
+      mx: "auto", // Centers the text box horizontally
+      mt: 2,
+      mb: 3,
+      marginTop: "-12px",
+      p: { xs: 1, md: 2 }, // Adds padding for a neat layout
+    },
     button: {
       mt: 2,
       mb: 4,
@@ -122,7 +122,7 @@ export default function SponsorsPage() {
     { imgname: "BlackbirdRobotix_1.png", link: "https://blackbirdrobotix.in/" },
     { imgname: "StockEdge.jpg", link: "https://stockedge.com/" },
     { imgname: "GEMS.jpg", link: "https://www.linkedin.com/company/genex-engineering-management-solutions/about/" },
-    { imgname: "Virel.jpg", link: "https://www.facebook.com/VIREL.Kolkata/about" }, 
+    { imgname: "Virel.jpg", link: "https://www.facebook.com/VIREL.Kolkata/about" },
     { imgname: "McPro.png", link: "#" },
     { imgname: "Logiczap.png", link: "#" },
     { imgname: "elearnmarkets.jpg", link: "#" },
@@ -182,46 +182,46 @@ export default function SponsorsPage() {
         </Box> */}..............................COMING SOON!
 
         <Box className="center1" style={{ marginTop: "100px" }}>
-        <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
-        <Typography sx={(styles.paragraph)}>
-    Partnering with us at Impetus 8.0 lets you showcase your brand to future innovators in engineering and technology. Gain visibility, connect with engaged audiences, and make a memorable impact. Let’s build the future together.
-  </Typography>   
-  <Button 
-          variant="contained" 
-          color="primary" 
-          sx={{
-            ...styles.button,
-            mt: 0.1,  // Reduced top margin
-            mb: 2,
-            transition: "transform 0.3s ease, box-shadow 0.3s ease", // Smooth transition for hover effects
-            "&:hover": {
-              transform: "scale(1.05)", // Slightly enlarge the button
-              boxShadow: "0px 6px 20px rgba(255, 105, 135, 0.4)", // Add shadow for depth
-              background: "linear-gradient(45deg, #FF3CAC, #FF8E53)", // Reverse gradient colors on hover
-            },
-          }} 
-          href="#" 
-          target="_blank"
-        >
-          Download Brochure
-        </Button> 
-        <Typography sx={styles.sectionTitle}>About Our College</Typography>
-        <Typography sx={styles.paragraph}>
-        Founded in 1856, the Indian Institute of Engineering Science and Technology (IIEST), Shibpur, is India’s second oldest engineering college. Formerly Bengal Engineering College, it became a Deemed University in 1992, a full university in 2004, and is now an Institute of National Importance. Ranked among the top 10 NITs in the country (NIRF Engg. 2024), IIEST has a rich legacy in research, engineering, culture, and politics, with a global alumni network. For over a century, it has been a beacon of excellence in education and innovation.
-        </Typography>
-        <Typography sx={styles.sectionTitle}>About IMPETUS</Typography>
-        <Typography sx={styles.paragraph}>
-        IMPETUS is an annual technical event by the Society of Mechanical Engineers (SME) at IIEST, Shibpur, aimed at bridging industry and students. This event gathers experts from diverse sectors, offering students valuable exposure to practical knowledge and real-world engineering applications. IMPETUS provides unique opportunities for interaction with industry professionals, ensuring participants leave enriched and inspired.
-        </Typography> 
-        
-        {/* Section: Sponsor Categories */}
-        <Typography sx={styles.sectionTitle}>Sponsor Categories</Typography>
-        <Typography sx={styles.paragraph}>
-          We offer a range of sponsorship tiers, including Title Sponsor, Co-Sponsor, Robowar Arena Partner...
-        </Typography>
+          <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
+          <Typography sx={(styles.paragraph)}>
+            Partnering with us at Impetus 8.0 lets you showcase your brand to future innovators in engineering and technology. Gain visibility, connect with engaged audiences, and make a memorable impact. Let’s build the future together.
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              ...styles.button,
+              mt: 0.1,
+              mb: 2,
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              "&:hover": {
+                transform: "scale(1.05)",
+                boxShadow: "0px 6px 20px rgba(255, 105, 135, 0.4)",
+                background: "linear-gradient(45deg, #FF3CAC, #FF8E53)", // Reverse gradient colors on hover
+              },
+            }}
+            href="#"
+            target="_blank"
+          >
+            Download Brochure
+          </Button>
+          <Typography sx={styles.sectionTitle}>About Our College</Typography>
+          <Typography sx={styles.paragraph}>
+            Founded in 1856, the Indian Institute of Engineering Science and Technology (IIEST), Shibpur, is India’s second oldest engineering college. Formerly Bengal Engineering College, it became a Deemed University in 1992, a full university in 2004, and is now an Institute of National Importance. Ranked among the top 10 NITs in the country (NIRF Engg. 2024), IIEST has a rich legacy in research, engineering, culture, and politics, with a global alumni network. For over a century, it has been a beacon of excellence in education and innovation.
+          </Typography>
+          <Typography sx={styles.sectionTitle}>About IMPETUS</Typography>
+          <Typography sx={styles.paragraph}>
+            IMPETUS is an annual technical event by the Society of Mechanical Engineers (SME) at IIEST, Shibpur, aimed at bridging industry and students. This event gathers experts from diverse sectors, offering students valuable exposure to practical knowledge and real-world engineering applications. IMPETUS provides unique opportunities for interaction with industry professionals, ensuring participants leave enriched and inspired.
+          </Typography>
+
+          {/* Section: Sponsor Categories */}
+          <Typography sx={styles.sectionTitle}>Sponsor Categories</Typography>
+          <Typography sx={styles.paragraph}>
+            We offer a range of sponsorship tiers, including Title Sponsor, Co-Sponsor, Robowar Arena Partner...
+          </Typography>
         </Box>
-          <SponsorCats /> {/* Adding the SponsorCats component here */}
-        
+        {/*<SponsorCats />*/} {/* Adding the SponsorCats component here */}
+        space for Tier-Cost visualization
         {/* Past Sponsors - Static Display */}
         <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
@@ -232,7 +232,7 @@ export default function SponsorsPage() {
           </Box>
         </Box>
         <Box sx={{
-          margin:"-20px",
+          margin: "-20px",
         }}>
           <Contact />
         </Box>
