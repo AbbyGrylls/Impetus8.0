@@ -1,56 +1,77 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
 import { Box, Typography } from "@mui/material";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const SponsorCats = () => {
-  const data = {
-    labels: ["Industry-Academia Meet Sponsor", "Robowar Arena Partner", "Co-Sponsor", "Title Sponsor"],
-    datasets: [
-      {
-        label: "Sponsorship Cost (in INR)",
-        data: [50000, 150000, 125000, 175000],
-        backgroundColor: "rgba(63, 81, 181, 0.7)",
-        borderColor: "rgba(63, 81, 181, 1)",
-        borderWidth: 1,
-      },
-    ],
-  };
+  const sponsors = [
+    { name: "Industry-Academia Meet Sponsor", cost: 50000 },
+    { name: "Robowar Arena Partner", cost: 150000 },
+    { name: "Co-Sponsor", cost: 125000 },
+    { name: "Title Sponsor", cost: 175000 },
+  ];
 
-  const options = {
-    indexAxis: "y",
-    responsive: true,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: (context) => `INR ${context.raw.toLocaleString()}` } },
-    },
-    scales: {
-      x: {
-        beginAtZero: true,
-        ticks: { callback: (value) => `INR ${value / 1000}k` },
-        title: { display: true, text: "Sponsorship Cost (in Lakhs)", font: { size: 14 } },
-      },
-    },
-  };
+  // Calculate proportional left positions based on sponsorship cost
+  const maxCost = Math.max(...sponsors.map((sponsor) => sponsor.cost));
+  const minCost = Math.min(...sponsors.map((sponsor) => sponsor.cost));
 
   return (
-    <Box sx={{ maxWidth: 800, mx: "auto", my: 4, textAlign: "center" }}>
-      <Typography variant="h4" sx={{ mb: 2, fontWeight: "bold", color: "#333" }}>
-        Sponsorship Categories and Costs
-      </Typography>
-      <Bar data={data} options={options} />
+    <Box sx={{ textAlign: "center", height: "100vh", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      {/* Line for sponsor visualization positioned lower */}
+      <Box sx={{ position: "relative", width: "90vw", height: "60vh", borderBottom: "2px solid #aaa" }}>
+        {sponsors.map((sponsor, index) => {
+          // Calculate left position as a percentage based on the cost, with slight adjustment for "Industry-Academia Meet Sponsor"
+          const leftPosition = sponsor.name === "Industry-Academia Meet Sponsor"
+            ? "15%"  // Moves it within bounds for visibility
+            : `${((sponsor.cost - minCost) / (maxCost - minCost)) * 80 + 10}%`; // Keep all elements within the view
+
+          return (
+            <Box
+              key={index}
+              sx={{
+                position: "absolute",
+                left: leftPosition,
+                bottom: "20%", // Position elements above the line
+                transform: "translateX(-50%)",
+                textAlign: "center",
+              }}
+            >
+              {/* Sponsor Category Name */}
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: sponsor.name === "Title Sponsor" ? "'Georgia', serif" : "'Brush Script MT', cursive",
+                  fontWeight: "bold",
+                  fontSize: "1.4em",
+                  background: "linear-gradient(90deg, #FF5733, #FFC300)", // Reddish-yellow gradient
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  mb: 0.5,
+                }}
+              >
+                {sponsor.name}
+              </Typography>
+
+              {/* Sponsorship Cost */}
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: "1.1em",
+                  background: "linear-gradient(90deg, #4caf50, #81c784)", // Green gradient for cost
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  fontWeight: "bold",
+                }}
+              >
+                ₹{(sponsor.cost / 100000).toFixed(2)} Lakh
+              </Typography>
+            </Box>
+          );
+        })}
+      </Box>
     </Box>
   );
 };
 
 export default SponsorCats;
+
+
+
