@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 
 const styles = (hoverEffect, dimmed) => ({
-  height: { xs: "70px", md: "125px" }, // Reduced box height
+  height: { xs: "72px", md: "125px" }, // Reduced box height
   width: { xs: "112px", md: "200px" },   // Reduced box width
   margin: "5px",
   display: "flex",
