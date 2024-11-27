@@ -113,16 +113,22 @@ export default function Contact() {
         >
           <Box>
             <Typography variant="p" sx={CStyle}>
-              Vasu Krishna Khemka (Coordiantor)
+              Ivan Jacob Thomas (Coordiantor)
             </Typography>
             <Typography variant="p" sx={CStyle}>
-              +91 7808814413
+              +91 7463884470
             </Typography>
             <Typography variant="p" sx={CStyle}>
-              Divyansh Bajpai (Coordiantor)
+              Janhvi Singh (Coordiantor)
             </Typography>
             <Typography variant="p" sx={CStyle}>
-              +91 9369462864
+              +91 8318035176
+            </Typography>
+            <Typography variant="p" sx={CStyle}>
+              Amartya Singh (Coordiantor)
+            </Typography>
+            <Typography variant="p" sx={CStyle}>
+              +91 7357769918
             </Typography>
           </Box>
           <Box className=" center2">
@@ -173,7 +179,7 @@ export default function Contact() {
           </Link>
 
           <em style={{ margin: "10px 0 20px 0", textAlign: "center" }}>
-            Copyright © 2024 - All rights reserved by Impetus
+            Copyright © 2025 - All rights reserved by Impetus
           </em>
         </Box>
       </Box>

@@ -138,6 +138,15 @@ export default function EventDescription({ index, setCurrIdx, currIdx }) {
           {content[currIdx % 9]}
         </p>
         <LearnMore link={`/events/${link[currIdx % 9]}`} />
+        <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              onClick={(event) =>
+                (window.location.href = "https://forms.gle/pxEokiDjCRBXDMah7")
+              }
+            >
+              Register Now
+        </button>
       </Box>
     </Box>
   );

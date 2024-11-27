@@ -9,8 +9,8 @@ export default function Countdown() {
   const [end, setEnd] = useState(false);
   const theme = useTheme();
 
-  const deadline = "February, 9, 2025";
-  const end_deadline = "February, 11, 2025";
+  const deadline = "February, 7, 2025";
+  const end_deadline = "February, 9, 2025";
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
     const endtime = Date.parse(end_deadline) - Date.now();

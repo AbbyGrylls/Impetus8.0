@@ -88,7 +88,8 @@ export default function AppbarComp() {
               ? "black"
               : top
                 ? "none"
-                : "linear-gradient(to right, black ,rgb(17 24 39 ),black)"
+                // : "linear-gradient(to right, black ,rgb(17 24 39 ),black)"
+                :"black"
           }`,
           position: "fixed",
           left: "50%",

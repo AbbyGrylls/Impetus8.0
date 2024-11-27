@@ -71,7 +71,7 @@ export default function VideoText({ hideIt }) {
         }}
       >
         <Typography variant="h5">IIEST Shibpur&apos;s</Typography>
-        <Typography variant="h5">9th - 11th February</Typography>
+        <Typography variant="h5">7th - 9th February</Typography>
       </Box>
       <Typography variant="h1" className="Heading">
         IMPETUS

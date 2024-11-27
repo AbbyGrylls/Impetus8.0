@@ -74,7 +74,7 @@ export default function HomePage() {
     <Box>
       {loading && <LoadingComp />}
       <VideoText hideIt={hideIt} />
-      <MerchandiseComp />
+      {/* <MerchandiseComp /> */}
       {aboutContent.map((el) => (
         <HomePageAbout1 key={el.name} {...el} />
       ))}

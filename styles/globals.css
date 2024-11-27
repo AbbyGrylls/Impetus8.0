@@ -7,7 +7,7 @@
 
 html,
 body {
-  background: linear-gradient(to right, black, rgb(17 24 39), black);
+  /* background: linear-gradient(to right, black, rgb(17 24 39), black); */
   /* background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(17, 24, 39, 1), rgba(0, 0, 0, 1)), linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 0, 0, 1)); */
 }
 
@@ -394,4 +394,34 @@ img:hover {
 .events-title {
   font-size: 36px;
   margin-bottom: 20px;
+}
+
+
+/*-------------------------------------------------------------ROBOWARS-------------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  .heroRobowars .roboPic {
+    width: 100% !important;
+    margin:0 !important;
+    bottom:0 !important;
+  }
+}
+@media (max-width: 900px) {
+  .heroRobowars .roboPic {
+    
+    bottom:5rem !important;
+  }
+}
+@media (max-width: 840px) {
+  .heroRobowars .upper_p {
+    font-size: 2rem !important;
+  }
+  .heroRobowars h1 {
+    font-size: 4rem !important;
+  }
+}
+@media (max-width: 800px) {
+  .heroRobowars .roboPic {
+    
+    display: none;
+  }
 }
