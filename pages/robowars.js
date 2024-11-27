@@ -167,7 +167,6 @@ export default function ExpoPage() {
           <Typography
             variant="p"
             style={{
-              color: "#555",
               fontSize: "1.25rem",
               color: "#fff",
               lineHeight:"1.75rem",

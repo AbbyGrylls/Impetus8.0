@@ -152,18 +152,42 @@ export default function IAMPage() {
   return (
     <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
       <CarouselComp />
+
+      
       <div className="pt-8 mt-4 px-4 mx-auto max-w-screen-xl text-center  z-10 relative">
         <h1
           className="text-2xl md:text-3xl font-extrabold tracking-tight leading-none text-gray-50 md:text-4xl lg:text-5xl"
-          style={{ fontFamily: "Rowdies" }}
+          style={{ fontSize:"4rem",
+          fontFamily:"Bebas Neue",
+          letterSpacing:"2px", }}
         >
           INDUSTRY ACADEMIA MEET
         </h1>
-        <p className=" text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48 ">
-          11th February, 2024 - 9AM to 6PM
+        <p className=" text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48 " style={{
+          fontSize: "1.25rem",
+          // color: "#fff",
+          lineHeight:"1.75rem",
+          fontFamily:"Bebas Neue,sans-serif",
+          letterSpacing:"2px",
+          paddingTop:"0.5rem",
+        }}>
+          9th February, 2025 - 9AM to 6PM
         </p>
       </div>
-      <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
+      <Box style={{
+        textAlign:"center",
+        padding:"6rem 0",
+        marginBottom:"5rem",
+        fontSize:"2rem",
+        fontFamily:"Bebas Neue",
+        letterSpacing:"2px",
+
+         }}>Coming <span style={{
+          // color:"rgb(255 67 26)"
+          }}>Soon</span>...</Box>
+
+
+      {/* <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
 
       
 
@@ -452,7 +476,9 @@ export default function IAMPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
       <Contact />
     </section>
   );
