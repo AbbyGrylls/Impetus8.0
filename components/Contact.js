@@ -113,19 +113,19 @@ export default function Contact() {
         >
           <Box>
             <Typography variant="p" sx={CStyle}>
-              Ivan Jacob Thomas (Coordiantor)
+              Ivan Jacob Thomas (Coordinator)
             </Typography>
             <Typography variant="p" sx={CStyle}>
               +91 7463884470
             </Typography>
             <Typography variant="p" sx={CStyle}>
-              Janhvi Singh (Coordiantor)
+              Janhvi Singh (Coordinator)
             </Typography>
             <Typography variant="p" sx={CStyle}>
               +91 8318035176
             </Typography>
             <Typography variant="p" sx={CStyle}>
-              Amartya Singh (Coordiantor)
+              Amartya Singh (Coordinator)
             </Typography>
             <Typography variant="p" sx={CStyle}>
               +91 7357769918
