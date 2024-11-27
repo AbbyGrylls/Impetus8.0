@@ -78,7 +78,7 @@ export default function HomePage() {
       {aboutContent.map((el) => (
         <HomePageAbout1 key={el.name} {...el} />
       ))}
-      <BubbleComponent />
+      {/* <BubbleComponent /> */}
       <Contact />
     </Box>
   );

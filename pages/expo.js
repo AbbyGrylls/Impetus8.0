@@ -70,7 +70,21 @@ export default function ExpoPage() {
 
   return (
     <Box sx={styles} style={{ paddingTop: "50px" }}>
-      <div className=" grid md:grid-cols-2 md:gap-8 gap-1 md:py-20 py-10">
+
+      <Box style={{
+        textAlign:"center",
+        padding:"6rem 0",
+        marginBottom:"5rem",
+        fontSize:"2rem",
+        fontFamily:"Bebas Neue",
+        letterSpacing:"2px",
+
+         }}>Coming <span style={{
+          // color:"rgb(255 67 26)"
+          }}>Soon</span>...
+      </Box>
+
+      {/* <div className=" grid md:grid-cols-2 md:gap-8 gap-1 md:py-20 py-10">
         <div className="flex items-center justify-center ">
           <img
             className="md:w-2/3 w-3/4  "
@@ -230,7 +244,7 @@ export default function ExpoPage() {
             </span>
           </p>
         </div>
-      </div>
+      </div> */}
 
       <Contact />
     </Box>

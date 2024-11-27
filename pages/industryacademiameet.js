@@ -184,7 +184,8 @@ export default function IAMPage() {
 
          }}>Coming <span style={{
           // color:"rgb(255 67 26)"
-          }}>Soon</span>...</Box>
+          }}>Soon</span>...
+      </Box>
 
 
       {/* <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">

@@ -70,10 +70,10 @@ export default function VideoText({ hideIt }) {
           width: "550px",
         }}
       >
-        <Typography variant="h5">IIEST Shibpur&apos;s</Typography>
+        <Typography variant="h5" >IIEST Shibpur&apos;s</Typography>
         <Typography variant="h5">7th - 9th February</Typography>
       </Box>
-      <Typography variant="h1" className="Heading">
+      <Typography variant="h1" className="Heading" style={{textShadow:"0 0 10px cyan",}}>
         IMPETUS
       </Typography>
       <Typography variant="h4" className="noMarginB">
