@@ -142,30 +142,13 @@ export default function AboutPage() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const person = {
-    person1: {
-      name: "Ayush Jaiswal",
-      phone: "+91 7766962188",
-      post: "Main Coordinator",
-      imgname: "Ayush_Jaiswal(Main Co ordinator).jpg",
-      insta: "https://instagram.com/ayushashokjaiswal?igshid=ZDdkNTZiNTM=",
-      link: "https://www.linkedin.com/in/ayush-jaiswal-ab8a491a6",
-    },
-    person2: {
-      name: "S.V.S Sai Raghav",
-      phone: "+91 9550994950",
-      post: "Main Coordinator",
-      imgname: "S.V.S_Sai_Raghav.jpg",
-      insta: "https://instagram.com/raagu_1237?igshid=ZDdkNTZiNTM=",
-      link: "https://www.linkedin.com/in/raghavsingupuram",
-    },
-  };
+ 
 
   return (
     <Box sx={styles} className="center1">
       <Box className="videos">
         <div className="overlay"></div>
-        <video
+        {/* <video
           // onClick={toggleVolume}
           ref={videoRef}
           muted={muted}
@@ -173,8 +156,10 @@ export default function AboutPage() {
           autoPlay
           loop
         >
-          <source src="images/trailer2.mp4" type="video/mp4" />
-        </video>
+          <source src="images/about/trailer2.mp4" type="video/mp4" />
+        </video> */}
+
+
         {/* <Divider2 /> */}
       </Box>
       {/* <Box style={YTvideoStyle}> */}
@@ -197,7 +182,7 @@ export default function AboutPage() {
       <Box className="aboutImpetus center1">
         <Image
           sx={{ mt: "50px" }}
-          src="/images/impetusNewLogo.png"
+          src="/images/impetusLogo.png"
           height="300"
           width="300"
           alt="SME"

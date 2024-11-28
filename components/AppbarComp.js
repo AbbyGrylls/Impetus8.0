@@ -99,7 +99,7 @@ export default function AppbarComp() {
       >
         <Image
           onClick={goToHome}
-          src="/images/impetusNewLogo.png"
+          src="/images/impetusLogo.png"
           alt="logo"
           width="70"
           height="70"
