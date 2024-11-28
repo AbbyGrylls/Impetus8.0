@@ -13,7 +13,11 @@ const styles = {
     width: "100vw",
     height: "120vh",
     objectFit: "cover",
-    filter: "brightness(100%) hue-rotate(445deg) contrast(1) saturate(2)",
+    // filter: "brightness(100%) hue-rotate(445deg) contrast(1) saturate(2)",
+    // filter: "brightness(1.5) blur(5px)  ---------------------------bg3",
+    // filter: "brightness(0.7) blur(10px)  ---------------------------bg3",
+    filter: "brightness(0.7) blur(25px) ", //bg5
+    // filter:"contrast(1) blur(15px)"
   },
 };
 
@@ -36,7 +40,7 @@ export default function HomePageVideo() {
         loop
         id="bgVideo"
       >
-        <source src="images/bgvideo2.mp4" type="video/mp4" />
+        <source src="images/home/bgvideo5.mp4" type="video/mp4" />
       </video>
     </Box>
   );

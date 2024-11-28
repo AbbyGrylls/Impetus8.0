@@ -23,7 +23,7 @@ export default function SponsorsPage() {
     glassOverlay: {
       position: "relative",
       zIndex: 1,
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      backgroundColor: "rgba(255, 255, 255, 4%)",
       backdropFilter: "blur(10px)",
       padding: "20px",
       margin: "auto",

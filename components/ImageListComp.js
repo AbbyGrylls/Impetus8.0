@@ -68,65 +68,15 @@ export default function ImageListComp() {
   );
 }
 
-const itemData = [
-  {
-    img: "/images/imag1.jpg",
-    // title: "imag1",
-    cols: 6,
-    rows: 4,
-  },
-  {
-    img: "/images/imag2.jpg",
-    // title: "Burger",
-    cols: 3,
-    rows: 2,
-  },
-  {
-    img: "/images/imag3.jpg",
-    // title: "Camera",
-    cols: 3,
-    rows: 2,
-  },
-  {
-    img: "/images/imag4.jpg",
-    // title: "Coffee",
-    cols: 3,
-    rows: 2,
-  },
-  {
-    img: "/images/imag5.jpg",
-    // title: "Mushrooms",
-    cols: 3,
-    rows: 2,
-  },
-  {
-    img: "/images/imag6.jpg",
-    // title: "Breakfast",
-    cols: 6,
-    rows: 3,
-  },
-  {
-    img: "/images/imag7.jpg",
-    // title: "Burger",
-    cols: 3,
-    rows: 3,
-  },
-  {
-    img: "/images/imag8.jpg",
-    // title: "Camera",
-    cols: 3,
-    rows: 2,
-  },
-  {
-    img: "/images/imag10.jpg",
-    // title: "Mushrooms",
-    cols: 3,
-    rows: 1,
-  },
-  {
-    img: "/images/imag9.jpg",
-    // title: "Coffee",
-    cols: 12,
-    rows: 2,
-  },
-];
+const itemData = Array.from({ length: 31 }, (_, i) => {
+  const index = i + 1; // Since the array starts from 0, we need to adjust it
+  return {
+    img: `/images/about/prevEditions/imag${index}.jpg`,
+    cols: (index % 4 === 0) ? 6 : 3, // Larger images every 4th item
+    rows: (index % 5 === 0) ? 2 : 1, // Taller images every 5th item
+  };
+});
+
+
+
+

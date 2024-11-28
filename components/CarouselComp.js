@@ -8,7 +8,7 @@ export default function CarouselComp() {
   const carousel = useRef(null);
 
   const handleEnd = ({ index }) => {
-    if (index == 6) {
+    if (index == 8) {
       setTimeout(() => {
         carousel.current?.goTo(0);
       }, 1000);
@@ -16,13 +16,15 @@ export default function CarouselComp() {
   };
 
   const urls = [
-    "/images/image4.jpg",
-    "/images/image2.jpg",
-    "/images/image3.jpg",
-    "/images/image1.jpg",
-    "/images/image5.jpg",
-    "/images/image6.jpg",
-    "/images/image7.jpg",
+    "/images/iam/caraousel/img1.jpg",
+    "/images/iam/caraousel/img2.jpg",
+    "/images/iam/caraousel/img3.jpg",
+    "/images/iam/caraousel/img4.jpg",
+    "/images/iam/caraousel/img5.jpg",
+    "/images/iam/caraousel/img6.jpg",
+    "/images/iam/caraousel/img7.jpg",
+    "/images/iam/caraousel/img8.jpg",
+    "/images/iam/caraousel/img9.jpg",
   ];
 
   const styles = {
@@ -50,7 +52,7 @@ export default function CarouselComp() {
         showArrows={false}
         enableAutoPlay={true}
         onNextEnd={handleEnd}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={3500}
         enableMouseSwipe={false}
         pagination={false}
       >
@@ -58,7 +60,7 @@ export default function CarouselComp() {
           <Box key={url} sx={styles}>
             <Image
               src={url}
-              alt="abacus"
+              alt="iamIMG"
               layout="fill"
               objectFit="cover"
               key={url}

@@ -8,6 +8,7 @@ import LoadingComp from "../components/LoadingComp";
 import { useLoading } from "../components/LoadingContext";
 import MerchandiseComp from "../components/MerchandiseComp";
 import VideoText from "../components/VideoText";
+import HomePageVideo from "../components/HomePageVideo";
 
 const styles = {
   minHeight: "100vh",
@@ -73,6 +74,7 @@ export default function HomePage() {
   return (
     <Box>
       {loading && <LoadingComp />}
+      <HomePageVideo />
       <VideoText hideIt={hideIt} />
       {/* <MerchandiseComp /> */}
       {aboutContent.map((el) => (

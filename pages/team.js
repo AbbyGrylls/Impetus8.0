@@ -73,11 +73,11 @@ export default function TeamPage() {
   const sponsorship_person = {
     person1: {
       name: "Ketan",
-      phone: "+91 8318035176",
+      phone: "+91 8788330638",
       post: "Head",
       imgname: "team/.jpg",
-      insta: "https://www.instagram.com/raghuvanshi_janhvi",
-      link: "https://www.linkedin.com/in/janhvi-singh-858600239",
+      insta: "",
+      link: "",
     },     
     person2: {
       name: "Rohit Pal",
@@ -225,6 +225,15 @@ export default function TeamPage() {
         "https://www.instagram.com/sub_hankarmondal/",
       link: "https://www.linkedin.com/in/subhankar-m-20032020/",
     },
+    person2: {
+      name: "Arunava Pal",
+      phone: "+91 9874269145",
+      post: "Head",
+      imgname: "team/Arunava.jpg",
+      insta:
+        "https://www.instagram.com/its_groot_06?igsh=eXJzYmcyYXRlbGE2",
+      link: "https://www.linkedin.com/in/arunava-pal-518872257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   };
   const webD_person = {
     
@@ -342,8 +351,9 @@ export default function TeamPage() {
         </TabPanel>
 
         <TabPanel value={value} index={7} className="contactCards">
-          {/*--------------------------------------------------------------------------------------------------------------------Food*/}
+          {/*--------------------------------------------------------------------------------------------------------------------T&L*/}
           <ContactCard person={tl_person.person1} />
+          <ContactCard person={tl_person.person2} />
         </TabPanel>
 
         <TabPanel value={value} index={8} className="contactCards">
