@@ -72,48 +72,73 @@ export default function TeamPage() {
   };
   const sponsorship_person = {
     person1: {
-      name: "Janhvi Singh",
+      name: "Ketan",
       phone: "+91 8318035176",
       post: "Head",
-      imgname: "IMG_20230331_024142 - 2021MEB062 JANHVI_SINGH.jpg",
+      imgname: "team/.jpg",
       insta: "https://www.instagram.com/raghuvanshi_janhvi",
       link: "https://www.linkedin.com/in/janhvi-singh-858600239",
-    },
+    },     
     person2: {
-      name: "Soumyadeep Dey",
-      phone: "+91 9800054616",
+      name: "Rohit Pal",
+      phone: "+91 8319629245",
       post: "Head",
-      imgname: "Formal Portrait(png) - 2021MEB046 SOUMYADEEP_DEY.png",
-      insta: "https://www.instagram.com/deepsoumyadey",
-      link: "https://www.linkedin.com/in/Soumyadeep Dey",
-    }, 
+      imgname: "team/ROHIT_PAL.jpg",
+      insta: "https://www.instagram.com/rohitpal_18?igsh=MXhlNWd6N2pzZGZ6",
+      link: "https://www.linkedin.com/in/rohit-pal-08443b222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    
   };
   const event_person = {
+    
     person1: {
-      name: "Ajay kumar khandelwal",
-      phone: "+91 7792062842",
-      post: "Head",
-      imgname:
-        "20231025_103237 - 2021MEB048 AJAY_KUMAR KHANDELWAL.jpg",
-      insta: "https://www.instagram.com/ajaykhandelwal_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-      link: "https://www.linkedin.com/in/ajay-kumar-khandelwal-1978aa231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-    person2: {
-      name: "Ankush Ghosh",
-      phone: "+91 8145326311",
-      post: "Head",
-      imgname: "IMG-20221001-WA0074 - 2021MEB010 ANKUSH_GHOSH.jpg",
-      insta: "https://www.instagram.com/ag0172003",
-      link: "https://www.linkedin.com/in/ankush-ghosh-43b02a255",
-    },
-    person3: {
       name: "Soham Banerjee",
       phone: "+91 8101264621",
       post: "Head",
-      imgname: "Photo - 2021MEB069 SOHAM_BANERJEE.png",
+      imgname: "team/SOHAM_BANERJEE.png",
       insta: "https://www.instagram.com/banerjeesoham111",
       link: "https://www.linkedin.com/in/soham-banerjee-867a82255",
+    },
+    person2: {
+      name: "Wali Ahad Mallick",
+      phone: "+91 7480984908",
+      post: "Head",
+      imgname: "team/MD_WALI AHAD MALLICK.jpg",
+      insta: "https://www.instagram.com/wali_malik578?igsh=MXg4NjlxYXVjZTgzeg==",
+      link: "https://www.linkedin.com/in/wali-ahad-mallick-027632222",
+    },
+    person3: {
+      name: "Ankush Ghosh",
+      phone: "+91 8145326311",
+      post: "Head",
+      imgname: "team/ANKUSH_GHOSH.jpg",
+      insta: "https://www.instagram.com/ag0172003",
+      link: "https://www.linkedin.com/in/ankush-ghosh-43b02a255",
     },   
+    person4: {
+      name: "Siddamalla Harshavardhan",
+      phone: "+91 7702497870",
+      post: "Head",
+      imgname: "team/Siddamalla_Harshavardhan.jpg",
+      insta: "https://www.instagram.com/harshavardhansiddhamalla?igsh=NGZjcnJxNmprOTV2",
+      link: "https://www.linkedin.com/in/harshavardhan-siddamalla-118995229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    },
+    person5: {
+      name: "Piyush Pathak",
+      phone: "+91 7282809390",
+      post: "Head",
+      imgname: "team/piyush.jpg",
+      insta: "",
+      link: "https://www.linkedin.com/in/piyush-pathak-882489241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },   
+    person6: {
+      name: "Sayan Mondal",
+      phone: "+91 8670297716",
+      post: "Head",
+      imgname: "team/SAYAN_MONDAL.jpg",
+      insta: "https://www.instagram.com/s.o.l.o.n.i.s.t/",
+      link: "https://www.linkedin.com/in/sayan-mondal-5016511a0/",
+    },
 
   };
   const design_person = {
@@ -121,113 +146,84 @@ export default function TeamPage() {
       name: "Piyal Bhowmick",
       phone: "+91 8910276639",
       post: "Head",
-      imgname: "IMG-20240110-WA0021 - 2021MEB022 PIYAL_BHOWMICK.jpg",
+      imgname: "team/PIYAL_BHOWMICK.jpg",
       insta: "https://www.instagram.com/piyalb_13",
       link: "https://www.linkedin.com/in/piyal-bhowmick-555563199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-    person2: {
-      name: "Sayan Mondal",
-      phone: "+91 8670297716",
-      post: "Head",
-      imgname: "IMG_20240111_185857 - 2021MEB007 SAYAN_MONDAL.jpg",
-      insta: "https://www.instagram.com/s.o.l.o.n.i.s.t/",
-      link: "https://www.linkedin.com/in/sayan-mondal-5016511a0/",
-    },
+    },   
     
   };
   const publicity_person = {
+   
     person1: {
-      name: "Rohit Pal",
-      phone: "+91 8319629245",
+      name: "Ajay kumar khandelwal",
+      phone: "+91 7792062842",
       post: "Head",
-      imgname: "IMG_20231216_115627 - 2021MEB097 ROHIT_PAL.jpg",
-      insta: "https://www.instagram.com/rohitpal_18?igsh=MXhlNWd6N2pzZGZ6",
-      link: "https://www.linkedin.com/in/rohit-pal-08443b222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      imgname:
+        "team/AJAY_KUMAR KHANDELWAL.jpg",
+      insta: "https://www.instagram.com/ajaykhandelwal_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      link: "https://www.linkedin.com/in/ajay-kumar-khandelwal-1978aa231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
   };
   const finance_person = {
     person1: {
-      name: "Arnav Anand",
-      phone: "+91 7061991256",
-      post: "Finance Head",
-      imgname: "Arnav - 2020MEB103 ARNAV_ANAND.png",
-      insta: "https://www.instagram.com/_arnav03",
-      link: "https://www.linkedin.com/in/arnav3",
-    },
-    person2: {
-      name: "Sayantan Paul",
-      phone: "+91 7439910063",
-      post: "Finance Head",
+      name: "Ivan Jacob Thomas",
+      phone: "+91 7463884470",
+      post: "Head",
       imgname:
-        "WhatsApp Image 2023-02-15 at 18.23.59 - 2020MEB106 SAYANTAN_PAUL.jpeg",
-      insta: "https://www.instagram.com/Overthinking_menace",
-      link: "https://www.linkedin.com/in/Look it up",
+        "team/IVAN_JACOB THOMAS.jpeg",
+      insta: "https://www.instagram.com/ivan_jax/",
+      link: "https://www.linkedin.com/in/ivan-jacob-thomas-a62b9b239/",
     },
   };
   const iam_person = {
     person1: {
-      name: "Snehal Kumar",
-      phone: "+91 7093081024",
-      post: "Head - Industry Academia Meet",
-      imgname: "Snapchat-1473531011 - 2020MEB072 TIPPANA_SAI.jpg",
-      insta: "https://www.instagram.com/_always.snehal_",
-      link: "https://www.linkedin.com/in/Tippana Sai Snehal Kumar",
-    },
-    person2: {
-      name: "Janhvi Singh",
-      phone: "+91 8318035176",
-      post: "Industry Academia Meet Executive",
-      imgname: "IMG_20230331_024142 - 2021MEB062 JANHVI_SINGH.jpg",
-      insta: "https://www.instagram.com/raghuvanshi_janhvi",
-      link: "https://www.linkedin.com/in/janhvi-singh-858600239",
-      },
-  };
-  const coordinator_person = {
-    person1: {
       name: "Ivan Jacob Thomas",
       phone: "+91 7463884470",
-      post: "Coordinator",
+      post: "Head",
       imgname:
-        "WhatsApp Image 2023-08-20 at 11.18.55 PM - 2021MEB059 IVAN_JACOB THOMAS.jpeg",
+        "team/IVAN_JACOB THOMAS.jpeg",
       insta: "https://www.instagram.com/ivan_jax/",
       link: "https://www.linkedin.com/in/ivan-jacob-thomas-a62b9b239/",
     },
     person2: {
+      name: "Soumyadeep Dey",
+      phone: "+91 9800054616",
+      post: "Head",
+      imgname: "team/SOUMYADEEP_DEY.png",
+      insta: "https://www.instagram.com/deepsoumyadey",
+      link: "https://www.linkedin.com/in/Soumyadeep Dey",
+    },
+  };
+  const coordinator_person = {
+    person1: {
       name: "Janhvi Singh",
       phone: "+91 8318035176",
       post: "Coordinator",
-      imgname: "IMG_20230331_024142 - 2021MEB062 JANHVI_SINGH.jpg",
+      imgname: "team/JANHVI_SINGH.jpg",
       insta: "https://www.instagram.com/raghuvanshi_janhvi",
       link: "https://www.linkedin.com/in/janhvi-singh-858600239",
     },
-    person3: {
+    person2: {
       name: "Amartya Singh",
       phone: "+91 7357769918",
       post: "Coordinator",
       imgname:
-        "WhatsApp Image 2024-01-06 at 12.39.41_ddaa52be - 2021MEB043 AMARTYA_SINGH.jpg",
+        "team/AMARTYA_SINGH.jpg",
       insta: "https://www.instagram.com/amartya_singh.29",
       link: "https://www.linkedin.com/in/Amartya Singh",
     },
     
+    
   };
   const tl_person = {
     person1: {
-      name: "Pritam Nayek",
-      phone: "+91 7074437263",
-      post: "Travel & Logistics Head",
-      imgname: "IMG_20231021_110941_288 - 2020MEB034 PRITAM_NAYEK.jpg",
+      name: "Subhankar Mondal",
+      phone: "+91 7863906928",
+      post: "Head",
+      imgname: "team/Subhankar.jpg",
       insta:
-        "https://www.instagram.com/pritam._.nayek?igsh=MWd0b2s2cnY3d2Yxcw==",
-      link: "https://www.linkedin.com/in/pritam-nayek-024b28199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-    person2: {
-      name: "Himanshu Shivam",
-      phone: "+91 9674577342",
-      post: "Travel & Logistics Head",
-      imgname: "RD1-1067 - 2020MEB042 HIMANSHU_SHIVAM.jpg",
-      insta: "https://www.instagram.com/shivamhimansh",
-      link: "https://www.linkedin.com/in/Himanshu Shivam",
+        "https://www.instagram.com/sub_hankarmondal/",
+      link: "https://www.linkedin.com/in/subhankar-m-20032020/",
     },
   };
   const webD_person = {
@@ -236,7 +232,7 @@ export default function TeamPage() {
       name: "Utsab Kundu",
       phone: "+91 8100460390",
       post: "Head",
-      imgname: "utsab.jpg",
+      imgname: "team/utsab.jpg",
       insta: "https://www.instagram.com/utsab_kundu5/",
       link: "https://www.linkedin.com/in/utsab-kundu-3a742421b/",
     },
@@ -246,9 +242,17 @@ export default function TeamPage() {
       name: "Sai Venkat Rao",
       phone: "+91 8367663100",
       post: "Head",
-      imgname: "1000127139-01_2 (1).jpeg.jpg",
+      imgname: "team/sai_venkat.jpg",
       insta: "https://www.instagram.com/saivenkatrao.mpeg/",
       link: "https://www.linkedin.com/in/nagireddy-neela-sai-venkat-rao-8bb27a229",
+    },
+    person2: {
+      name: "Sabavath Akash Ram Naik",
+      phone: "+91 7815812686",
+      post: "Head",
+      imgname: "team/Akash_Ram.jpg",
+      insta: "https://www.instagram.com/akash_ram__/profilecard/?igsh=dTNjb3ByYXVsbDI=",
+      link: "https://www.linkedin.com/in/sabavath-akash-ram-naik-369980214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
   };
 
@@ -266,7 +270,7 @@ export default function TeamPage() {
             <Tab className="tab" label="Content and Design Team" />
             <Tab className="tab" label="Publicity Team" />
             <Tab className="tab" label="Sponsorship Team" />
-            <Tab className="tab" label="Food and Logistics Team" />
+            <Tab className="tab" label="Travel and Logistics Team" />
             <Tab className="tab" label="Industry Academia Meet" />
             <Tab className="tab" label="Videography and Photography Team" />
           </Tabs>
@@ -275,7 +279,6 @@ export default function TeamPage() {
           <Box style={{ width: "100%", marginBottom: "80px" }}>
             <ContactCard person={coordinator_person.person1} />
             <ContactCard person={coordinator_person.person2} />
-            <ContactCard person={coordinator_person.person3} />
           </Box>
 
           {/* <ContactCard person={coordinator_person.person3} /> */}
@@ -299,6 +302,9 @@ export default function TeamPage() {
             <ContactCard person={event_person.person1} />
             <ContactCard person={event_person.person2} />
             <ContactCard person={event_person.person3} />
+            <ContactCard person={event_person.person4} />
+            <ContactCard person={event_person.person5} />
+            <ContactCard person={event_person.person6} />
           </Box>
           {/* <ContactCard person={event_person.person6} /> */}
         </TabPanel>
@@ -316,7 +322,6 @@ export default function TeamPage() {
           {/*--------------------------------------------------------------------------------------------------------------------Design*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
             <ContactCard person={design_person.person1} />
-            <ContactCard person={design_person.person2} />
           </Box>
             {/* <ContactCard person={design_person.person6} /> */}
         </TabPanel>
@@ -332,20 +337,20 @@ export default function TeamPage() {
 
         <TabPanel value={value} index={1} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Finance*/}
-          {/* <ContactCard person={finance_person.person1} /> */}
+          <ContactCard person={finance_person.person1} />
           {/* <ContactCard person={finance_person.person2} /> */}
         </TabPanel>
 
         <TabPanel value={value} index={7} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Food*/}
-          {/* <ContactCard person={tl_person.person1} /> */}
-          {/* <ContactCard person={tl_person.person2} /> */}
+          <ContactCard person={tl_person.person1} />
         </TabPanel>
 
         <TabPanel value={value} index={8} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------IAM*/}          
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            {/* <ContactCard person={iam_person.person1} /> */}
+            <ContactCard person={iam_person.person1} />
+            <ContactCard person={iam_person.person2} />
           </Box>
           {/* <ContactCard person={iam_person.person2} /> */}
         </TabPanel>
@@ -354,6 +359,7 @@ export default function TeamPage() {
           {/*--------------------------------------------------------------------------------------------------------------------Video & Photo*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
             <ContactCard person={videoPhoto_person.person1} />
+            <ContactCard person={videoPhoto_person.person2} />
           </Box>
           {/* <ContactCard person={videoPhoto_person.person4} /> */}
 
