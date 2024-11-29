@@ -31,7 +31,7 @@ export default function AboutPage() {
       },
       "#trailer": {
         [theme.breakpoints.down("md")]: {
-          display: "none",
+          // display: "none",
         },
         width: "100vw",
         height: "100vh",
@@ -100,7 +100,7 @@ export default function AboutPage() {
 
   const handleSize = (e) => {
     const width = e.target.innerWidth;
-    if (width < 900) videoRef.current.pause();
+    if (width < 8) videoRef.current.pause();
     else {
       setMuted(true);
       videoRef.current.play().catch((e) => console.log(e));
@@ -108,7 +108,7 @@ export default function AboutPage() {
   };
 
   useEffect(() => {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 8) {
       videoRef.current?.play().catch((e) => console.log(e));
     } else {
       videoRef.current?.pause();
@@ -148,16 +148,18 @@ export default function AboutPage() {
     <Box sx={styles} className="center1">
       <Box className="videos">
         <div className="overlay"></div>
-        {/* <video
+        <video
           // onClick={toggleVolume}
           ref={videoRef}
           muted={muted}
           id="trailer"
+          className="tvid"
           autoPlay
           loop
         >
-          <source src="images/about/trailer2.mp4" type="video/mp4" />
-        </video> */}
+          <source src="images/about/teaser.mp4" type="video/mp4" />
+        </video>
+        
 
 
         {/* <Divider2 /> */}

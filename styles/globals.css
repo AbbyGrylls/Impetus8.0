@@ -432,3 +432,17 @@ img:hover {
     display: none;
   }
 }
+
+
+
+/*-------------------------------------------------------------about-------------------------------------------------------------------*/
+@media (max-width: 900px) {
+  .videos .overlay {    
+    height:auto !important;
+  }
+  .videos .tvid {
+    height:auto !important;
+    margin-top: 100px !important;
+  }
+  
+}
