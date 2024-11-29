@@ -105,7 +105,7 @@ export default function CadathonPage() {
           <p className="text-lg font-normal text-gray-200  ">
           This competition aims to develop the idea of Engineering Drawing and modelling of 3D
 structures on a CAD software. This event will be organized by the Department of Mechanical
-Engineering, IIEST Shibpur under the banner of &quot;Impetus 7.0&quot;.
+Engineering, IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
           </p>
           <div className="py-2 flex items-center flex-col justify-center ">
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">

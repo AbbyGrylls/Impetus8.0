@@ -150,6 +150,22 @@ export default function TeamPage() {
       insta: "https://www.instagram.com/piyalb_13",
       link: "https://www.linkedin.com/in/piyal-bhowmick-555563199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },   
+    person2: {
+      name: "Kanishka Dutta",
+      phone: "+91 9874168331",
+      post: "Head",
+      imgname: "team/Kanishka.jpg",
+      insta: "https://www.instagram.com/theindiandollar172/profilecard/?igsh=NnIxczg0NDlmYjlp",
+      link: "https://www.linkedin.com/in/kanishkadutta?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },   
+    person3: {
+      name: "Anurag Chakraborty",
+      phone: "+91 6290781657",
+      post: "Head",
+      imgname: "team/Anurag.jpg",
+      insta: "https://www.instagram.com/obla_diob_lada/profilecard/?igsh=ZTl3YTVuZXRuY3Qx",
+      link: "#",
+    },   
     
   };
   const publicity_person = {
@@ -162,6 +178,15 @@ export default function TeamPage() {
         "team/AJAY_KUMAR KHANDELWAL.jpg",
       insta: "https://www.instagram.com/ajaykhandelwal_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       link: "https://www.linkedin.com/in/ajay-kumar-khandelwal-1978aa231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    person2: {
+      name: "Shamiksha Kumari",
+      phone: "+91 9749520498",
+      post: "Head",
+      imgname:
+        "team/Shamiksha.jpg",
+      insta: "https://www.instagram.com/may.be.shami/profilecard/?igsh=MWp0eXkzaHZha2ds",
+      link: "https://www.linkedin.com/in/shamiksha-kumari-6a2623258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
   };
   const finance_person = {
@@ -281,7 +306,7 @@ export default function TeamPage() {
             <Tab className="tab" label="Publicity Team" />
             <Tab className="tab" label="Sponsorship Team" />
             <Tab className="tab" label="Travel and Logistics Team" />
-            <Tab className="tab" label="Industry Academia Meet" />
+            <Tab className="tab" label="Industry Academia Meet Team" />
             <Tab className="tab" label="Videography and Photography Team" />
           </Tabs>
         </Box>
@@ -332,6 +357,8 @@ export default function TeamPage() {
           {/*--------------------------------------------------------------------------------------------------------------------Design*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
             <ContactCard person={design_person.person1} />
+            <ContactCard person={design_person.person2} />
+            <ContactCard person={design_person.person3} />
           </Box>
             {/* <ContactCard person={design_person.person6} /> */}
         </TabPanel>
@@ -340,6 +367,7 @@ export default function TeamPage() {
           {/*--------------------------------------------------------------------------------------------------------------------Publicity */}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
             <ContactCard person={publicity_person.person1} />
+            <ContactCard person={publicity_person.person2} />
           </Box>
           {/* <ContactCard person={publicity_person.person6} /> */}
           

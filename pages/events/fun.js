@@ -91,7 +91,7 @@ export default function CadathonPage() {
       <Box sx={dataStyles} className="data">
         <Box>
           <Typography sx={{}} variant="p">
-            Impetus 7.0 brings to you a proper carnival game of skill. Dodge
+            Impetus 8.0 brings to you a proper carnival game of skill. Dodge
             between one bunker to another to make a lead over others . Test the
             cognitive and hand coordination in breaking down the complete
             pyramid. Try your hands on darts and wire wand loop. Take help with

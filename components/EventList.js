@@ -30,7 +30,7 @@ export default function EventList({ setCurrIdx, currIdx }) {
     "Death Race",
     "Drone Pursuit",
     "Valorant",
-    "Funny",
+    "Fun Bunkers",
   ];
 
   return (

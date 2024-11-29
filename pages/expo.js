@@ -97,7 +97,7 @@ export default function ExpoPage() {
             CAD Workshop
           </h2>
           <div className=" px-3 md:w-5/6 md:px-0 ">
-            Elevate your design game with Impetus 7.0 in association with Genex
+            Elevate your design game with Impetus 8.0 in association with Genex
             Engineering and Management Solutions!
             <br></br>
             Calling all budding designers and tech enthusiasts! Don&apos;t miss

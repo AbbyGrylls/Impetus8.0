@@ -221,6 +221,12 @@ p {
 }
 
 /*-------------------industryacademiameet--------------------------*/
+@media (max-width: 1026px) {
+  .pattern {
+    flex-direction: column !important;
+    margin-bottom: 150px;
+  }
+}
 @media (max-width: 680px) {
   .pattern {
     flex-direction: column !important;

@@ -113,7 +113,7 @@ export default function CadathonPage() {
           <Typography sx={{}} variant="p">
             To instil the essence of quizzing, IMechE IIEST Shibpur brings to
             you a Grand General Technical Quiz: IQ Ignition under the banner of
-            Impetus 7.0.
+            Impetus 8.0.
           </Typography>
 
           <ul className="nestedList" style={{ fontSize: "21px" }}>

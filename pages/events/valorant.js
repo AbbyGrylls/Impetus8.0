@@ -105,7 +105,7 @@ export default function CadathonPage() {
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
         <div className="py-2  ">
           Valorant has found an exponentially rising popularity amid the
-          youngsters today. So for the grand gaming event of Impetus 7.0, we
+          youngsters today. So for the grand gaming event of Impetus 8.0, we
           bring to you a Valorant tournament, where teams of 5 each, lock horns
           to be the best of the best. It will be conducted in 3 rounds, a
           knockout round, the eliminations, and the semi final and the final
@@ -261,7 +261,7 @@ export default function CadathonPage() {
               <ul className="BulletNone">
                 <li>
                   Registration will be done through google form. Participants
-                  will be required to join the discord server of Impetus 7.0.
+                  will be required to join the discord server of Impetus 8.0.
                 </li>
               </ul>{" "}
               <ul className="BulletNone">
