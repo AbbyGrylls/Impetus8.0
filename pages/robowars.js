@@ -69,16 +69,17 @@ export default function ExpoPage() {
   };
 
   return (
-    <Box sx={styles} style={{ backgroundColor:"#060606" }}>
+    <Box sx={styles} style={{ backgroundColor:"#060606", height: "100vh", }}>
       {/* Hero Section */}
       <Box
         className="heroRobowars"
         style={{
-          position: "relative", // Relative position to contain overlapping elements
-          height: "100vh", // Set height for proper stacking
+          position: "relative", 
+          height: "100vh", 
           width: "100%",
-          overflow: "hidden", // Prevent elements from spilling out
+          overflow: "hidden", 
           // backgroundColor:"black"
+          maxHeight:"1200px",
         }}
       >
         {/* Background Image */}
@@ -110,7 +111,9 @@ export default function ExpoPage() {
           quality={100}
           style={{
             position: "absolute",
-            bottom: "-4rem", 
+            // bottom: "-4rem", 
+            // top:"18rem",
+            top:"25%",
             margin:"0 5vw",
             // bottom: "0px", 
             // left: "50%",

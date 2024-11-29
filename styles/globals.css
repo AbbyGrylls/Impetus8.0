@@ -402,13 +402,14 @@ img:hover {
   .heroRobowars .roboPic {
     width: 100% !important;
     margin:0 !important;
-    bottom:0 !important;
+    /* bottom:0 !important; */
   }
 }
 @media (max-width: 900px) {
   .heroRobowars .roboPic {
     
-    bottom:5rem !important;
+    /* bottom:5rem !important; */
+    /* bottom:15vh !important; */
   }
 }
 @media (max-width: 840px) {
