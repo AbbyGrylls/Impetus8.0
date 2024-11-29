@@ -72,10 +72,10 @@ export default function TeamPage() {
   };
   const sponsorship_person = {
     person1: {
-      name: "Ketan",
+      name: "Ketan Masurkar",
       phone: "+91 8788330638",
       post: "Head",
-      imgname: "team/.jpg",
+      imgname: "team/ketan.jpg",
       insta: "",
       link: "",
     },     

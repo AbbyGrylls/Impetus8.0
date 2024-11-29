@@ -3,8 +3,6 @@ import { Box } from "@mui/system";
 import Link from "next/link";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-// import Link from 'next/link'; // Adjust based on your setup
-// import { Box, Typography } from '@mui/material'; // Adjust imports based on your library
 
 const containerStyles = {
   marginTop: "50px",
