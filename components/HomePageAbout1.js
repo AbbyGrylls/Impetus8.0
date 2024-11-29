@@ -1,6 +1,10 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+// import Link from 'next/link'; // Adjust based on your setup
+// import { Box, Typography } from '@mui/material'; // Adjust imports based on your library
 
 const containerStyles = {
   marginTop: "50px",
@@ -90,19 +94,24 @@ export default function HomePageAbout1(p) {
   return (
     <Box sx={containerStyles}>
       <Box sx={style}>
-        <Box className="tShirt" style={{}}>
-          <Link href={p.link}>
-            <img src={`/images/${p.img}`} alt="tshirt" />
-          </Link>
+        <Box className="tShirt">
+          {p.img === 'teaser' ? (
+            <LiteYouTubeEmbed id="gp4IQg8Or8g" />
+          ) : p.img.endsWith('.png') ? (
+            <Link href={p.link}>
+              <img src={`/images/${p.img}`} alt="tshirt" />
+            </Link>
+          ) : (
+            <div>No valid content to display</div>
+          )}
         </Box>
         <Box className="content">
           <Typography className="flux" variant="h1">
             {p.name}
           </Typography>
-          <Typography variant="p">{p.text}</Typography>
+          <Typography variant="body1">{p.text}</Typography>
         </Box>
       </Box>
     </Box>
   );
 }
-
