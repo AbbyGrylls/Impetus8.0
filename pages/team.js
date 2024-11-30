@@ -77,7 +77,7 @@ export default function TeamPage() {
       post: "Head",
       imgname: "team/ketan.jpg",
       insta: "",
-      link: "",
+      link: "https://www.linkedin.com/in/ketan-masurkar-0a4b24225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },     
     person2: {
       name: "Rohit Pal",
