@@ -136,7 +136,7 @@ export default function Contact() {
             <IconButton
               onClick={(event) =>
                 (window.location.href =
-                  "https://www.linkedin.com/in/society-of-mechanical-engineers-iiest-shibpur-89244a193")
+                  "https://www.linkedin.com/in/sme-iiest-shibpur-835323228/")
               }
             >
               <LinkedInIcon className="transform transition duration-100 hover:scale-110 ease-in-out" />
