@@ -184,7 +184,7 @@ export default function SponsorsPage() {
         </Box>
         <Box
           component="img"
-          src="/docs/Group_22.svg" 
+          src="/docs/ScatsVis.svg" 
           alt="Sponsor Categories"
           sx={{
             width: "100%", 
