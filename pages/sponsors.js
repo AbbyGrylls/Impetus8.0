@@ -188,7 +188,7 @@ export default function SponsorsPage() {
           alt="Sponsor Categories"
           sx={{
             width: "100%", 
-            maxWidth: "600px", 
+            maxWidth: "800px", 
             height: "auto", 
             margin: "20px auto", 
             display: "block", 
