@@ -1,8 +1,15 @@
-import { Typography, useTheme } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography, useTheme, Button } from "@mui/material";
+import { Box, display } from "@mui/system";
 import Contact from "../components/Contact";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import React, { useRef, useEffect, useState } from "react";
+
 export default function ExpoPage() {
+  //const [infoRef, infoInView] = useInView({ threshold: 0.1 });
+  const [rulebookRef, rulebookInView] = useInView({ threshold: 0.1 });
+  const [timelineRef, timelineInView] = useInView({ threshold: 0.1 });
+  const [aboutRef, aboutInView] = useInView({ threshold: 0.1 });
   const theme = useTheme();
 
   const btnStyle = {
@@ -69,17 +76,17 @@ export default function ExpoPage() {
   };
 
   return (
-    <Box sx={styles} style={{ backgroundColor:"#060606", height: "100vh", }}>
+    <Box sx={styles} style={{ backgroundColor: "#060606", height: "100vh", }}>
       {/* Hero Section */}
       <Box
         className="heroRobowars"
         style={{
-          position: "relative", 
-          height: "100vh", 
+          position: "relative",
+          height: "100vh",
           width: "100%",
-          overflow: "hidden", 
+          overflow: "hidden",
           // backgroundColor:"black"
-          maxHeight:"1200px",
+          maxHeight: "1200px",
         }}
       >
         {/* Background Image */}
@@ -95,12 +102,12 @@ export default function ExpoPage() {
             left: 0,
             width: "100%",
             height: "100%",
-            filter:"brightness(10)", 
+            filter: "brightness(10)",
             zIndex: 2,
             // border: "solid red",
           }}
         />
-  
+
         {/* Foreground Image */}
         <Image
           className="roboPic"
@@ -113,19 +120,19 @@ export default function ExpoPage() {
             position: "absolute",
             // bottom: "-4rem", 
             // top:"18rem",
-            top:"25%",
-            margin:"0 5vw",
+            top: "25%",
+            margin: "0 5vw",
             // bottom: "0px", 
             // left: "50%",
             // transform: "translate(-50%, -50%)", 
             zIndex: 1,
             // border: "2px solid green",
-            width:"90%",
-            maxWidth:"1400px",
+            width: "90%",
+            maxWidth: "1400px",
             // height:"100%",
           }}
         />
-  
+
         {/* Content Box */}
         <Box
           style={{
@@ -139,9 +146,9 @@ export default function ExpoPage() {
             justifyContent: "center",
             flexDirection: "column",
             textAlign: "center",
-            width:"100%",
-            lineHeight:"5rem",
-            padding:"0 1rem",
+            width: "100%",
+            lineHeight: "5rem",
+            padding: "0 1rem",
           }}
         >
           <Typography
@@ -161,8 +168,8 @@ export default function ExpoPage() {
               fontSize: "6rem",
               fontWeight: "bold",
               color: "#fff",
-              fontFamily:"Bebas Neue,sans-serif",
-              letterSpacing:"4px",
+              fontFamily: "Bebas Neue,sans-serif",
+              letterSpacing: "4px",
             }}
           >
             EXPERIENCE THE FORGE!
@@ -172,31 +179,36 @@ export default function ExpoPage() {
             style={{
               fontSize: "1.25rem",
               color: "#fff",
-              lineHeight:"1.75rem",
-              fontFamily:"Bebas Neue,sans-serif",
-              letterSpacing:"2px",
-              padding:"2rem 0"
+              lineHeight: "1.75rem",
+              fontFamily: "Bebas Neue,sans-serif",
+              letterSpacing: "2px",
+              padding: "2rem 0"
             }}
           >
             Craft your metal masterpiece and unleash mayhem in the arena!
           </Typography>
+          <Button
+            href="/register"
+            variant="p"
+            class="upper_p"
+            sx={{
+              color: "#fff",
+              fontSize: "20px",
+              fontFamily: "Bebas Neue, sans-serif",
+              padding: "10px 20px",
+              border: "5px",
+              borderRadius: "3px",
+              backgroundColor: "rgb(255 67 26)",
+            }}
+          >
+            Register Now!
+          </Button>
         </Box>
       </Box>
-      <Box style={{
-        textAlign:"center",
-        padding:"3rem 0",
-        marginBottom:"5rem",
-        fontSize:"2rem",
-        fontFamily:"Bebas Neue",
-        letterSpacing:"2px",
-
-         }}>Coming <span style={{
-          // color:"rgb(255 67 26)"
-          }}>Soon</span>...</Box>
-  
+      
       {/* Contact Section */}
       <Contact style={{ bottom: "0", position: "relative" }} />
     </Box>
   );
-  
+
 }
