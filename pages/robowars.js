@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 import Timeline from "./Timeline";
 import NoiseBackground from "./NoiseBackground";
 import { useEffect, useRef, useState } from "react";
-import zIndex from "@mui/material/styles/zIndex";
 
 export default function ExpoPage() {
   const [rulebookRef, rulebookInView] = useInView({ threshold: 0.1 });
