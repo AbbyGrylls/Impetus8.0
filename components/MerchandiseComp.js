@@ -69,7 +69,7 @@ const style = {
     margin: "25px 0",
     ".Btn": {
       border: "solid #00A7E7 2px",
-      borderRadius: "25px",
+      borderRadius: "17px",
       padding: "10px 30px",
       color: "white",
       ":hover": {
@@ -81,9 +81,9 @@ const style = {
   ".tShirt": {
     backgroundColor: "#c4c4c4",
     width: {
-      lg: "30%",
-      sm: "40%",
-      xs: "80%",
+      lg: "40%",
+      sm: "50%",
+      xs: "90%",
     },
     borderRadius: "10px",
   },
@@ -94,33 +94,25 @@ export default function MerchandiseComp() {
   return (
     <Box sx={containerStyles}>
       <Typography className="flux" variant="h1">
-        MERCHANDISE
+      T-Shirt Design Contest
       </Typography>
       <Box sx={style}>
         <Box className="content">
           <Typography variant="p">
-            Our official Impetus merchandise T-shirt is the perfect addition to
-            your wardrobe! Made with High-quality materials, Reflective print
-            and Customised Name, this shirt is sure to turn heads. Whether youre
-            a die-hard Impetus fan or simply looking for a stylish and
-            comfortable new piece to add to your collection, this T-shirt is the
-            perfect choice.<br></br>
-            <br></br>
-            Stand out from the crowd and show your support for the Impetus
-            community with our exclusive merchandise. Do not miss out on this
-            unique opportunity to own an official Impetus T-shirt that is not
-            only fashionable but also a great way to connect with like-minded
-            individuals who share your passion for this iconic brand. So,
-            upgrade your wardrobe today and join the Impetus community with our
-            official merchandise T-shirt!
+          Ignite your creativity and design the ultimate t-shirt for Impetus 8.0! 🌟 <br></br>
+          Let your imagination run wild and create a design that captures the essence of innovation 💡, technology 🖥, and the spirit of our college 🎓.<br></br><br></br>
+          Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let's make this year's t-shirt a masterpiece.
+
+            
+            
           </Typography>
           <Box className="ButtonBox">
             {/* <Button className="Btn" onClick={handleClick}>Buy Now</Button> */}
-            <Button className="Btn" href="https://forms.gle/C2H9EZJeNkJ5PATD6">Buy Now</Button>
+            <Button className="Btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe9w0Pp528U1TvNGUddCDMD7gcfFfgvIfDEJMYACQ1LFCve4Q/viewform">Submit</Button>
           </Box>
         </Box>
         <Box className="tShirt" style={{}}>
-          <img src="/images/T_Shirt_WE_MOVETHE_WORLD-removebg-preview.png" alt="tshirt" />
+          <img src="/images/home/Tshirt.jpg" alt="tshirt" />
         </Box>
       </Box>
     </Box>
