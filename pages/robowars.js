@@ -11,7 +11,7 @@ export default function ExpoPage() {
   const [rulebookRef, rulebookInView] = useInView({ threshold: 0.1 });
   const [aboutRef, aboutInView] = useInView({ threshold: 0.1 });
   const theme = useTheme();
-  
+
   const btnStyle = {
     border: "solid #1E3A8A 2px",
     borderRadius: "10px",
@@ -78,8 +78,6 @@ export default function ExpoPage() {
   return (
     <Box sx={styles} style={{ backgroundColor: "#060606", height: "100vh", }}>
       {/* Hero Section */}
-      <Box //hero scetion
-       >
       <Box
         className="heroRobowars"
         style={{
@@ -109,7 +107,6 @@ export default function ExpoPage() {
             // border: "solid red",
           }}
         />
-
         {/* Foreground Image */}
         <Image
           className="roboPic"
@@ -129,7 +126,9 @@ export default function ExpoPage() {
             // transform: "translate(-50%, -50%)", 
             zIndex: 1,
             // border: "2px solid green",
-            width: "90%",
+            width: "100%",
+            marginLeft:"0px",
+            marginTop:"-20px",
             maxWidth: "1400px",
             // height:"100%",
           }}
@@ -207,30 +206,40 @@ export default function ExpoPage() {
           </Button>
         </Box>
       </Box>
-      </Box>
       <Box sx={{ //overall box with flex of 1st pg and 2md pg
         display: "flex",
         flexDirection: "column",
-        gap:"50px"
-      }}>
-        <NoiseBackground />
+       // gap: "50px",
+        "@media (max-width: 900px)": {
+          marginTop: "-160px",
+          
+        },
+      }}> <NoiseBackground style={{zIndex:0,}} />
         <Box //1st pg box starts here
           ref={aboutRef}
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", md: "row-reverse" }, 
+            zIndex:1,
+            flexDirection: { xs: "column", md: "row-reverse" },
             alignItems: { xs: "center", md: "flex-start" },
             justifyContent: "space-between",
             gap: 2,
             width: "100%",
-            flexGrow:"1000px",
+            flexGrow: "1400px",
             maxWidth: "1200px",
+            "@media (min-width: 900px)": {
+              maxWidth:"1400px",
+              padding:"0 60px 0 90px",
+            },
             mx: "auto",
-            opacity: aboutInView ? 3 : 0,
-            transform: aboutInView ? "translateY(50px)" : "translateY(200px)",
-            transition: "all 0.5s ease-in-out",
+            transform: aboutInView ? "translateY(0)" : "translateY(75px)", // Smooth entry from below
+            opacity: aboutInView ? 3 : 0, // Fade-in effect
+            transition: "transform 1s ease-out, opacity 1s ease-out", // Smooth transition
+            
+            position:"relative",
+            //flexGrow:1,
           }}
-        >
+        >  
           {/* Image Component */}
           <Box
             sx={{
@@ -249,11 +258,11 @@ export default function ExpoPage() {
                 width: "100%",
                 maxWidth: "400px",
                 height: "auto",
-                marginTop:"100px",
+                marginTop: "100px",
               }}
             />
           </Box>
-          
+
           {/* Text Component */}
           <Box
             sx={{
@@ -267,7 +276,7 @@ export default function ExpoPage() {
               textAlign: { xs: "center", md: "justify" },
             }}
           >
-            <Typography sx={{ fontFamily:"Bebas Neue,sans-serif",color:"rgb(255,67,24)",fontSize:"40px",marginBottom:"15px"}}
+            <Typography sx={{ fontFamily: "Bebas Neue,sans-serif", color: "rgb(255,67,24)", fontSize: "40px", marginBottom: "15px" }}
             >{">>"}Battlebots</Typography>
             {[
               "Welcome to the electrifying world of BattleBots, where metal warriors clash in the ultimate test of engineering and strategy! This is your gateway to the adrenaline-fueled realm of robot combat, where teams of ingenious builders pit their custom creations against each other in fierce battles of wit and metal.",
@@ -294,41 +303,42 @@ export default function ExpoPage() {
           sx={{
             display: "flex",
             flexDirection: {
-              xs: "column", 
-              md: "row", 
+              xs: "column",
+              md: "row",
             },
             alignItems: "center",
             justifyContent: "center",
             gap: 2,
             width: "100%",
             marginTop: {
-              xs: "20px", 
+              xs: "20px",
               md: "0px",
             },
             "@media (max-width: 1000px)": {
-               flexDirection: "column", 
-               marginTop: "20px", 
-              },
-              overflow:"hidden",
+              flexDirection: "column",
+              marginTop: "20px",
+            },
+            overflow: "hidden",
+            position:"relative"
           }}
         >
           {/* Rulebook Section */}
           <Box
             ref={rulebookRef}
             sx={{
-              position:"sticky",
-            zIndex:0,
+              position: "sticky",
+              top:"20px",
+              zIndex: 0,
               flex: { xs: "1 1 auto", sm: "0 0 25%" },
-              width: { xs: "95%", sm: "95%" }, 
+              width: { xs: "95%", sm: "95%" },
               padding: { xs: 3, sm: 2 },
               boxSizing: "border-box",
-              marginLeft:{md:"80px ", xs:"-35px auto"},
+              marginLeft: { md: "80px ", xs: "-35px auto" },
               "@media (min-width: 1000px)": {
-                marginTop:"-500px",
-                marginBottom:"50px",
+                marginTop: "-500px",
+                marginBottom: "50px",
               },
               borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
               opacity: rulebookInView ? 1 : 0,
               transform: rulebookInView ? "translateY(50)" : "translateY(200px)",
               transition: "all 0.7s ease-in-out",
@@ -362,14 +372,14 @@ export default function ExpoPage() {
                     fontSize: "17px",
                     mb: 1.2,
                     color: "#fff",
-                    textAlign: "left", 
+                    textAlign: "left",
                   }}
                 >
                   {text}
                 </Typography>
               ))}
             </Box>
-
+           
             <Box sx={{ marginTop: "-10px", marginLeft: "10px", display: "flex", textAlign: "center", alignItems: "center", justifyContent: "flex-start" }}>
               <Button
                 href="/docs/robowars-rulebook.pdf"
@@ -382,7 +392,7 @@ export default function ExpoPage() {
                   padding: "12px 20px",
                   transition: "background-color 0.3s ease",
                   "&:hover": {
-                    backgroundColor: "rgb(200, 47, 18)", 
+                    backgroundColor: "rgb(200, 47, 18)",
                   },
                 }}
               >
@@ -390,7 +400,6 @@ export default function ExpoPage() {
               </Button>
             </Box>
           </Box>
-
           {/* Timeline Section */}
           <Box ref={rulebookRef}
             sx={{
@@ -398,10 +407,10 @@ export default function ExpoPage() {
               boxSizing: "border-box",
               justifyContent: "center",
               alignItems: "flex-start",
-              marginTop: { xs: "20px", md: "0px" }, 
+              marginTop: { xs: "20px", md: "0px" },
               padding: { xs: "10px", sm: "20px" },
               "@media (min-width: 1000px)": {
-                marginTop:"100px",
+                marginTop: "100px",
               },
               opacity: rulebookInView ? 1 : 0,
               transform: rulebookInView ? "translateY(50)" : "translateY(200px)",
@@ -413,8 +422,9 @@ export default function ExpoPage() {
         </Box>
 
       </Box>
-      {/* Contact Section */}
-      <Contact style={{ bottom: "0", position: "relative",  }} />
+      {/* Contact Section */}<Box style={{position: "relative",zIndex:2}}>
+      <Contact style={{bottom:"0", position: "relative" }} />
+      </Box>
     </Box>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const NoiseBackground = () => {
+const NoiseBackground = ({ style = {} }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -11,7 +11,6 @@ const NoiseBackground = () => {
 
     const generateNoise = () => {
       const imageData = ctx.createImageData(canvas.width, canvas.height);
-      
      
       const stepSize = 1;  
       for (let i = 0; i < imageData.data.length; i += stepSize * 4) {
@@ -37,11 +36,11 @@ const NoiseBackground = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: 0,
+        ...style,
         pointerEvents: "none",
       }}
     />
   );
 };
 
-export default NoiseBackground;
+export default NoiseBackground
