@@ -126,7 +126,7 @@ const Timeline = () => {
                     fontSize: "1rem",
                     lineHeight: 1.6,
                     color: "#fff",
-                    fontFamily: "'Bebas Neue', sans-serif",
+                    fontFamily: "'Bebas Neue', sans-serif"
                   }}
                 >
                   {item.description}
