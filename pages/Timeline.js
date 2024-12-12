@@ -25,8 +25,8 @@ const phases = [
 ];
 
 const Timeline = () => {
-  // Use a separate array of refs to manage the in-view state for each phase
-  const refs = phases.map(() => useInView({ threshold: 0 }));
+  // Use an array of refs and inView states
+  const refsAndStates = phases.map(() => useInView({ threshold: 0.1 }));
 
   return (
     <Box
@@ -63,7 +63,7 @@ const Timeline = () => {
         }}
       >
         {phases.map((item, index) => {
-          const [ref, inView] = refs[index];
+          const { ref, inView } = refsAndStates[index];
           return (
             <Box
               key={index}
@@ -90,11 +90,12 @@ const Timeline = () => {
                   textAlign: index % 2 === 0 ? "right" : "left",
                   marginLeft: index % 2 === 0 ? "10px" : "0",
                   marginRight: index % 2 === 0 ? "0" : "10px",
-                  transition: "all 0.8s ease",transform: inView
-                  ? "translate(0, 0)" // Final position when in view
-                  : index % 2 === 0
-                  ? "translate(-50px, -50px)" // Transition for left items
-                  : "translate(50px, -50px)",
+                  transition: "all 0.8s ease",
+                  transform: inView
+                    ? "translate(0, 0)" // Final position when in view
+                    : index % 2 === 0
+                    ? "translate(-50px, -50px)" // Transition for left items
+                    : "translate(50px, -50px)",
                   opacity: inView ? 1 : 0,
                 }}
               >
@@ -126,7 +127,7 @@ const Timeline = () => {
                     fontSize: "1rem",
                     lineHeight: 1.6,
                     color: "#fff",
-                    fontFamily: "'Bebas Neue', sans-serif"
+                    fontFamily: "'Bebas Neue', sans-serif",
                   }}
                 >
                   {item.description}
