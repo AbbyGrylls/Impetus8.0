@@ -209,7 +209,7 @@ export default function ExpoPage() {
       <Box sx={{ //overall box with flex of 1st pg and 2md pg
         display: "flex",
         flexDirection: "column",
-       // gap: "50px",
+       //gap: "50px",
         "@media (max-width: 900px)": {
           marginTop: "-160px",
           
@@ -219,25 +219,24 @@ export default function ExpoPage() {
           ref={aboutRef}
           sx={{
             display: "flex",
-            zIndex:1,
+            zIndex:0,
             flexDirection: { xs: "column", md: "row-reverse" },
             alignItems: { xs: "center", md: "flex-start" },
             justifyContent: "space-between",
             gap: 2,
             width: "100%",
-            flexGrow: "1400px",
+           flexGrow: 1,
             maxWidth: "1200px",
             "@media (min-width: 900px)": {
               maxWidth:"1400px",
               padding:"0 60px 0 90px",
             },
             mx: "auto",
-            transform: aboutInView ? "translateY(0)" : "translateY(75px)", // Smooth entry from below
-            opacity: aboutInView ? 3 : 0, // Fade-in effect
-            transition: "transform 1s ease-out, opacity 1s ease-out", // Smooth transition
-            
+            transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out", 
             position:"relative",
-            //flexGrow:1,
+            overflow:"hidden"
           }}
         >  
           {/* Image Component */}
@@ -326,10 +325,10 @@ export default function ExpoPage() {
           <Box
             ref={rulebookRef}
             sx={{
-              position: "sticky",
-              top:"20px",
-              zIndex: 0,
+              zIndex: 3,
               flex: { xs: "1 1 auto", sm: "0 0 25%" },
+              position:"sticky",
+              top:"30px",
               width: { xs: "95%", sm: "95%" },
               padding: { xs: 3, sm: 2 },
               boxSizing: "border-box",
