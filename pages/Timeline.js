@@ -25,8 +25,14 @@ const phases = [
 ];
 
 const Timeline = () => {
-  // Use an array of refs and inView states
-  const refsAndStates = phases.map(() => useInView({ threshold: 0.1 }));
+  // Explicitly declare refs and inView states for each phase
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 });
+  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.1 });
+  const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.1 });
+  const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.1 });
+
+  const refs = [ref1, ref2, ref3, ref4];
+  const inViews = [inView1, inView2, inView3, inView4];
 
   return (
     <Box
@@ -57,13 +63,15 @@ const Timeline = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "50px", // Increased gap between phase boxes
+          gap: "50px",
           width: "100%",
           position: "relative",
         }}
       >
         {phases.map((item, index) => {
-          const { ref, inView } = refsAndStates[index];
+          const ref = refs[index];
+          const inView = inViews[index];
+
           return (
             <Box
               key={index}
@@ -76,15 +84,14 @@ const Timeline = () => {
                 zIndex: 1,
               }}
             >
-              {/* Phase Box */}
               <Box
                 ref={ref}
                 sx={{
                   padding: "20px",
                   width: {
-                    xs: "40%", // Adjusted size for smaller screens
-                    sm: "40%", // Equal size for left and right boxes
-                    md: "40%", // Wider boxes for medium screens
+                    xs: "40%",
+                    sm: "40%",
+                    md: "40%",
                   },
                   maxWidth: "400px",
                   textAlign: index % 2 === 0 ? "right" : "left",
@@ -92,9 +99,9 @@ const Timeline = () => {
                   marginRight: index % 2 === 0 ? "0" : "10px",
                   transition: "all 0.8s ease",
                   transform: inView
-                    ? "translate(0, 0)" // Final position when in view
+                    ? "translate(0, 0)"
                     : index % 2 === 0
-                    ? "translate(-50px, -50px)" // Transition for left items
+                    ? "translate(-50px, -50px)"
                     : "translate(50px, -50px)",
                   opacity: inView ? 1 : 0,
                 }}
