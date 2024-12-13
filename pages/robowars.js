@@ -235,7 +235,7 @@ export default function ExpoPage() {
             transition: "transform 1s ease-out, opacity 1s ease-out",  */
             position:"relative",
             "@media (max-width: 900px)": {
-              marginTop: "-150px",
+              marginTop: "-100px",
             },
             overflow:"hidden"
           }}
