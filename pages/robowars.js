@@ -235,7 +235,11 @@ export default function ExpoPage() {
             transition: "transform 1s ease-out, opacity 1s ease-out",  */
             position:"relative",
             "@media (max-width: 900px)": {
+<<<<<<< HEAD
               marginTop: "-100px",
+=======
+              marginTop: "-150px",
+>>>>>>> 5503214 ([FIX] robowars page)
             },
             overflow:"hidden"
           }}
