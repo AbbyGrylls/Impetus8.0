@@ -235,11 +235,7 @@ export default function ExpoPage() {
             transition: "transform 1s ease-out, opacity 1s ease-out",  */
             position:"relative",
             "@media (max-width: 900px)": {
-<<<<<<< HEAD
               marginTop: "-100px",
-=======
-              marginTop: "-150px",
->>>>>>> 5503214 ([FIX] robowars page)
             },
             overflow:"hidden"
           }}
@@ -367,7 +363,7 @@ export default function ExpoPage() {
                 fontSize: { xs: "1.5rem", sm: "2rem" },
               }}
             >
-              Rulebook
+            Rulebook
             </Typography>
 
             <Box sx={{ maxWidth: "600px", wordWrap: "break-word", padding: "10px", margin: "0" }}>
