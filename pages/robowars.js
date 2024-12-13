@@ -210,7 +210,7 @@ export default function ExpoPage() {
         display: "flex",
         flexDirection: "column",
         "@media (max-width: 900px)": {
-          marginTop: "-160px",
+          marginTop: "-100px",
         },
       }}> <NoiseBackground style={{zIndex:0,}} />
         <Box //1st pg box starts here
@@ -234,6 +234,9 @@ export default function ExpoPage() {
             pacity: aboutInView ? 3 : 0,
             transition: "transform 1s ease-out, opacity 1s ease-out",  */
             position:"relative",
+            "@media (max-width: 900px)": {
+              marginTop: "-150px",
+            },
             overflow:"hidden"
           }}
         >  
