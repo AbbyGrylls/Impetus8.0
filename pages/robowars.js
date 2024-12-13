@@ -1,10 +1,10 @@
 import { Typography, useTheme, Button } from "@mui/material";
-import { Box, display } from "@mui/system";
+import { Box, } from "@mui/system";
 import Contact from "../components/Contact";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import Timeline from "./Timeline";
-import NoiseBackground from "./NoiseBackground";
+import Timeline from "../components/Timeline";
+import NoiseBackground from "../components/NoiseBackground";
 import { useEffect, useRef, useState } from "react";
 
 export default function ExpoPage() {
@@ -76,7 +76,7 @@ export default function ExpoPage() {
   };
 
   return (
-    <Box sx={styles} style={{ backgroundColor: "#060606", height: "100vh", }}>
+    <Box sx={styles} className="center1" style={{ backgroundColor: "#060606",/* height: "100vh", */}}>
       {/* Hero Section */}
       <Box
         className="heroRobowars"
@@ -216,10 +216,10 @@ export default function ExpoPage() {
         },
       }}> <NoiseBackground style={{zIndex:0,}} />
         <Box //1st pg box starts here
-          ref={aboutRef}
+          /* ref={aboutRef} */
           sx={{
             display: "flex",
-            zIndex:0,
+            zIndex:2,
             flexDirection: { xs: "column", md: "row-reverse" },
             alignItems: { xs: "center", md: "flex-start" },
             justifyContent: "space-between",
@@ -232,19 +232,22 @@ export default function ExpoPage() {
               padding:"0 60px 0 90px",
             },
             mx: "auto",
-            transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            /* transform: aboutInView ? "translateY(0)" : "translateY(75px)",
             pacity: aboutInView ? 3 : 0,
-            transition: "transform 1s ease-out, opacity 1s ease-out", 
+            transition: "transform 1s ease-out, opacity 1s ease-out",  */
             position:"relative",
             overflow:"hidden"
           }}
         >  
           {/* Image Component */}
-          <Box
+          <Box ref={aboutRef}
             sx={{
               flex: { xs: "1 1 auto", md: "0 0 40%" },
               display: "flex",
               justifyContent: "center",
+              transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out", 
             }}
           >
             <Image
@@ -263,7 +266,7 @@ export default function ExpoPage() {
           </Box>
 
           {/* Text Component */}
-          <Box
+          <Box ref={aboutRef}
             sx={{
               flex: { xs: "1 1 auto", md: "0 0 60%" },
               maxWidth: "100%",
@@ -273,6 +276,9 @@ export default function ExpoPage() {
               boxSizing: "border-box",
               overflow: "hidden",
               textAlign: { xs: "center", md: "justify" },
+              transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out", 
             }}
           >
             <Typography sx={{ fontFamily: "Bebas Neue,sans-serif", color: "rgb(255,67,24)", fontSize: "40px", marginBottom: "15px" }}
@@ -297,6 +303,7 @@ export default function ExpoPage() {
               </Typography>
             ))}
           </Box>
+          <NoiseBackground style={{zIndex:-1,}} />
         </Box>{/* 1st pg box ends here */}
         <Box
           sx={{
@@ -320,7 +327,7 @@ export default function ExpoPage() {
             overflow: "hidden",
             position:"relative"
           }}
-        >
+        > <NoiseBackground style={{zIndex:0,}} />
           {/* Rulebook Section */}
           <Box
             ref={rulebookRef}
@@ -421,8 +428,9 @@ export default function ExpoPage() {
         </Box>
 
       </Box>
-      {/* Contact Section */}<Box style={{position: "relative",zIndex:2}}>
+      {/* Contact Section */}<Box style={{position: "relative",zIndex:1,width:"1400px"}}>
       <Contact style={{bottom:"0", position: "relative" }} />
+      <NoiseBackground style={{zIndex:-1,}} />
       </Box>
     </Box>
   );
