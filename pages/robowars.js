@@ -209,10 +209,8 @@ export default function ExpoPage() {
       <Box sx={{ //overall box with flex of 1st pg and 2md pg
         display: "flex",
         flexDirection: "column",
-       //gap: "50px",
         "@media (max-width: 900px)": {
           marginTop: "-160px",
-          
         },
       }}> <NoiseBackground style={{zIndex:0,}} />
         <Box //1st pg box starts here
@@ -322,7 +320,7 @@ export default function ExpoPage() {
             },
             "@media (max-width: 1000px)": {
               flexDirection: "column",
-              marginTop: "20px",
+              marginTop: "0px",
             },
             overflow: "hidden",
             position:"relative"
