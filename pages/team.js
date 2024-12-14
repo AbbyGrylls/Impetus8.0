@@ -237,7 +237,22 @@ export default function TeamPage() {
       insta: "https://www.instagram.com/amartya_singh.29",
       link: "https://www.linkedin.com/in/Amartya Singh",
     },
-    
+    person3: {
+      name:"Varun Gautam",
+      phone:"+91 9368145959",
+      post:"Joint Coordinator",
+      imgname: "team/varunIMG.jpeg",
+      insta:"https://www.instagram.com/smile__varun?igsh=YWN6emg5c2xwdXhj",
+      link:"https://in.linkedin.com/in/varun-gautam-1205012a9"
+    },
+    person4: {
+      name:"Abhishek Bhatt",
+      phone:"+91 6395399362",
+      post:"Joint Coordinator",
+      imgname: "team/abhishekIMG.jpeg",
+      insta:"https://www.instagram.com/abhibhtabhi?igsh=MTY3Y2d4Znd2YmZjYw==",
+      link:" https://www.linkedin.com/in/abhishek-bhatt-306b28259"
+    }
     
   };
   const tl_person = {
@@ -316,8 +331,8 @@ export default function TeamPage() {
             <ContactCard person={coordinator_person.person2} />
           </Box>
 
-          {/* <ContactCard person={coordinator_person.person3} /> */}
-          {/* <ContactCard person={coordinator_person.person4} /> */}
+          <ContactCard person={coordinator_person.person3} /> 
+          <ContactCard person={coordinator_person.person4} />
         </TabPanel>
         <TabPanel value={value} index={6} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Sponsorship Team*/}
