@@ -1,8 +1,15 @@
-import { Typography, useTheme } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography, useTheme, Button } from "@mui/material";
+import { Box, } from "@mui/system";
 import Contact from "../components/Contact";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import Timeline from "../components/Timeline";
+import NoiseBackground from "../components/NoiseBackground";
+import { useEffect, useRef, useState } from "react";
+
 export default function ExpoPage() {
+  const [rulebookRef, rulebookInView] = useInView({ threshold: 0.1 });
+  const [aboutRef, aboutInView] = useInView({ threshold: 0.1 });
   const theme = useTheme();
 
   const btnStyle = {
@@ -69,17 +76,17 @@ export default function ExpoPage() {
   };
 
   return (
-    <Box sx={styles} style={{ backgroundColor:"#060606", height: "100vh", }}>
+    <Box sx={styles} className="center1" style={{ backgroundColor: "#060606",/* height: "100vh", */}}>
       {/* Hero Section */}
       <Box
         className="heroRobowars"
         style={{
-          position: "relative", 
-          height: "100vh", 
+          position: "relative",
+          height: "100vh",
           width: "100%",
-          overflow: "hidden", 
+          overflow: "hidden",
           // backgroundColor:"black"
-          maxHeight:"1200px",
+          maxHeight: "1200px",
         }}
       >
         {/* Background Image */}
@@ -95,12 +102,11 @@ export default function ExpoPage() {
             left: 0,
             width: "100%",
             height: "100%",
-            filter:"brightness(10)", 
+            filter: "brightness(10)",
             zIndex: 2,
             // border: "solid red",
           }}
         />
-  
         {/* Foreground Image */}
         <Image
           className="roboPic"
@@ -113,19 +119,21 @@ export default function ExpoPage() {
             position: "absolute",
             // bottom: "-4rem", 
             // top:"18rem",
-            top:"25%",
-            margin:"0 5vw",
+            top: "25%",
+            margin: "0 5vw",
             // bottom: "0px", 
             // left: "50%",
             // transform: "translate(-50%, -50%)", 
             zIndex: 1,
             // border: "2px solid green",
-            width:"90%",
-            maxWidth:"1400px",
+            width: "100%",
+            marginLeft:"0px",
+            marginTop:"-20px",
+            maxWidth: "1400px",
             // height:"100%",
           }}
         />
-  
+
         {/* Content Box */}
         <Box
           style={{
@@ -139,9 +147,9 @@ export default function ExpoPage() {
             justifyContent: "center",
             flexDirection: "column",
             textAlign: "center",
-            width:"100%",
-            lineHeight:"5rem",
-            padding:"0 1rem",
+            width: "100%",
+            lineHeight: "5rem",
+            padding: "0 1rem",
           }}
         >
           <Typography
@@ -161,8 +169,8 @@ export default function ExpoPage() {
               fontSize: "6rem",
               fontWeight: "bold",
               color: "#fff",
-              fontFamily:"Bebas Neue,sans-serif",
-              letterSpacing:"4px",
+              fontFamily: "Bebas Neue,sans-serif",
+              letterSpacing: "4px",
             }}
           >
             EXPERIENCE THE FORGE!
@@ -172,31 +180,259 @@ export default function ExpoPage() {
             style={{
               fontSize: "1.25rem",
               color: "#fff",
-              lineHeight:"1.75rem",
-              fontFamily:"Bebas Neue,sans-serif",
-              letterSpacing:"2px",
-              padding:"2rem 0"
+              lineHeight: "1.75rem",
+              fontFamily: "Bebas Neue,sans-serif",
+              letterSpacing: "2px",
+              padding: "2rem 0"
             }}
           >
             Craft your metal masterpiece and unleash mayhem in the arena!
           </Typography>
+          <Button
+            href="/register"
+            variant="p"
+            class="upper_p"
+            sx={{
+              color: "#fff",
+              fontSize: "20px",
+              fontFamily: "Bebas Neue, sans-serif",
+              padding: "10px 20px",
+              border: "5px",
+              borderRadius: "3px",
+              backgroundColor: "rgb(255 67 26)",
+            }}
+          >
+            Register Now!
+          </Button>
         </Box>
       </Box>
-      <Box style={{
-        textAlign:"center",
-        padding:"3rem 0",
-        marginBottom:"5rem",
-        fontSize:"2rem",
-        fontFamily:"Bebas Neue",
-        letterSpacing:"2px",
+      <Box sx={{ //overall box with flex of 1st pg and 2md pg
+        display: "flex",
+        flexDirection: "column",
+        "@media (max-width: 900px)": {
+          marginTop: "-100px",
+        },
+      }}> <NoiseBackground style={{zIndex:0,}} />
+        <Box //1st pg box starts here
+          /* ref={aboutRef} */
+          sx={{
+            display: "flex",
+            zIndex:2,
+            flexDirection: { xs: "column", md: "row-reverse" },
+            alignItems: { xs: "center", md: "flex-start" },
+            justifyContent: "space-between",
+            gap: 2,
+            width: "100%",
+           flexGrow: 1,
+            maxWidth: "1200px",
+            "@media (min-width: 900px)": {
+              maxWidth:"1400px",
+              padding:"0 60px 0 90px",
+            },
+            mx: "auto",
+            /* transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out",  */
+            position:"relative",
+            "@media (max-width: 900px)": {
+              marginTop: "-100px",
+            },
+            overflow:"hidden"
+          }}
+        >  
+          {/* Image Component */}
+          <Box ref={aboutRef}
+            sx={{
+              flex: { xs: "1 1 auto", md: "0 0 40%" },
+              display: "flex",
+              justifyContent: "center",
+              transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out", 
+            }}
+          >
+            <Image
+              src="/images/robowarimg.png"
+              alt="RoboWars Event"
+              width={400}
+              height={300}
+              style={{
+                borderRadius: "10px",
+                width: "100%",
+                maxWidth: "400px",
+                height: "auto",
+                marginTop: "100px",
+              }}
+            />
+          </Box>
 
-         }}>Coming <span style={{
-          // color:"rgb(255 67 26)"
-          }}>Soon</span>...</Box>
-  
-      {/* Contact Section */}
-      <Contact style={{ bottom: "0", position: "relative" }} />
+          {/* Text Component */}
+          <Box ref={aboutRef}
+            sx={{
+              flex: { xs: "1 1 auto", md: "0 0 60%" },
+              maxWidth: "100%",
+              wordWrap: "break-word",
+              p: { xs: "20px", sm: "30px", md: "40px" },
+              fontSize: { xs: "14px", md: "16px" },
+              boxSizing: "border-box",
+              overflow: "hidden",
+              textAlign: { xs: "center", md: "justify" },
+              transform: aboutInView ? "translateY(0)" : "translateY(75px)",
+            pacity: aboutInView ? 3 : 0,
+            transition: "transform 1s ease-out, opacity 1s ease-out", 
+            }}
+          >
+            <Typography sx={{ fontFamily: "Bebas Neue,sans-serif", color: "rgb(255,67,24)", fontSize: "40px", marginBottom: "15px" }}
+            >{">>"}Battlebots</Typography>
+            {[
+              "Welcome to the electrifying world of BattleBots, where metal warriors clash in the ultimate test of engineering and strategy! This is your gateway to the adrenaline-fueled realm of robot combat, where teams of ingenious builders pit their custom creations against each other in fierce battles of wit and metal.",
+              "Explore the intricacies of the BattleBots arena, where every corner holds peril and every move could be the difference between victory and defeat. Engage with a passionate community of fans, share your thoughts, and connect with like-minded enthusiasts who share your love for all things robotic.",
+              "Get ready to unleash your inner robot warrior and join us on an unforgettable journey into the heart of BattleBots!",
+            ].map((text, idx) => (
+              <Typography
+                key={idx}
+                sx={{
+                  fontFamily: "Nunito",
+                  lineHeight: 1.5,
+                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  mb: 2,
+                  color: "#fff",
+                  textAlign: "justify",
+                }}
+              >
+                {text}
+              </Typography>
+            ))}
+          </Box>
+          <NoiseBackground style={{zIndex:-1,}} />
+        </Box>{/* 1st pg box ends here */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xs: "column",
+              md: "row",
+            },
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 2,
+            width: "100%",
+            marginTop: {
+              xs: "20px",
+              md: "0px",
+            },
+            "@media (max-width: 1000px)": {
+              flexDirection: "column",
+              marginTop: "0px",
+            },
+            overflow: "hidden",
+            position:"relative"
+          }}
+        > <NoiseBackground style={{zIndex:0,}} />
+          {/* Rulebook Section */}
+          <Box
+            ref={rulebookRef}
+            sx={{
+              zIndex: 3,
+              flex: { xs: "1 1 auto", sm: "0 0 25%" },
+              position:"sticky",
+              top:"30px",
+              width: { xs: "95%", sm: "95%" },
+              padding: { xs: 3, sm: 2 },
+              boxSizing: "border-box",
+              marginLeft: { md: "80px ", xs: "-35px auto" },
+              "@media (min-width: 1000px)": {
+                marginTop: "-500px",
+                marginBottom: "50px",
+              },
+              borderRadius: "8px",
+              opacity: rulebookInView ? 1 : 0,
+              transform: rulebookInView ? "translateY(50)" : "translateY(200px)",
+              transition: "all 0.7s ease-in-out",
+              justifyContent: "left",
+            }}
+          >
+            {/* Rulebook content */}
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: "Bebas Neue",
+                color: "rgb(255, 67, 24)",
+                marginTop: "15px",
+                textAlign: "left",
+                fontSize: { xs: "1.5rem", sm: "2rem" },
+              }}
+            >
+            Rulebook
+            </Typography>
+
+            <Box sx={{ maxWidth: "600px", wordWrap: "break-word", padding: "10px", margin: "0" }}>
+              {[
+                "Ensure your bot meets all the rules and specifications.",
+                "Download the rulebook for detailed guidelines.",
+              ].map((text, idx) => (
+                <Typography
+                  key={idx}
+                  sx={{
+                    fontFamily: "Bebas Neue, sans-serif",
+                    lineHeight: 1.4,
+                    fontSize: "17px",
+                    mb: 1.2,
+                    color: "#fff",
+                    textAlign: "left",
+                  }}
+                >
+                  {text}
+                </Typography>
+              ))}
+            </Box>
+           
+            <Box sx={{ marginTop: "-10px", marginLeft: "10px", display: "flex", textAlign: "center", alignItems: "center", justifyContent: "flex-start" }}>
+              <Button
+                href="/docs/robowars-rulebook.pdf"
+                sx={{
+                  fontFamily: "Bebas Neue, sans-serif",
+                  backgroundColor: "rgb(255,67,24)",
+                  color: "#fff",
+                  borderRadius: "3px",
+                  fontSize: "1rem",
+                  padding: "12px 20px",
+                  transition: "background-color 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "rgb(200, 47, 18)",
+                  },
+                }}
+              >
+                DOWNLOAD RULEBOOK!
+              </Button>
+            </Box>
+          </Box>
+          {/* Timeline Section */}
+          <Box ref={rulebookRef}
+            sx={{
+              width: { xs: "100%", sm: "100%" },
+              boxSizing: "border-box",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              marginTop: { xs: "20px", md: "0px" },
+              padding: { xs: "10px", sm: "20px" },
+              "@media (min-width: 1000px)": {
+                marginTop: "100px",
+              },
+              opacity: rulebookInView ? 1 : 0,
+              transform: rulebookInView ? "translateY(50)" : "translateY(200px)",
+              transition: "all 0.7s ease-in-out",
+            }}
+          >
+            <Timeline />
+          </Box>
+        </Box>
+
+      </Box>
+      {/* Contact Section */}<Box style={{position: "relative",zIndex:1,width:"1400px"}}>
+      <Contact style={{bottom:"0", position: "relative" }} />
+      <NoiseBackground style={{zIndex:-1,}} />
+      </Box>
     </Box>
   );
-  
 }
