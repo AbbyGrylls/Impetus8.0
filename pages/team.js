@@ -327,12 +327,11 @@ export default function TeamPage() {
         </Box>
         <TabPanel value={value} index={0} className="contactCards">
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={coordinator_person.person1} />
             <ContactCard person={coordinator_person.person2} />
+            <ContactCard person={coordinator_person.person1} />
           </Box>
-
-          <ContactCard person={coordinator_person.person3} /> 
           <ContactCard person={coordinator_person.person4} />
+          <ContactCard person={coordinator_person.person3} /> 
         </TabPanel>
         <TabPanel value={value} index={6} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Sponsorship Team*/}
@@ -349,12 +348,12 @@ export default function TeamPage() {
         <TabPanel value={value} index={2} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Event Team*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={event_person.person1} />
-            <ContactCard person={event_person.person2} />
             <ContactCard person={event_person.person3} />
-            <ContactCard person={event_person.person4} />
             <ContactCard person={event_person.person5} />
             <ContactCard person={event_person.person6} />
+            <ContactCard person={event_person.person4} />
+            <ContactCard person={event_person.person1} />
+            <ContactCard person={event_person.person2} />
           </Box>
           {/* <ContactCard person={event_person.person6} /> */}
         </TabPanel>
@@ -371,9 +370,9 @@ export default function TeamPage() {
         <TabPanel value={value} index={4} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Design*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={design_person.person1} />
-            <ContactCard person={design_person.person2} />
             <ContactCard person={design_person.person3} />
+            <ContactCard person={design_person.person2} />
+            <ContactCard person={design_person.person1} />
           </Box>
             {/* <ContactCard person={design_person.person6} /> */}
         </TabPanel>
@@ -396,8 +395,8 @@ export default function TeamPage() {
 
         <TabPanel value={value} index={7} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------T&L*/}
-          <ContactCard person={tl_person.person1} />
           <ContactCard person={tl_person.person2} />
+          <ContactCard person={tl_person.person1} />
         </TabPanel>
 
         <TabPanel value={value} index={8} className="contactCards">
@@ -412,8 +411,8 @@ export default function TeamPage() {
         <TabPanel value={value} index={9} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Video & Photo*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={videoPhoto_person.person1} />
             <ContactCard person={videoPhoto_person.person2} />
+            <ContactCard person={videoPhoto_person.person1} />
           </Box>
           {/* <ContactCard person={videoPhoto_person.person4} /> */}
 
