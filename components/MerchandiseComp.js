@@ -102,16 +102,13 @@ export default function MerchandiseComp() {
           <Typography variant="p">
           Ignite your creativity and design the ultimate t-shirt for Impetus 8.0! 🌟 <br></br>
           Let your imagination run wild and create a design that captures the essence of innovation 💡, technology 🖥, and the spirit of our college 🎓.<br></br><br></br>
-          Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let&apos;s make this year's t-shirt a masterpiece.
+          Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let&apos;s make this year&apos;s t-shirt a masterpiece.
  
           </Typography>
           <Box className="ButtonBox">
             {/* <Button className="Btn" onClick={handleClick}>Buy Now</Button> */}
             <Button className="Btn"
              href="https://docs.google.com/forms/d/e/1FAIpQLSe9w0Pp528U1TvNGUddCDMD7gcfFfgvIfDEJMYACQ1LFCve4Q/viewform"
-              style={{
-                
-              }}
              >Submit</Button>
           </Box>
         </Box>
