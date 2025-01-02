@@ -18,7 +18,7 @@ export default function EventPage() {
   const items = [
     {
       id: 1,
-      image: "/images/events/cadathon.jpg",
+      image: "/images/events/Cadathon.jpg",
       title: "CADATHON",
       category: "Design-&-CAD",
       description: "This competition aims to develop the idea of assembly of 3D structures on a CAD software.This event will be organized by the Society of Automotive Engineers (SAE), IIEST Shibpur  under the banner of 'Impetus 8.0'.",
@@ -26,7 +26,7 @@ export default function EventPage() {
     },
     {
       id: 2,
-      image: "/images/events/yantrasearch.jpg",
+      image: "/images/events/Yantrasearch.jpg",
       title: "YANTRASEARCH",
       category: "Problem-Solving",
       description: "This event organized by ASME IIEST, aims to give you all the excitement of treasure hunt.You can look forward to having fun while solving mysteries together and hunting down simple machines in our college campus.",
@@ -58,7 +58,7 @@ export default function EventPage() {
     },
     {
       id: 6,
-      image: "/images/events/deathrace.jpg",
+      image: "/images/events/Deathrace.jpg",
       title: "DEATH RACE",
       category: "Robotics",
       description: "The Death Race is a thrilling competition that brings together talented individuals to showcase their skills in building and maneuvering a robot through a challenging track filled with obstacles.",
@@ -74,7 +74,7 @@ export default function EventPage() {
     },
     {
       id: 8,
-      image: "/images/events/valorant.jpg",
+      image: "/images/events/Valorant.jpg",
       title: "VALORANT",
       category: "Gaming-&-Esports",
       description: "The Valorant gaming event is a competition that brings together talented players to showcase their skills and compete for recognition. It is an exciting opportunity for Valorant fans to experience high-level gameplay and celebrate the top talent in the game.",
