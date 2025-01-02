@@ -1,214 +1,216 @@
 import { useTheme } from "@emotion/react";
-import { Box } from "@mui/system";
-import disableScroll from "disable-scroll";
-import lodash from "lodash";
+import { Box, fontFamily } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
-import { SwipeEventListener } from "swipe-event-listener";
-import EventDescription from "../../components/EventDescription";
-import EventDots from "../../components/EventDots";
-import EventList from "../../components/EventList";
+import { useRouter } from "next/router";
+
+
 
 export default function EventPage() {
-  const theme = useTheme();
-  const [currIdx, setCurrIdx] = useState(0);
+    //----------------------------
+  const prevBtn = useRef(null);
+  const nextBtn = useRef(null);
+  const carouselRef = useRef(null);
 
-  const images = [
-    "cadathon.jpg",
-    "Yantra_.jpg",
-    "heatovation_.jpg",
-    "scrapyard_.jpg",
-    "quizzical.jpg",
-    "linefollower1.png",
-    "drone.png",
-    "Valorant.jpg",
-    "fun_.jpg",
-  ];
-  const size = [
-    "750px",
-    "550px",
-    "570px",
-    "530px",
-    "580px",
-    "580px",
-    "650px",
-    "550px",
-    "580px",
-  ];
-  const position = [
-    "25%",
-    "30%",
-    "29%",
-    "27%",
-    "29%",
-    "27%",
-    "27%",
-    "29%",
-    "28%",
-  ];
+  const [active, setActive] = useState(0);
 
-  const descRef = useRef(null);
+  const router = useRouter();
 
-  const styles = {
-    width: "100vw",
-    paddingLeft: "100px",
-    minHeight: "100vh",
-    backgroundColor: "black",
-    background: `url(/images/${
-      images[currIdx % 10]
-    }) no-repeat , url(/images/grid-white.svg) no-repeat `,
-
-    background: `url(/images/${images[currIdx % 9]}) no-repeat  `,
-
-    backgroundSize: `${size[currIdx % 9]} auto`,
-    [theme.breakpoints.down("md")]: {
-      backgroundSize: `calc(${size[currIdx % 9]} - 200px) auto`,
+  const items = [
+    {
+      id: 1,
+      image: "/images/events/cadathon.jpg",
+      title: "CADATHON",
+      category: "Design-&-CAD",
+      description: "This competition aims to develop the idea of assembly of 3D structures on a CAD software.This event will be organized by the Society of Automotive Engineers (SAE), IIEST Shibpur  under the banner of 'Impetus 8.0'.",
+      regLink: "https://forms.gle/pxEokiDjCRBXDMah7",
     },
-
-    backgroundPosition: `${position[currIdx % 9]} center`,
-
-    [theme.breakpoints.down("lg")]: {
-      backgroundPosition: "50% 10%",
-      paddingLeft: "0",
+    {
+      id: 2,
+      image: "/images/events/yantrasearch.jpg",
+      title: "YANTRASEARCH",
+      category: "Problem-Solving",
+      description: "This event organized by ASME IIEST, aims to give you all the excitement of treasure hunt.You can look forward to having fun while solving mysteries together and hunting down simple machines in our college campus.",
+      regLink: "https://forms.gle/bfNTGYyJkkkrHGtv9",
     },
-    backgroundAttachment: "fixed",
-    position: "relative",
-    ".descWrapper": {
-      height: "100vh",
-      overflowY: "hidden",
-      scrollSnapType: "y mandatory",
-      scrollSnapPointsY: "repeat(100vh)",
+    {
+      id: 3,
+      image: "/images/events/heatovation.jpg",
+      title: "HEATOVATION",
+      category: "HVAC-&-Entrepreneurship",
+      description: "'Heatovation', organized by Impetus 8.0 in association with ISHRAE-IIEST Kolkata chapter empowers social entrepreneurs to create a culture for entrepreneurship and to promote entrepreneurial education in the field of HVAC.",
+      regLink: "https://forms.gle/Fn3HDBAkPTSaBRqG9",
     },
-  };
+    {
+      id: 4,
+      image: "/images/events/scrapyard.jpg",
+      title: "SCRAPYARD",
+      category: "Innovation",
+      description: "Innovation need not come from what everyone considers to be a resource; it can also come from making use of what others consider to be waste and producing something useful. With this thought in mind Impetus 8.0 presents to you 'Scrapyard'",
+      regLink: "https://forms.gle/KpHeEY4ev3kNjjmx7",
+    },
+    {
+      id: 5,
+      image: "/images/events/iQIgnition.jpg",
+      title: "IQ IGNITION",
+      category: "Quizzing-&-Knowledge",
+      description: "To instil the essence of quizzing, IMechE IIEST, Shibpur brings to you a Grand General Technical Quiz: ' Suspects' under the banner of Impetus 8.0 .The quiz tests and showcases students' technical knowledge and skills.",
+      regLink: "https://forms.gle/HTt7EuvgkQfqscgk8",
+    },
+    {
+      id: 6,
+      image: "/images/events/deathrace.jpg",
+      title: "DEATH RACE",
+      category: "Robotics",
+      description: "The Death Race is a thrilling competition that brings together talented individuals to showcase their skills in building and maneuvering a robot through a challenging track filled with obstacles.",
+      regLink: "https://forms.gle/j8gTXK1SUV9KVva78",
+    },
+    {
+      id: 7,
+      image: "/images/events/Dronepursuit.png",
+      title: "DRONE PURSUIT",
+      category: "Drones",
+      description: "Through Drone Pursuit, IMPETUS and ROBODARSHAN give you the chance to showcase your skills. In Drone Pursuit, participants fly drones through hurdles and gates to win the race. Bring your models to life and make this competition a great success.",
+      regLink: "https://forms.gle/FSkcY878hvjc59K8A",
+    },
+    {
+      id: 8,
+      image: "/images/events/valorant.jpg",
+      title: "VALORANT",
+      category: "Gaming-&-Esports",
+      description: "The Valorant gaming event is a competition that brings together talented players to showcase their skills and compete for recognition. It is an exciting opportunity for Valorant fans to experience high-level gameplay and celebrate the top talent in the game.",
+      regLink: "https://forms.gle/8J18pVrNTjMNBD399",
+    },    
+  ];
+  const link = [
+    "cadathon",
+    "yantrasearch",
+    "heatovation",
+    "scrapyard",
+    "iQIgnition",
+    "deathrace",
+    "dronePursuit",
+    "valorant",
+  ];
+  const lastPosition = items.length - 1;
 
-  const moveUp = () => {
-    setCurrIdx((idx) => (idx === 8 ? idx : idx + 1));
-  };
+    const setSlider = () => {
+      const carousel = carouselRef.current;      
+      const itemNodes = carousel.querySelectorAll(".events_list .events_item");
+      itemNodes.forEach((item, index) => {
+        if (index === active) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
 
-  const moveDown = () => {
-    setCurrIdx((idx) => (idx === 0 ? idx : idx - 1));
-  };
-
-  const handleScroll = (val, swipe) => {
-    console.log("hello");
-    if (val < 0) moveUp();
-    else moveDown();
-    if (swipe) {
-      if (val < 0) {
-        setTimeout(() => {
-          descRef.current?.scrollBy({
-            top: window.innerHeight,
-            behavior: "smooth",
-          });
-        }, 100);
+    
+    const dotNodes = carousel.querySelectorAll(".events_indicators ul li");
+    dotNodes.forEach((dot, index) => {
+      if (index === active) {
+        dot.classList.add("active");
       } else {
-        setTimeout(() => {
-          descRef.current?.scrollBy({
-            top: -window.innerHeight,
-            behavior: "smooth",
-          });
-        }, 10);
+        dot.classList.remove("active");
       }
+    });
+
+    
+    const numberIndicator = carousel.querySelector(".events_number");
+    if (numberIndicator) {
+      numberIndicator.textContent = `0${active + 1}`;
     }
   };
 
-  const handleDebounceScroll = lodash.debounce(handleScroll, 100, {
-    leading: true,
-    trailing: false,
-  });
 
-  useEffect(() => {
-    disableScroll.on(descRef.current, {
-      disableKeys: "false",
-    });
-    console.log(descRef.current);
-    descRef.current?.addEventListener("mousewheel", (e) => {
-      const val = e.wheelDeltaY;
-      lodash.debounce(handleDebounceScroll).cancel();
-      handleDebounceScroll(val);
-    });
-    descRef.current?.addEventListener("wheel", (e) => {
-      const val = e.wheelDeltaY;
-      lodash.debounce(handleDebounceScroll).cancel();
-      handleDebounceScroll(val);
-    });
 
-    window.addEventListener("keydown", (e) => {
-      if (e.keyCode === 40) handleDebounceScroll(-1);
-      if (e.keyCode === 38) handleDebounceScroll(1);
-    });
-    const { swipeArea } = SwipeEventListener({
-      swipeArea: descRef.current,
-    });
-    swipeArea.addEventListener("swipeUp", () => handleDebounceScroll(-1, true));
-    swipeArea.addEventListener("swipeDown", () =>
-      handleDebounceScroll(1, true),
-    );
-    return () => {
-      disableScroll.off();
-    };
-  }, []);
+  
+  const handleNext = () => {
+    setActive((prev) => (prev + 1 > lastPosition ? 0 : prev + 1));
+    carouselRef.current.style.setProperty("--calculation", 1);
+  };
 
-  return (
-    <Box
-      className="center1"
-      style={{
-        paddingTop: "50px",
-        overflowY: "hidden",
-        backgroundColor: "black",
-      }}
-    >
-      {/* {currIdx} */}
-      <Box sx={styles}>
-        <EventList setCurrIdx={setCurrIdx} currIdx={currIdx} />
-        <EventDots currIdx={currIdx} setCurrIdx={setCurrIdx} />
-        <Box ref={descRef} className="descWrapper">
-          <EventDescription
-            index={0}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={1}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={2}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={3}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={4}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={5}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={6}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={7}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-          <EventDescription
-            index={8}
-            setCurrIdx={setCurrIdx}
-            currIdx={currIdx}
-          />
-        </Box>
+  
+   const handlePrev = () => {
+    setActive((prev) => (prev - 1 < 0 ? lastPosition : prev - 1));
+    carouselRef.current.style.setProperty("--calculation", -1);
+  };
+
+  
+  const handleDotClick = (index) => {
+    setActive(index);
+  };
+
+   
+   useEffect(() => {
+    setSlider();
+  }, [active]);
+
+
+
+  return(
+    <Box className="events_body">
+      <Box className="events_carousel" ref={carouselRef}>
+        <div className="events_list">
+          {items.map((item, index) => (
+          <div 
+          key={index}
+          className={`events_item ${index === active ? "active" : ""}`} 
+          >
+            <figure>
+              {/* <img src="/images/events/cadathon.jpg" alt="as" /> */}
+              <img
+                  src={item.image}
+                  alt={`Event ${item.id}`}
+              />
+            </figure>
+            <div className="events_content">
+                    <p className="events_category">
+                    {item.category} 
+                    </p>
+                    <h2>
+                    {item.title}
+                    </h2>
+                    <p className="events_description">                        
+                        {item.description}
+                    </p>
+                    <div className="events_more">
+                        <button onClick={(event)=>(window.location.href = item.regLink)}>
+                            Register
+                        </button>
+                        <button onClick={(event)=>(router.push(`/events/${link[index % 8]}`))}
+                          style={{display:"flex", alignItems:"center", justifyContent:"center"}}
+                          >
+                            <i className="fa-solid fa-play"></i> See More
+                        </button>
+                        
+                    </div>
+                </div>
+          </div>
+          ))}
+        </div>
+        {/* Navigation Arrows */}
+        <div className="events_arrows">
+            <button onClick={handlePrev}><i className="fa-solid fa-chevron-left"></i></button>
+            <button onClick={handleNext}><i className="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        {/* Indicators */}
+        <div className="events_indicators" >
+            <div className="events_number">01</div>
+            <ul>
+            {items.map((_, index) => (
+              <li
+                key={index}
+                className={index === active ? "active" : ""}
+                onClick={() => handleDotClick(index)}
+              ></li>
+            ))}
+          </ul>
+        </div>
       </Box>
+      
     </Box>
   );
-}
+    
+};
+

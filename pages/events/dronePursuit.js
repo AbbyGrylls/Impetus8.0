@@ -12,7 +12,7 @@ const imageStyles = {
   minWidth: "400px",
   minHeight: "400px",
 
-  background: `url(/images/drone_pg.png)  no-repeat  `,
+  background: `url(/images/events/Dronepursuit.png)  no-repeat  `,
 
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
@@ -98,7 +98,7 @@ export default function CadathonPage() {
     },
   };
   return (
-    <Box sx={{ width: "100vw", background:"black" }} className="mt-10 center1">
+    <Box sx={{ width: "100vw", background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)" }} className="mt-10 center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -121,10 +121,11 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Dates
                 </span>
-                 10th February, 2024  4:00pm to 6:00pm
+                 {/* 10th February, 2024  4:00pm to 6:00pm */}
+                 Coming Soon...
               </p>
             </div>
-            <button
+            {/* <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -132,10 +133,10 @@ export default function CadathonPage() {
               }
             >
               Register Now
-            </button>
+            </button> */}
           </div>
         </div>
-        <div className="py-2  ">
+        {/* <div className="py-2  ">
           <h1 className="text-3xl py-1 font-bold ">Objective</h1>
           <p className="text-lg font-normal text-gray-200  ">
           The objective of this competition is to test the agility and manoeuverability of your drones . The drones are required to pass through a series of manoeuvre, such as passing through hoops, avoiding obstacles. You will be judged on the overall performance of your drones.
@@ -220,7 +221,9 @@ export default function CadathonPage() {
             </button>
           </div>
           
-        </div>
+        </div> */}
+        {/* ***************************************************** */}
+
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Event Structure</h1>
           <Box className="data mt-2" sx={dataStyles}>
@@ -387,7 +390,12 @@ export default function CadathonPage() {
             </li>
           </ul>
         </Box> */}
-        <div className="">
+
+
+
+
+        {/* ***************************************************** */}
+        {/* <div className="">
           <p className="text-lg font-semibold  text-gray-200  ">
             If any team faces any problem, they are supposed to report to the
             Event Co-Ordinator or Pool Volunteer without much delay.<br></br>
@@ -430,7 +438,7 @@ export default function CadathonPage() {
             <EventMag person={person.person1} />
             <EventMag person={person.person2} />
           </Box>
-        </Box>
+        </Box> */}
       </section>
       <Contact />
     </Box>

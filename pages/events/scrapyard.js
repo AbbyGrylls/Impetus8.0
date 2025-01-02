@@ -13,7 +13,7 @@ const imageStyles = {
   minWidth: "400px",
   minHeight: "400px",
 
-  background: `url(/images/scrapyard_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/scrapyard.jpg)  no-repeat  `,
 
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
@@ -87,12 +87,12 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Piyush Pathak",
-      phone: "+91 7282809390",
+      name: "Harsh Tiwari",
+      phone: "+91 6232089966",
     },
     person2: {
-      name: "Wali Ahad Mallick ",
-      phone: "+91 7480984908",
+      name: "Sanjeev Kumar",
+      phone: "+91 8545898275",
     },
   };
   const sponsor = {
@@ -101,7 +101,7 @@ export default function CadathonPage() {
     },
   }
   return (
-    <Box sx={{ width: "100vw", background:"black" }} className="mt-10 center1">
+    <Box sx={{ width: "100vw", background:"black" ,background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="mt-10 center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -112,10 +112,10 @@ export default function CadathonPage() {
         </IconButton>
       </Box>
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
-      <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1>
-        <Box className="cards" style={{width:"100%"}}>
+      {/* <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1> */}
+        {/* <Box className="cards" style={{width:"100%"}}>
           <SponsorCard sponsor={sponsor.sponsor1} />
-        </Box>
+        </Box> */}
 
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
@@ -132,14 +132,16 @@ of innovation.
                   <CalendarMonthIcon className="h-5" />
                   Round 1
                 </span>
-                10th February, 2024 10:00 AM-11:00 AM
+                {/* 10th February, 2024 10:00 AM-11:00 AM */}
+                Coming Soon...
               </p>
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Round 2
                 </span>
-                10th February, 2024 1:00 PM-3:00 PM
+                {/* 10th February, 2024 1:00 PM-3:00 PM */}
+                Coming Soon...
               </p>
             </div>
             <button
@@ -186,7 +188,7 @@ of innovation.
                 </td>
                 <td className="pl-2 py-1">
                   <div className="text-sm md:text-lg font-medium ">
-                    A team of 2-3 members
+                    A team of maximum 3 people
                   </div>
                 </td>
               </tr>
@@ -198,7 +200,7 @@ of innovation.
                 </td>
                 <td className="pl-2 py-1">
                   <div className="text-sm md:text-lg font-medium ">
-                    Round 1- Gallery 6 , Round 2- Amenities
+                    Round 1- Gallery 6 (Department of Mechanical Engineering, IIEST Shibpur),<br></br> Round 2- Amenities
                   </div>
                 </td>
               </tr>
@@ -227,13 +229,13 @@ of innovation.
               <tr>
                 <td className="pl-2 md:px-4 py-2 whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Prizes worth: Rs 10000/-
+                    Prizes worth:
                   </div>
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.10000</span>
+                    <span className="font-bold ">Rs.8000</span>
                   </div>
                 </td>
               </tr>
@@ -249,7 +251,7 @@ of innovation.
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/18O1LUnV9UXJUzEw_Ki49a-pylMRWFlAd/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RfJw_1AkHs68Y9I8AO2OnJbY0WajoJOe/view?usp=drive_link")
               }
             >
               Click Here

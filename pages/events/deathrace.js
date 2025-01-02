@@ -11,7 +11,7 @@ const imageStyles = {
   height: "40vh",
   minWidth: "400px",
   minHeight: "400px",
-  background: `url(/images/DeathRace_F.png)  no-repeat  `,
+  background: `url(/images/events/Deathrace.jpg)  no-repeat  `,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
@@ -87,17 +87,17 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Siddamalla Harshavardhan",
-      phone: "+91 7702497870",
+      name: "Ritesh Gupta",
+      phone: "+91 8291164387",
     },
     person2: {
-      name: "Soham Banerjee",
-      phone: "+91 8101264621",
+      name: "Shivansh Kumar",
+      phone: "+91 8545898275",
     },
     
   };
   return (
-    <Box sx={{ width: "100vw" , background:"black"}} className="center1 mt-10">
+    <Box sx={{ width: "100vw" , background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="center1 mt-10">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -120,7 +120,8 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Date
                 </span>
-                10th February 2024 , 3:00pm - 4:30pm
+                {/* 10th February 2024 , 3:00pm - 4:30pm */}
+                Coming Soon...
               </p>
               
             </div>
@@ -166,7 +167,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Team of 2-5 members
+                    Team of maximum 5 members
                   </div>
                 </td>
               </tr>
@@ -219,7 +220,7 @@ export default function CadathonPage() {
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/19esxn9cMLk584w6_Ji2HuVPT0RayN9tY/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RfiyE20W_TAXa6vMokDYQpMsSDBBQY0s/view?usp=drive_link")
               }
             >
               Click Here

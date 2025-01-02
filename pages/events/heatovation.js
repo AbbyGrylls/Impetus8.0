@@ -12,7 +12,7 @@ const imageStyles = {
   height: "40vh",
   minWidth: "400px",
   minHeight: "400px",
-  background: `url(/images/heatovation_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/heatovation.jpg)  no-repeat  `,
 
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
@@ -89,12 +89,12 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Ankush Ghosh",
-      phone: "+91 8145326311",
+      name: "Debjit Maity",
+      phone: "+91 8167025227",
     },
     person2: {
-      name: "Ketan Mohan Masurkar",
-      phone: "+91 8788330638",
+      name: "Dibya Jyoti Das",
+      phone: "+91 7699249687",
     },
   };
   const sponsor = {
@@ -103,7 +103,7 @@ export default function CadathonPage() {
     },
   }
   return (
-    <Box sx={{ width: "100vw" , background:"black"}} className="center1 mt-10">
+    <Box sx={{ width: "100vw" , background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="center1 mt-10">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -114,17 +114,16 @@ export default function CadathonPage() {
         </IconButton>
       </Box>
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
-      <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1>
-        <Box className="cards" style={{width:"100%"}}>
+      {/* <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1> */}
+        {/* <Box className="cards" style={{width:"100%"}}>
           <SponsorCard sponsor={sponsor.sponsor1} />
-        </Box>
+        </Box> */}
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
             HEATOVATION is an event organized by the Impetus 8.0 which invites
             participation from students with entrepreneurial/ problem-solving
-            mindsets in the field of HVAC pan India. It would require its
-            participants to present their solutions to the panel of judges and
-            answer their queries based on the presentation.
+            mindsets. It would be pushing the out of the box thinking skills to your
+            absolute limits.
           </p>
           <div className="py-2 flex items-center flex-col justify-center ">
             {/* <div className="py-3  ">
@@ -161,8 +160,9 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Date
                 </span>
-                9th February 2024,
-                <span className="pl-3"> 2:00pm - 4:00pm</span>
+                {/* 9th February 2024, */}
+                {/* <span className="pl-3"> 2:00pm - 4:00pm</span> */}
+                Coming Soon...
               </p>
             </div>
 
@@ -179,7 +179,7 @@ export default function CadathonPage() {
         </div>
         <div className="py-2  ">
           <h1 className="text-3xl py-1 font-bold ">Objective</h1>
-          <p className="text-lg font-normal text-gray-200  ">
+          {/* <p className="text-lg font-normal text-gray-200  ">
             You have to upload the presentation along with an abstract of your
             idea (in less than 350 words) on the given link and the top 5
             performers will be selected for the second round.
@@ -187,12 +187,12 @@ export default function CadathonPage() {
             In the second round, the participants will be given an opportunity
             to present the idea in front of the judges after which top
             performers will be announced.
-          </p>
+          </p> */}
         </div>
         <div className="py-6 bg-gray-900 mb-2 shadow-md sm:rounded-lg px-0 rounded-md">
           <table className="min-w-full divide-y">
             <tbody className="bg-gray-900 md:text-lg text-gray-300 divide-y divide-gray-800">
-              <tr>
+              {/* <tr>
                 <td className="pl-2 py-2 whitespace-nowrap  md:px-4 ">
                   <div className="text-sm md:text-lg font-medium ">
                     Deadline for round 1:-
@@ -203,7 +203,7 @@ export default function CadathonPage() {
                     2 days before the commencement of round1
                   </div>
                 </td>
-              </tr>
+              </tr> */}
               <tr>
                 <td className="pl-2 py-2 whitespace-nowrap  md:px-4 ">
                   <div className="text-sm  md:text-lg font-medium ">
@@ -212,19 +212,19 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Individual or team of maximum 2 members.
+                    Individual 
                   </div>
                 </td>
               </tr>
               <tr>
                 <td className="pl-2 py-2 md:px-4  whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Expected number of teams:-
+                    Expected number of participation:-
                   </div>
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    15+ teams
+                    10+ 
                   </div>
                 </td>
               </tr>
@@ -248,6 +248,19 @@ export default function CadathonPage() {
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
                     <span className="font-bold ">Rs.8000</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="pl-2 md:px-4 py-2 whitespace-nowrap ">
+                  <div className="text-sm font-medium  md:text-lg ">
+                    Venue
+                  </div>
+                </td>
+                <td className=" pl-2 py-1">
+                  <div className="text-sm font-medium  md:text-lg ">
+                    {" "}
+                    <span className="font-bold ">Conference Room  (Department of Mechanical Engineering, IIEST Shibpur)</span>
                   </div>
                 </td>
               </tr>

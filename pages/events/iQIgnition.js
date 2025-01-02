@@ -12,7 +12,7 @@ const imageStyles = {
   height: "40vh",
   minWidth: "400px",
   minHeight: "400px",
-  background: `url(/images/quizzical_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/iQIgnition.jpg)  no-repeat  `,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
@@ -85,12 +85,12 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Ajay Khandelwal",
-      phone: "+91 7792062842",
+      name: "Dibyajyoti",
+      phone: "+91 7699249687",
     },
     person2: {
-      name: "Shreya Jaiswal",
-      phone: "+91 6394615691",
+      name: "Arunabh",
+      phone: "+91 6232089966",
     },
   };
   const sponsor = {
@@ -99,7 +99,7 @@ export default function CadathonPage() {
     },
   }
   return (
-    <Box sx={{ width: "100vw", background:"black" }} className="mt-10 center1">
+    <Box sx={{ width: "100vw", background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)" }} className="mt-10 center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -110,15 +110,15 @@ export default function CadathonPage() {
         </IconButton>
       </Box>
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
-      <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1>
-        <Box className="cards" style={{width:"100%"}}>
+      {/* <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1> */}
+        {/* <Box className="cards" style={{width:"100%"}}>
           <SponsorCard sponsor={sponsor.sponsor1} />
-        </Box>
+        </Box> */}
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
-            To instil the essence of quizzing, IMechE IIEST, Shibpur brings to
-            you a Grand General Technical Quiz: &quot; IQ Ignition &quot;
-            under the banner of <b>Impetus 8.0</b>.
+          IQ Ignition is a high-intensity quiz competition that tests your knowledge across various
+domains. Participants will be challenged with a series of questions, ranging from general
+knowledge to technical expertise.
           </p>
           <div className="py-2 flex items-center flex-col justify-center ">
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
@@ -127,14 +127,16 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Round 1
                 </span>
-                10th February 2024 , 11:00am - 12:00pm
+                {/* 10th February 2024 , 11:00am - 12:00pm */}
+                Coming Soon...
               </p>
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Round 2
                 </span>
-                10th February 2024 , 12:00pm - 1:30pm
+                {/* 10th February 2024 , 12:00pm - 1:30pm */}
+                Coming Soon...
               </p>
             </div>
             <button
@@ -159,7 +161,7 @@ export default function CadathonPage() {
                 </td>
                 <td className="pl-2 py-1">
                   <div className="text-sm md:text-lg font-medium ">
-                    Till 2 hour before the commencement of round 1
+                    Till 2 hour before the commencement of Round 1
                   </div>
                 </td>
               </tr>
@@ -183,7 +185,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Team of 1-3 members
+                  Teams of size (1-3)
                   </div>
                 </td>
               </tr>
@@ -217,7 +219,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Round1- 1hr 30mins, Round2- 2hr 30mins
+                    Round1- 30mins, Round2- 30mins
                   </div>
                 </td>
               </tr>
@@ -247,7 +249,7 @@ export default function CadathonPage() {
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1YLlvdawZ5no73J7LzOAx55Y0DhyATifJ/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RbPAJOwPjbLF78HItCrv129snU3M0LtT/view?usp=drive_link")
               }
             >
               Click Here

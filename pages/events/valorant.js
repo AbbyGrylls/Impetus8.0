@@ -13,7 +13,7 @@ const imageStyles = {
   minWidth: "400px",
   minHeight: "400px",
 
-  background: `url(/images/Valorant_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/Valorant.jpg)  no-repeat  `,
 
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
@@ -56,9 +56,9 @@ export default function CadathonPage() {
   const theme = useTheme();
   const router = useRouter();
 
-  const goNext = () => {
-    router.push("/events/fun");
-  };
+  // const goNext = () => {
+  //   router.push("/events/fun");
+  // };
   const goBack = () => {
     router.push("/events/dronePursuit");
   };
@@ -87,20 +87,24 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Alex Horo",
-      phone: "+91 8249199487",
+      name: "Vizo",
+      phone: "+91 8787805856",
+    },
+    person2: {
+      name: "Debjit",
+      phone: "+91 8167025227",
     },
   };
   return (
-    <Box sx={{ width: "100vw", background:"black" }} className="mt-10 center1">
+    <Box sx={{ width: "100vw", background:"black" ,background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="mt-10 center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
         </IconButton>
         <Box sx={imageStyles}></Box>
-        <IconButton onClick={goNext} className="right">
+        {/* <IconButton onClick={goNext} className="right">
           <ArrowForwardIcon fontSize="large" color="white" />
-        </IconButton>
+        </IconButton> */}
       </Box>
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
         <div className="py-2  ">
@@ -119,7 +123,8 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Dates{" "}
                 </span>
-                10th February, 2024 11:00 AM onwards
+                {/* 10th February, 2024 11:00 AM onwards */}
+                Coming Soon...
               </p>
             </div>
             <button
@@ -156,8 +161,8 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Laptop with Valorant and discord installed. Stable internet
-                    connection will be provided.
+                    Laptop with Valorant and discord installed. <br></br>(Stable internet
+                    connection will be provided.)
                   </div>
                 </td>
               </tr>
@@ -246,7 +251,7 @@ export default function CadathonPage() {
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1tD6_BuxOV-BTgj7I9jhP2ALgNzXiRfCI/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RZAABdHfFkHdtdJvy8cb8ry_0WdlANIB/view?usp=drive_link")
               }
             >
               Click Here
@@ -410,6 +415,7 @@ export default function CadathonPage() {
           </Typography>
           <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
             <EventMag person={person.person1} />
+            <EventMag person={person.person2} />
           </Box>
         </Box>
       </section>

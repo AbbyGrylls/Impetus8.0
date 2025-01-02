@@ -98,7 +98,7 @@ export default function CadathonPage() {
     },
   };
   return (
-    <Box sx={{ width: "100vw" , background:"black"}} className="center1">
+    <Box sx={{ width: "100vw" , background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />

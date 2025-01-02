@@ -13,7 +13,7 @@ const imageStyles = {
   minWidth: "400px",
   minHeight: "400px",
 
-  background: `url(/images/yantra_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/Yantrasearch.jpg)  no-repeat  `,
 
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
@@ -85,16 +85,24 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Piyal Bhowmick",
-      phone: "+91 8910276639",
+      name: "Rajdeep",
+      phone: "+91 7980430746",
     },
     person2: {
-      name: "Md Wali Ahad Malik",
-      phone: "+91 7480984908",
+      name: "Ritesh",
+      phone: "+91 8291164387",
+    },
+    person3: {
+      name: "Harsh Kumar Tiwari",
+      phone: "+91 8240541513",
     },
     person4: {
-      name: "Ankush Ghosh",
-      phone: "+91 8145326311",
+      name: "Debjit",
+      phone: "+91 8167025227",
+    },
+    person5: {
+      name: "Shivansh",
+      phone: "+91 8545898275",
     },
   };
   const sponsor = {
@@ -103,7 +111,7 @@ export default function CadathonPage() {
     },
   }
   return (
-    <Box sx={{ width: "100vw", background:"black" }} className="center1 mt-10">
+    <Box sx={{ width: "100vw", background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)" }} className="center1 mt-10">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
           <ArrowBackIcon fontSize="large" color="white" />
@@ -114,15 +122,16 @@ export default function CadathonPage() {
         </IconButton>
       </Box>
       <section className="py-10 max-w-screen-lg md:px-10 px-4">
-        <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1>
+        {/* <h1 className="text-3xl py-1 font-bold ">Event Sponsor</h1>
         <Box className="cards" style={{width:"100%"}}>
           <SponsorCard sponsor={sponsor.sponsor1} />
-        </Box>
+        </Box> */}
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
             {" "}
-            This event aims to give you all the excitement of a treasure hunt. You can look forward to having fun while
-solving mysteries together and hunting down simple machines on our college campus.
+            Get ready for a thrilling adventure! This event is like a treasure hunt, but instead of
+buried gold, you&apos;ll be searching for simple machines hidden around our campus. Solve
+riddles, work together, and have a blast discovering these mechanical wonders!
           </p>
           <div className="py-2 flex items-center flex-col justify-center ">
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
@@ -131,7 +140,8 @@ solving mysteries together and hunting down simple machines on our college campu
                   <CalendarMonthIcon className="h-5" />
                   Dates
                 </span>
-                9th February 2024 <span className="pl-3"> 4:30pm - 7pm</span>
+                {/* 9th February 2024 <span className="pl-3"> 4:30pm - 7pm</span> */}
+                Coming Soon...
               </p>
             </div>
             <button
@@ -146,13 +156,17 @@ solving mysteries together and hunting down simple machines on our college campu
           </div>
         </div>
         <div className="py-2  ">
-          <h1 className="text-3xl py-1 font-bold ">Objective</h1>
+          <h1 className="text-3xl py-1 font-bold ">Objective</h1><br></br>
           <p className="text-lg font-normal text-gray-200  ">
-            Teams will be provided with 10 riddles, which needs to be solved one
-            after another. The answer to the riddles will be simple
-            machines/mechanisms found in campus, which they need to click
-            picture of and sent to the corresponding volunteer to get the next
-            riddle. The team completing the whole task in least time wins.
+            - The Challenge: Teams will solve a series of 10 riddles.
+            <br></br>
+            - The Clues: Each riddle&apos;s answer is a simple machine or mechanism found on
+            campus.<br></br>
+            - The Race: Teams must locate the machine/mechanism, take a photo, and send it to
+            a volunteer to receive the next riddle. <br></br>
+            - The Win: The team that finishes all 10 riddles and photo submissions in the
+            shortest time wins.<br></br>
+
           </p>
         </div>
         <div className="py-6 bg-gray-900 mb-2 shadow-md sm:rounded-lg px-0 rounded-md">
@@ -167,7 +181,7 @@ solving mysteries together and hunting down simple machines on our college campu
                 </td>
                 <td className="pl-2 py-1">
                   <div className="text-sm md:text-lg font-medium ">
-                    Till 1 hour before the commencement of event (On spot
+                    Till 1 hour before the commencement of event <br></br>(On spot
                     registrations will be available only if slots are available)
                   </div>
                 </td>
@@ -236,7 +250,7 @@ solving mysteries together and hunting down simple machines on our college campu
                 </td>
               </tr>
 
-              <tr>
+              {/* <tr>
                 <td className="pl-2 md:px-4 py-2 whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">
                     Prizes worth
@@ -248,7 +262,7 @@ solving mysteries together and hunting down simple machines on our college campu
                     <span className="font-bold ">Rs.10000</span>
                   </div>
                 </td>
-              </tr>
+              </tr> */}
 
             </tbody>
           </table>
@@ -262,7 +276,7 @@ solving mysteries together and hunting down simple machines on our college campu
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1A8DFwO2ASP-umLJq3G6saYhPAiZQLrOk/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RgNY4BK_VPSTxi8lAOyLV8x2QxHOr4ic/view?usp=drive_link")
               }
             >
               Click Here
@@ -403,9 +417,17 @@ solving mysteries together and hunting down simple machines on our college campu
           <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
             <EventMag person={person.person1} />
             <EventMag person={person.person2} />
+            {/* <EventMag person={person.person3} /> */}
+            {/* <EventMag person={person.person4} /> */}
           </Box>
           <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
+            {/* <EventMag person={person.person1} /> */}
+            {/* <EventMag person={person.person2} /> */}
+            <EventMag person={person.person3} />
             <EventMag person={person.person4} />
+          </Box>
+          <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
+            <EventMag person={person.person5} />
             {/* <EventMag person={person.person2} /> */}
           </Box>
         </Box>

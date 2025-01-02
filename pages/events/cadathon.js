@@ -1,16 +1,17 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { Box } from "@mui/system";
+import { Box, color } from "@mui/system";
 import { useRouter } from "next/router";
 import Contact from "../../components/Contact";
 import EventMag from "../../components/EventManagement";
 import { IconButton, Typography, useTheme } from "@mui/material";
+
 const imageStyles = {
   width: "80vw",
   height: "40vh",
   minWidth: "600px",
   minHeight: "400px",
-  background: `url(/images/cadathon_pg.jpg)  no-repeat  `,
+  background: `url(/images/events/Cadathon.jpg)  no-repeat  `,
   backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
@@ -80,32 +81,38 @@ export default function CadathonPage() {
         bottom: "50px",
       },
     },
+    
   };
+  const content_style={
+    p:{
+      color: "red",
+    }
+  }
   const person = {
     person1: {
-      name: "Soham Banerjee",
-      phone: "+91 8101264621",
+      name: "Rajdeep Sarkar",
+      phone: "+91 7980430746",
     },
     person2: {
-      name: "Ketan Mohan Masurkar",
-      phone: "+91 8788330638",
+      name: "Someshwar das",
+      phone: "+91 8787805856",
     },
   };
 
   return (
-    <Box sx={{ width: "100vw", background: "black" }} className="center1 mt-10">
+    <Box sx={{ width: "100vw", background: "black", background:"linear-gradient(180deg, #000000, #18192aab, #04040a)" }} className="center1 mt-10">
       <Box sx={headerStyles} className="center2">
-        <Box sx={imageStyles}></Box>
+      <Box sx={{ ...imageStyles, borderRadius: "15px", overflow: "hidden" }}></Box>
         <IconButton onClick={goNext} className="right">
           <ArrowForwardIcon fontSize="large" color="white" />
         </IconButton>
       </Box>
-      <section className="py-10 max-w-screen-lg md:px-10 px-4">
+      <section className="py-10 max-w-screen-lg md:px-10 px-4" style={content_style}>
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
           This competition aims to develop the idea of Engineering Drawing and modelling of 3D
-structures on a CAD software. This event will be organized by the Department of Mechanical
-Engineering, IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
+structures on a CAD software. This event will be organized by the Society of Automotive Engineers
+(SAE), IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
           </p>
           <div className="py-2 flex items-center flex-col justify-center ">
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
@@ -114,14 +121,16 @@ Engineering, IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
                   <CalendarMonthIcon className="h-5" />
                   Round 1
                 </span>
-                9th February 2024 , 12:30pm - 2:00pm
+                {/* 9th February 2024 , 12:30pm - 2:00pm */}
+                Coming soon...
               </p>
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Round 2
                 </span>
-                9th February 2024 ,   3:00pm - 4:30pm
+                {/* 9th February 2024 ,   3:00pm - 4:30pm */}
+                Coming soon...
               </p>
             </div>
             <button
@@ -138,10 +147,9 @@ Engineering, IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
         <div className="py-2  ">
           <h1 className="text-3xl py-1 font-bold ">Objective</h1>
           <p className="text-lg font-normal text-gray-200  ">
-          Initially, the organizing team will provide a problem statement with figures given and the
-participants will have to do according to the given instructions and then either the have to make 3D
-structure on CAD software or draw it on a Drawing paper as per their choice selected beforehand,
-within the speculated time.
+          Initially, the organizing team will provide a problem statement with a figure given and the
+participants will have to draw all 3 views of the figure or made 3D model of the structure on CAD
+software within the speculated time.
           </p>
         </div>
         <div className="py-6 bg-gray-900 mb-2 shadow-md sm:rounded-lg px-0 rounded-md">
@@ -226,7 +234,7 @@ within the speculated time.
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.8000</span>
+                    <span className="font-bold ">Rs.10,000</span>
                   </div>
                 </td>
               </tr>
@@ -241,7 +249,7 @@ within the speculated time.
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1QzV8FEb8m9VgaLFFZeFRusFtWQbeQUhd/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1RXkGg9k8WHokScmeVT3gms4xPVOC7mP6/view?usp=drive_link")
               }
             >
               Click Here
