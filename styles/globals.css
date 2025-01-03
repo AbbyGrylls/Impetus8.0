@@ -842,6 +842,8 @@ img:hover {
       --w-column: 50px;
   }
   .events_body{
+      height:92vh;
+      overflow: hidden;
       & .events_carousel{
           height: 100vh;
           & .events_list{
@@ -850,6 +852,8 @@ img:hover {
                       justify-content: flex-end;
                       padding-bottom: 50px;
                       gap:7px;
+                      height:95%;
+                      /* overflow: hidden; */
                       
                       & h2{
                           font-size: 2.5em;
@@ -860,6 +864,9 @@ img:hover {
                         grid-template-rows: 33px;
                         & button{
                           border-radius: 11px;
+                          & i{
+                            overflow: hidden;
+                          }
                         }
                       }
                       & .events_description{
@@ -882,12 +889,17 @@ img:hover {
           }
           & .events_indicators{
             height:auto;
-            top:82%;
+            /* top:82%; */
+            top:35%;
             /* transform: translateY(50px); */
               & .events_number{
                   font-size: 3em;
                   transform: translateX(25px);
                   opacity: 0.5;
+              }
+              & ul{
+                gap:0;
+                justify-content: space-between;
               }
           }
       }
