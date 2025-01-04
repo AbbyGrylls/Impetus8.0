@@ -73,7 +73,7 @@ export default function AppbarComp() {
         className="appbar"
         style={{
           mt: "30px",
-          background: "none",
+          // background: "none",
           background: `${
             typeof window !== "undefined" &&
             (window.location.pathname.includes("/events/yantrasearch") ||
@@ -85,16 +85,17 @@ export default function AppbarComp() {
               window.location.pathname.includes("/events/dronePursuit") ||
               window.location.pathname.includes("/events/valorant") ||
               window.location.pathname.includes("/events/fun"))
-              ? "black"
+              ? "#0000004f"
               : top
                 ? "none"
                 // : "linear-gradient(to right, black ,rgb(17 24 39 ),black)"
-                :"black"
+                :"#0000004f"
           }`,
           position: "fixed",
           left: "50%",
           transform: "translateX(-50%)",
           paddingBottom: "10px",
+          backdropFilter: "blur(10px)",
         }}
       >
         <Image
