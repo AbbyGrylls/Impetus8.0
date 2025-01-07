@@ -199,7 +199,10 @@ export default function ExpoPage() {
               padding: "10px 20px",
               border: "5px",
               borderRadius: "3px",
-              backgroundColor: "rgb(255 67 26)",
+              backgroundColor: "rgb(255, 67 ,26)",
+              "&:hover": {
+                    backgroundColor: "rgb(200, 47, 18)",
+                },
             }}
           >
             Register Now!
@@ -304,6 +307,8 @@ export default function ExpoPage() {
                 {text}
               </Typography>
             ))}
+            <p><span style={{color: "rgb(255,67,24)"}}>WEIGHT CATEGORY:</span> 15KGS</p>
+            <p><span style={{color: "rgb(255,67,24)"}}>ARENA SIZE:</span> 16x16 FEET</p>
           </Box>
           {/* <NoiseBackground style={{zIndex:-1,}} /> */}
         </Box>{/* 1st pg box ends here */}
@@ -368,7 +373,7 @@ export default function ExpoPage() {
             Rulebook
             </Typography>
 
-            <Box sx={{ maxWidth: "600px", wordWrap: "break-word", padding: "10px", margin: "0" }}>
+            <Box sx={{ maxWidth: "600px", wordWrap: "break-word", padding: "10px 10px 10px 0", margin: "0" }}>
               {[
                 "Ensure your bot meets all the rules and specifications.",
                 "Download the rulebook for detailed guidelines.",
