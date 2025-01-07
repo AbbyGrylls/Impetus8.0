@@ -23,8 +23,8 @@ export default function SponsorsPage() {
     glassOverlay: {
       position: "relative",
       zIndex: 1,
-      backgroundColor: "rgba(255, 255, 255, 4%)",
-      backdropFilter: "blur(10px)",
+      // backgroundColor: "rgba(255, 255, 255, 4%)",
+      // backdropFilter: "blur(10px)",
       padding: "20px",
       margin: "auto",
       maxWidth: "1200px",
@@ -35,18 +35,24 @@ export default function SponsorsPage() {
     h1: {
       mt: { lg: "100px", xs: "60px" },
       mb: { lg: "50px", xs: "20px" },
+      // fontSize: {
+      //   lg: "54px",
+      //   sm: "50px",
+      //   xs: "32px",
+      // },
       fontSize: {
-        lg: "54px",
-        sm: "50px",
-        xs: "32px",
+        lg: "70px",
+        sm: "65px",
+        xs: "47px",
       },
       height: "auto",
-      background: "linear-gradient(90deg, #ffd700, #ff6347)", 
+      // background: "linear-gradient(90deg, #ffd700, #ff6347)", 
+      // background: "linear-gradient(to right, #3171f8, #527bc2)", 
       WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      fontWeight: 700,
-      fontFamily: "'Rowdies'",
-      fontWeight: 'bold', 
+      // WebkitTextFillColor: "transparent",
+      fontWeight: 500,
+      fontFamily: "'League Gothic'",
+      // fontWeight: 'bold', 
       lineHeight: 1.5, 
       paddingBottom: "0px",
     },
@@ -58,22 +64,25 @@ export default function SponsorsPage() {
     },
     paragraph: {
       textAlign: "center",
-      fontSize: { xs: "16px", md: "18px" },
+      fontSize: { xs: "13px", md: "16px" },
       lineHeight: 1.6,
-      fontWeight: 500,
-      color: "#E0E0E0",
-      fontFamily: "'Roboto', sans-serif",
+      fontWeight: 400,
+      // color: "#E0E0E0",
+      color: "#fff8",
+      fontFamily: "'Poppins' !important",
       maxWidth: "800px",
       mx: "auto", 
       mt: 2,
       mb: 3,
       marginTop: "-17px",
       p: { xs: 1, md: 2 },
+      paddingBottom:"50px !important",
     },
     button: {
       mt: 2,
       mb: 4,
-      background: "linear-gradient(45deg, #FF8E53, #FF3CAC)",
+      // background: "linear-gradient(45deg, #FF8E53, #FF3CAC)",
+      background: "linear-gradient(to right, #3171f8, #527bc2)", 
       color: "#FFFFFF",
       fontWeight: "bold",
       textAlign: "center",
@@ -81,16 +90,19 @@ export default function SponsorsPage() {
       marginBottom:"38px",
     },
     sectionTitle: {
-      fontSize: { xs: "24px", md: "32px" },
-      fontWeight: "bold",
+      // fontSize: { xs: "24px", md: "32px" },
+      fontSize: { xs: "37px", md: "45px" },
+      // fontWeight: "bold",
+      fontWeight: "normal",
       mt: 4,
       mb: 2,
       marginTop:"-5px",
       fontFamily: "'Rowdies'",
+      fontFamily: "'League Gothic'",
       textAlign: "center",
-      background: "linear-gradient(90deg, #1E90FF, #00BFFF)",
+      // background: "linear-gradient(90deg, #1E90FF, #00BFFF)",
       WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
+      // WebkitTextFillColor: "transparent",
       textShadow: "1px 1px 3px rgba(0, 0, 139, 0.3)", // Soft shadow glow for depth
     },
   };
@@ -145,8 +157,8 @@ export default function SponsorsPage() {
       {/* Background Image */}
       <Box sx={styles.backgroundImage} />
       {/* Glass Overlay */}
-      <Box sx={styles.glassOverlay}>
-      <Box className="center1" style={{ marginTop: "100px" }}>
+      <Box sx={{}}>
+        <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography sx={styles.sectionTitle}>Want to Sponsor Us?</Typography>
           <Typography sx={(styles.paragraph)}>
             Partnering with us at Impetus 8.0 lets you showcase your brand to future innovators in engineering and technology. Gain visibility, connect with engaged audiences, and make a memorable impact. Let’s build the future together.
@@ -158,10 +170,12 @@ export default function SponsorsPage() {
               ...styles.button,
               mt: 0.1,
               mb: 2,
+              marginBottom:"80px",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
               "&:hover": {
                 transform: "scale(1.05)",
-                background: "linear-gradient(45deg, #FF3CAC, #FF8E53)", // Reverse gradient colors on hover
+                // background: "linear-gradient(45deg, #FF3CAC, #FF8E53)", // Reverse gradient colors on hover
+                background: "linear-gradient(to left, #3171f8, #527bc2)",  // Reverse gradient colors on hover
               },
             }}
             href="/docs/sponsorBrochr.pdf"
@@ -233,7 +247,7 @@ export default function SponsorsPage() {
         </Box> */}
 
         {/* Past Sponsors - Static Display */}
-        <Box className="center1" style={{ marginTop: "100px" }}>
+        <Box className="center1" style={{ marginTop: "100px" }} sx={styles.glassOverlay}>
           <Typography variant="h1" sx={styles.h1}>Past Sponsors</Typography>
           <Box sx={styles.cardsContainer}>
             {pastSponsors.map((sponsor, index) => (
@@ -244,9 +258,10 @@ export default function SponsorsPage() {
         <Box sx={{
           margin: "-20px",
         }}>
-          <Contact />
         </Box>
-      </Box>
+          <Contact />
+      
+    </Box>
     </Box>
   );
 }

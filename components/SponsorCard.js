@@ -13,6 +13,7 @@ const styles = (hoverEffect, dimmed) => ({
   cursor: "pointer",
   transition: "transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease",
   opacity: dimmed ? 0.5 : 1,
+  overflow:"hidden",
   "&:hover": {
     transform: "scale(1.05)",
     boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",

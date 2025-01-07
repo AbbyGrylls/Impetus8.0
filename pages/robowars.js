@@ -212,7 +212,8 @@ export default function ExpoPage() {
         "@media (max-width: 900px)": {
           marginTop: "-100px",
         },
-      }}> <NoiseBackground style={{zIndex:0,}} />
+      }}>
+      {/* <NoiseBackground style={{zIndex:0,}} /> */}
         <Box //1st pg box starts here
           /* ref={aboutRef} */
           sx={{
@@ -304,7 +305,7 @@ export default function ExpoPage() {
               </Typography>
             ))}
           </Box>
-          <NoiseBackground style={{zIndex:-1,}} />
+          {/* <NoiseBackground style={{zIndex:-1,}} /> */}
         </Box>{/* 1st pg box ends here */}
         <Box
           sx={{
@@ -328,7 +329,8 @@ export default function ExpoPage() {
             overflow: "hidden",
             position:"relative"
           }}
-        > <NoiseBackground style={{zIndex:0,}} />
+        > 
+        {/* <NoiseBackground style={{zIndex:0,}} /> */}
           {/* Rulebook Section */}
           <Box
             ref={rulebookRef}
@@ -429,10 +431,13 @@ export default function ExpoPage() {
         </Box>
 
       </Box>
-      {/* Contact Section */}<Box style={{position: "relative",zIndex:1,width:"1400px"}}>
+      {/* Contact Section */}
+      {/* <Box style={{position: "relative",zIndex:1,width:"1400px"}}>
+      
+      </Box> */}
+      {/* <NoiseBackground style={{zIndex:-1,}} /> */}
+
       <Contact style={{bottom:"0", position: "relative" }} />
-      <NoiseBackground style={{zIndex:-1,}} />
-      </Box>
     </Box>
   );
 }
