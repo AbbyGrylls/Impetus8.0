@@ -22,7 +22,7 @@ export default function EventPage() {
       title: "CADATHON",
       category: "Design-&-CAD",
       description: "This competition aims to develop the idea of assembly of 3D structures on a CAD software.This event will be organized by the Society of Automotive Engineers (SAE), IIEST Shibpur  under the banner of 'Impetus 8.0'.",
-      regLink: "https://forms.gle/pxEokiDjCRBXDMah7",
+      regLink: "https://forms.gle/ZTjNRtyFgKXEV2Tv7",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function EventPage() {
       title: "YANTRASEARCH",
       category: "Problem-Solving",
       description: "This event organized by ASME IIEST, aims to give you all the excitement of treasure hunt.You can look forward to having fun while solving mysteries together and hunting down simple machines in our college campus.",
-      regLink: "https://forms.gle/bfNTGYyJkkkrHGtv9",
+      regLink: "https://forms.gle/zVVLVsUvVZgZEuG28",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export default function EventPage() {
       title: "HEATOVATION",
       category: "HVAC-&-Entrepreneurship",
       description: "'Heatovation', organized by Impetus 8.0 in association with ISHRAE-IIEST Kolkata chapter empowers social entrepreneurs to create a culture for entrepreneurship and to promote entrepreneurial education in the field of HVAC.",
-      regLink: "https://forms.gle/Fn3HDBAkPTSaBRqG9",
+      regLink: "https://docs.google.com/forms/d/e/1FAIpQLSf-wT50-fijiElPM7-JLE7p2UdDnmDUrYHzxPeohyTDCmLFLA/viewform",
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ export default function EventPage() {
       title: "IQ IGNITION",
       category: "Quizzing-&-Knowledge",
       description: "To instil the essence of quizzing, IMechE IIEST, Shibpur brings to you a Grand General Technical Quiz: ' Suspects' under the banner of Impetus 8.0 .The quiz tests and showcases students' technical knowledge and skills.",
-      regLink: "https://forms.gle/HTt7EuvgkQfqscgk8",
+      regLink: "https://forms.gle/b3SgxfnNhuWQ3bFc6",
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ export default function EventPage() {
       title: "DEATH RACE",
       category: "Robotics",
       description: "The Death Race is a thrilling competition that brings together talented individuals to showcase their skills in building and maneuvering a robot through a challenging track filled with obstacles.",
-      regLink: "https://forms.gle/j8gTXK1SUV9KVva78",
+      regLink: "https://forms.gle/W3f6VdQbcFyBvsaT8",
     },
     {
       id: 7,
@@ -70,7 +70,7 @@ export default function EventPage() {
       title: "DRONE PURSUIT",
       category: "Drones",
       description: "Through Drone Pursuit, IMPETUS and ROBODARSHAN give you the chance to showcase your skills. In Drone Pursuit, participants fly drones through hurdles and gates to win the race. Bring your models to life and make this competition a great success.",
-      regLink: "https://forms.gle/FSkcY878hvjc59K8A",
+      regLink: "https://forms.gle/e9SLGrNviaA6EASP9",
     },
     {
       id: 8,
@@ -78,7 +78,7 @@ export default function EventPage() {
       title: "VALORANT",
       category: "Gaming-&-Esports",
       description: "The Valorant gaming event is a competition that brings together talented players to showcase their skills and compete for recognition. It is an exciting opportunity for Valorant fans to experience high-level gameplay and celebrate the top talent in the game.",
-      regLink: "https://forms.gle/8J18pVrNTjMNBD399",
+      regLink: "https://forms.gle/TDZPpbcoTQFE1UDB7",
     },    
   ];
   const link = [

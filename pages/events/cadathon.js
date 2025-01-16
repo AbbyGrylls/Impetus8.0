@@ -137,7 +137,7 @@ structures on a CAD software. This event will be organized by the Society of Aut
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
-                (window.location.href = "https://forms.gle/pxEokiDjCRBXDMah7")
+                (window.location.href = "https://forms.gle/ZTjNRtyFgKXEV2Tv7")
               }
             >
               Register Now
@@ -350,7 +350,7 @@ choice chosen by the participants through Google form.
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 onClick={(event) =>
-                  (window.location.href = "https://forms.gle/pxEokiDjCRBXDMah7")
+                  (window.location.href = "https://forms.gle/ZTjNRtyFgKXEV2Tv7")
                 }
               >
                 Register Now

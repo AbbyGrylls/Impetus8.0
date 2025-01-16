@@ -131,7 +131,7 @@ export default function CadathonPage() {
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
-                (window.location.href = "https://forms.gle/8J18pVrNTjMNBD399")
+                (window.location.href = "https://forms.gle/TDZPpbcoTQFE1UDB7")
               }
             >
               Register Now
@@ -399,7 +399,7 @@ export default function CadathonPage() {
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 onClick={(event) =>
-                  (window.location.href = "https://forms.gle/8J18pVrNTjMNBD399")
+                  (window.location.href = "https://forms.gle/TDZPpbcoTQFE1UDB7")
                 }
               >
                 Register Now
