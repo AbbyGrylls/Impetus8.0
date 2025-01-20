@@ -44,7 +44,7 @@ const style = {
   width: "70vw",
   gap: "35px",
   margin: "20px",
-  marginBottom: "20px",
+  marginBottom: "10px",
   flexDirection: {
     xs: "column-reverse",
     sm: "column-reverse",
@@ -105,11 +105,11 @@ export default function MerchandiseComp() {
   return (
     <Box sx={containerStyles}>
       <Typography className="flux" variant="h1">
-        Offcial IMPETUS 8.0 Merchandise
+        Merchandise
       </Typography>
       <Box sx={style}>
         <Box className="content">
-          <Typography variant="p">
+          <Typography variant="p" sx={{fontSize: "1rem"}}>
             {/* Ignite your creativity and design the ultimate t-shirt for Impetus 8.0! 🌟 <br></br>
           Let your imagination run wild and create a design that captures the essence of innovation 💡, technology 🖥, and the spirit of our college 🎓.<br></br><br></br>
           Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let&apos;s make this year&apos;s t-shirt a masterpiece. */}
