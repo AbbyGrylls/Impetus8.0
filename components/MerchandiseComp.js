@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 const containerStyles = {
   marginTop: "50px",
   margin: {
@@ -44,7 +44,7 @@ const style = {
   width: "70vw",
   gap: "35px",
   margin: "20px",
-  marginBottom: "50px",
+  marginBottom: "10px",
   flexDirection: {
     xs: "column-reverse",
     sm: "column-reverse",
@@ -89,31 +89,50 @@ const style = {
     borderRadius: "10px",
   },
 };
+const Dot = () => {
+  return (
+    <FiberManualRecordIcon
+      sx={{
+        fontSize: "1rem", // Adjust size
+        color: "black", // Adjust color
+      }}
+    />
+  );
+};
 
 export default function MerchandiseComp() {
-  
+
   return (
     <Box sx={containerStyles}>
       <Typography className="flux" variant="h1">
-      T-Shirt Design Contest
+        Merchandise
       </Typography>
       <Box sx={style}>
         <Box className="content">
-          <Typography variant="p">
-          Ignite your creativity and design the ultimate t-shirt for Impetus 8.0! 🌟 <br></br>
+          <Typography variant="p" sx={{fontSize: "1rem"}}>
+            {/* Ignite your creativity and design the ultimate t-shirt for Impetus 8.0! 🌟 <br></br>
           Let your imagination run wild and create a design that captures the essence of innovation 💡, technology 🖥, and the spirit of our college 🎓.<br></br><br></br>
-          Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let&apos;s make this year&apos;s t-shirt a masterpiece.
- 
+          Submit your designs by <span style={{fontWeight:"bold", color:"#00A7E7"}}>10th January 2025</span>.<br></br> The winning design will be featured on official Impetus 8.0 merchandise, and the winner will receive free Impetus 8.0 merchandise 🎁. Let&apos;s make this year&apos;s t-shirt a masterpiece. */}
+            Get ready to gear up for IMPETUS 8.0, with our exclusive and stylish official merchandise!😎👕<br></br>
+            {/* 🔥 T-shirt Details:<br></br> */}
+            <Dot /> Color: Black 🖤<br></br>
+            <Dot /> Type: Polo T-shirt (collar T-shirt)<br></br>
+            <Dot /> Sizes Available: S, M, L, XL, XXL, XXXL (special orders available in the second lot) <br></br>
+            <Dot /> Cost: <span style={{fontWeight:"bold", color:"#00A7E7"}}>₹325</span> only<br></br>
+            {/* ⏳ Availability: <br></br> */}
+            T-shirts from the first lot are available based on demand and size. Limited stock, so don’t miss out—HURRY!
+            <br></br>Flaunt your participation in style, and let IMPETUS 8.0 be a part of your wardrobe!
+
           </Typography>
           <Box className="ButtonBox">
             {/* <Button className="Btn" onClick={handleClick}>Buy Now</Button> */}
             <Button className="Btn"
-             href="https://docs.google.com/forms/d/e/1FAIpQLSe9w0Pp528U1TvNGUddCDMD7gcfFfgvIfDEJMYACQ1LFCve4Q/viewform"
-             >Submit</Button>
+              href="https://forms.gle/vgSSmepqsyUaoiQA8"
+            >Submit</Button>
           </Box>
         </Box>
-        <Box className="tShirt" style={{}}>
-          <img src="/images/home/Tshirt.jpg" alt="tshirt" />
+        <Box className="tShirt" sx={{ marginBottom: { sm: 0, lg: "120px" } }}>
+          <img src="/images/home/TshirtFinal.png" alt="tshirt" />
         </Box>
       </Box>
     </Box>
