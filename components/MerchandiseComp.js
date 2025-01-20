@@ -69,7 +69,7 @@ const style = {
     margin: "25px 0",
     ".Btn": {
       border: "2px",
-      borderRadius: "17px",
+      borderRadius: "10px",
       padding: "10px 30px",
       color: "white",
       backgroundColor: "#00A7E7",
