@@ -128,7 +128,7 @@ export default function MerchandiseComp() {
             {/* <Button className="Btn" onClick={handleClick}>Buy Now</Button> */}
             <Button className="Btn"
               href="https://forms.gle/vgSSmepqsyUaoiQA8"
-            >Submit</Button>
+            >Buy Now</Button>
           </Box>
         </Box>
         <Box className="tShirt" sx={{ marginBottom: { sm: 0, lg: "120px" } }}>
