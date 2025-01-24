@@ -46,7 +46,7 @@ export default function EventPage() {
       title: "SCRAPYARD",
       category: "Innovation",
       description: "Innovation need not come from what everyone considers to be a resource; it can also come from making use of what others consider to be waste and producing something useful. With this thought in mind Impetus 8.0 presents to you 'Scrapyard'",
-      regLink: "https://forms.gle/KpHeEY4ev3kNjjmx7",
+      regLink: "https://forms.gle/YW4dXrUNvUvQo7bu7",
     },
     {
       id: 5,

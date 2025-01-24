@@ -148,7 +148,7 @@ of innovation.
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
-                (window.location.href = "https://forms.gle/KpHeEY4ev3kNjjmx7")
+                (window.location.href = "https://forms.gle/YW4dXrUNvUvQo7bu7")
               }
             >
               Register Now
@@ -417,7 +417,7 @@ of innovation.
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 onClick={(event) =>
-                  (window.location.href = "https://forms.gle/KpHeEY4ev3kNjjmx7")
+                  (window.location.href = "https://forms.gle/YW4dXrUNvUvQo7bu7")
                 }
               >
                 Register Now
