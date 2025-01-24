@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import Image from "next/image";
 import SponsorCard from "../components/SponsorCard";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import TakeawayTimeline from "../components/TakeawayTimeline";
+import TakeawayTimeline from "../components/TkeawayTimeline";
 import BenifitsTimeline from "../components/BenifitsTimeline";
 const speakers = [
   {
