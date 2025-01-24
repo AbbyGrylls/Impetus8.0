@@ -1,12 +1,13 @@
 import { Typography, useTheme } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, display } from "@mui/system";
 import CarouselComp from "../components/CarouselComp";
 import ContactCard from "../components/ContactCard";
 import Contact from "../components/Contact";
 import Image from "next/image";
 import SponsorCard from "../components/SponsorCard";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import takeawayTimeline from "../components/takeawayTimeline"
+import TakeawayTimeline from "../components/TakeawayTimeline";
+import BenifitsTimeline from "../components/BenifitsTimeline";
 const speakers = [
   {
     name: "Debajyoti Dhar",
@@ -82,6 +83,13 @@ export default function IAMPage() {
         margin: "30px",
       },
     },
+    ".arrowheads":{
+      color: "rgb(24, 66, 255)", 
+      fontSize: "2rem", 
+      fontFamily: "Bebas Neue, sans-serif",
+      justifyContent: "flex-start", 
+      mb: 2, 
+    },
     ".contact": {
       width: "100%",
       maxWidth: "1000px",
@@ -146,13 +154,6 @@ export default function IAMPage() {
     person1: {},
     person2: {},
   };
-  const templateBenefits = {
-    temp1: { head: "Strategic Networking", des: "Engage with key industry officials and HR leaders, fostering connections that drive impactful collaborations." },
-    temp2: { head: "Hiring Trends Insight", des: "Access cutting-edge knowledge on foundational principles and emerging trends in campus recruitment." },
-    temp3: { head: "Technical Excellence", des: "Witness demonstrations of exceptional technical prowess and success stories that highlight institutional achievements." },
-    temp4: { head: "Future-Ready Engineers", des: "Partner with institutions dedicated to shaping industry-ready engineers for seamless recruitment integration." },
-    temp5: { head: "Synergistic Ecosystem", des: "Contribute to cultivating a collaborative ecosystem that benefits students, academic institutions, and corporate stakeholders alike." }
-  };
 
   const sponsor = {
     sponsor1: { imgname: "IOCL.jpg", link: "https://iocl.com/" },
@@ -172,7 +173,7 @@ export default function IAMPage() {
             letterSpacing: "2px",
           }}
         >
-          INDUSTRY ACADEMIA MEET
+          INDUSTRY-ACADEMIA MEET
         </h1>
         <p className=" text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48 " style={{
           fontSize: "1.25rem",
@@ -191,34 +192,50 @@ export default function IAMPage() {
           display: "flex",
           flexDirection: "column",
           gap: 10,
-          pt: 8, // Padding Top
-          mt: 4, // Margin Top
-          px: 4, // Padding Left and Right
-          mx: "auto", // Center the box horizontally
-          maxWidth: "1200px", // Equivalent to max-w-screen-xl
-          // textAlign: "left", // Align content to the left
-          zIndex: 10, // Set z-index
-          position: "relative", // Equivalent to relative
+          pt: 8,
+          mt: 4, 
+          px: 4, 
+          mx: "auto", 
+          maxWidth: "1200px", 
+          // textAlign: "left", 
+          zIndex: 10, 
+          position: "relative", 
         }}
-      > <Box>
+      >
+        <h1
+          className="text-3xl md:text-4xl py-1 font-bold"
+          style={{
+            textAlign: "center",
+            marginTop: "10px",
+            fontFamily: "Rowdies",
+            marginBottom: "-50px",
+          }}
+        >
+         Past Event Sponsors
+        </h1>
+        <Box className="cards" style={{ width: "100%" }}>
+          <SponsorCard sponsor={sponsor.sponsor1} />
+          <SponsorCard sponsor={sponsor.sponsor2} />
+        </Box> 
+      <Box>
           <Typography
             variant="h2"
             sx={{
-              color: "rgb(24, 66, 255)", // Text color
-              fontSize: "2rem", // Font size
-              fontFamily: "Bebas Neue, sans-serif", // Font family
-              justifyContent: "flex-start", // Align text to start
-              mb: 2, // Margin Bottom for spacing
+              color: "rgb(24, 66, 255)", 
+              fontSize: "2rem", 
+              fontFamily: "Bebas Neue, sans-serif",
+              justifyContent: "flex-start", 
+              mb: 2, 
             }}
           >
             {">>"}Academia meets Industry - Insights that matter
           </Typography>
           <Typography
             sx={{
-              color: "#fff", // Default text color
-              fontSize: "1rem", // Adjust font size
-              lineHeight: "1.6", // Adjust line spacing
-              fontFamily: "Roboto, sans-serif", // Use a clean font for body text
+              color: "#fff", 
+              fontSize: "1rem", 
+              lineHeight: "1.6", 
+              fontFamily: "Roboto, sans-serif",
               letterSpacing: "1px"
             }}
           >
@@ -237,10 +254,10 @@ export default function IAMPage() {
           <Typography
             variant="h2"
             sx={{
-              color: "rgb(24, 66, 255)", // Text color
-              fontSize: "2rem", // Font size
-              fontFamily: "Bebas Neue, sans-serif", // Font family
-              mb: 2, // Margin Bottom for spacing
+              color: "rgb(24, 66, 255)", 
+              fontSize: "2rem", 
+              fontFamily: "Bebas Neue, sans-serif", 
+              mb: 2, 
               textAlign: "right"
             }}
           >
@@ -249,10 +266,10 @@ export default function IAMPage() {
           </Typography>
           <Typography
             sx={{
-              color: "#fff", // Default text color
-              fontSize: "1rem", // Adjust font size
-              lineHeight: "1.6", // Adjust line spacing
-              fontFamily: "Roboto, sans-serif", // Use a clean font for body text
+              color: "#fff", 
+              fontSize: "1rem", 
+              lineHeight: "1.6", 
+              fontFamily: "Roboto, sans-serif", 
               letterSpacing: "1px",
               textAlign: "right"
             }}
@@ -269,7 +286,7 @@ export default function IAMPage() {
             fontFamily: "Rowdies",
             paddingTop: "15px",
           }}>
-            Speakers
+           Past Speakers
           </Typography>
         </Box>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 place-items-center" style={{ maxWidth: "850px", margin: "0 auto", gap: "100px", marginTop: "-60px" }}>
@@ -299,9 +316,52 @@ export default function IAMPage() {
             );
           })}
         </div>
-      <Box sx={{display:"flex"}}>
-       <takeawayTimeline />
-      </Box>
+        <Box>
+          <Typography sx={{
+            color: "rgb(24, 66, 255)", 
+            fontSize: "2rem", 
+            fontFamily: "Bebas Neue, sans-serif", 
+            mb: 2,
+            textAlign: "left"
+          }}>
+            {">>"}Our Aim at IMPETUS 8.0
+          </Typography>
+        </Box>
+        <Box sx={{
+          display: "flex", flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+          justifyContent: "center",
+          gap: "175px"
+        }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Typography variant="h2"
+              sx={{
+                color: "rgb(24, 66, 255)", 
+                fontSize: "2rem", 
+                fontFamily: "Bebas Neue, sans-serif", 
+                mb: 2, 
+                textAlign: "left"
+              }}>
+              {">>"}Takeaways for the corporate
+            </Typography>
+            <TakeawayTimeline />
+          </div>
+          <Box sx={{ display: "flex", flexDirection: "column", marginTop: { xs: "-100px", md: "0px" } }}>
+            <Typography variant="h2"
+              sx={{
+                color: "rgb(24, 66, 255)", 
+                fontSize: "2rem", 
+                fontFamily: "Bebas Neue, sans-serif", 
+                mb: 2, 
+                textAlign: "right"
+              }}>
+              Benifits for the institution{"<<"}
+            </Typography>
+            <BenifitsTimeline />
+          </Box>
+        </Box>
       </Box>
       {/* <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
 

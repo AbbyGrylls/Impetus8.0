@@ -2,14 +2,14 @@ import { Typography, Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 const phases = [
-    { head : "Innovative Solutions", des:"Addressing technical challenges through collaborative projects and expert consultancy services."},
-    {head:"Research Excellence", des:"Showcasing practical solutions with in-depth studies and research publications by esteemed academicians."},
-    {head:"Streamlined Hiring", des:"Implementing innovative and time-efficient strategies to optimize the hiring process."},
-    {head:"Collaborative Engagement",des:"Fostering active interactions between industries and scholars to collectively tackle challenges."},
-    {head:"Networking Opportunities",des:"Building valuable connections with distinguished delegates from various industries and research institutes."}
+    { head: "Strategic Networking", des: "Engage with key industry officials and HR leaders, fostering connections that drive impactful collaborations." },
+    { head: "Hiring Trends Insight", des: "Access cutting-edge knowledge on foundational principles and emerging trends in campus recruitment." },
+     { head: "Technical Excellence", des: "Witness demonstrations of exceptional technical prowess and success stories that highlight institutional achievements." },
+    { head: "Future-Ready Engineers", des: "Partner with institutions dedicated to shaping industry-ready engineers for seamless recruitment integration." },
+     { head: "Synergistic Ecosystem", des: "Contribute to cultivating a collaborative ecosystem that benefits students, academic institutions, and corporate stakeholders alike." }
 ];
 
-const TakeawayTimeline = () => {
+const BenefitsTimeline = () => {
   // Explicitly declare refs and inView states for each phase
   const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 });
   const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.1 });
@@ -52,7 +52,7 @@ const TakeawayTimeline = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          //gap: "20px",
+          //gap: "50px",
           width: "100%",
           position: "relative",
         }}
@@ -71,7 +71,6 @@ const TakeawayTimeline = () => {
                 width: "100%",
                 position: "relative",
                 zIndex: 1,
-              //  backgroundColor:"#999"
               }}
             >
               <Box
@@ -94,8 +93,6 @@ const TakeawayTimeline = () => {
                     ? "translate(-50px, -50px)"
                     : "translate(50px, -50px)",
                   opacity: inView ? 1 : 0,
-                  
-                //backgroundColor:"#666"
                 }}
               >
                 <Typography
@@ -130,4 +127,4 @@ const TakeawayTimeline = () => {
   );
 };
 
-export default TakeawayTimeline
+export default BenefitsTimeline
