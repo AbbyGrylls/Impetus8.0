@@ -96,6 +96,7 @@ export default function CadathonPage() {
     },
   };
   return (
+    
     <Box sx={{ width: "100vw", background:"black" ,background:"linear-gradient(180deg, #000000, #18192aab, #04040a)"}} className="mt-10 center1">
       <Box sx={headerStyles} className="center2">
         <IconButton onClick={goBack} className="left">
@@ -116,7 +117,24 @@ export default function CadathonPage() {
           clash will be a best of 3 matches. The winners take home total prize
           money worth Rs. 10000{" "}
           <p className="text-lg font-normal text-gray-200  "></p>
-          <div className="py-2 flex items-center flex-col justify-center ">
+          
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
+          <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
+          <h1 className="text-3xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+          <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              
+              onClick={(event) =>
+                (window.location.href = "https://drive.google.com/file/d/1RZAABdHfFkHdtdJvy8cb8ry_0WdlANIB/view?usp=drive_link")
+              }
+            >
+              Click Here
+            </button>
+          </div>
+          
+        </div>
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
@@ -124,10 +142,9 @@ export default function CadathonPage() {
                   Dates{" "}
                 </span>
                 {/* 10th February, 2024 11:00 AM onwards */}
-                Coming Soon...
+                8th Feb 2025, Starts at 10:00am 
               </p>
-            </div>
-            <button
+              <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -136,6 +153,21 @@ export default function CadathonPage() {
             >
               Register Now
             </button>
+            </div>
+            <Box  sx={{display:"flex", flexDirection:"column",marginBottom:"10px "}}>
+            <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">
+            <span className="font-bold text-xl">Rs.250</span> (For IIEST students)
+          </li>
+          <li className="py-1">
+            <span className="font-bold text-xl">Rs.300</span> (For non-IIEST students)
+          </li>
+          <li>
+            <span className="font-bold text-xl">Rs.100</span> (for re-entry)
+          </li>
+            </Box>
           </div>
         </div>
         <div className="py-6 bg-gray-900 mb-2 shadow-md sm:rounded-lg px-0 rounded-md">
@@ -236,14 +268,14 @@ export default function CadathonPage() {
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.10000</span>
+                    <span className="font-bold ">Rs. 20,000</span>
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -258,7 +290,7 @@ export default function CadathonPage() {
             </button>
           </div>
           
-        </div>
+        </div> */}
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Flow of the events</h1>
           <Box className="data mt-2" sx={dataStyles}>
@@ -379,7 +411,7 @@ export default function CadathonPage() {
             If any team faces any problem, they are supposed to report to the
             Event Co-Ordinator or Pool Volunteer without much delay.<br></br>
           </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
+          {/* <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
             Registration fee
           </h1>
           <li className="py-1">
@@ -390,10 +422,10 @@ export default function CadathonPage() {
           </li>
           <li>
             <span className="font-bold text-xl">Rs.100</span> (for re-entry)
-          </li>
+          </li> */}
         </div>
         <Box>
-          <Box className="fee">
+          {/* <Box className="fee">
             <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
@@ -405,7 +437,7 @@ export default function CadathonPage() {
                 Register Now
               </button>
             </Box>
-          </Box>
+          </Box> */}
           <Typography
             variant="h3"
             sx={{ textAlign: "center", marginTop: "20px" }}

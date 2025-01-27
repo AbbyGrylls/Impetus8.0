@@ -133,18 +133,33 @@ export default function CadathonPage() {
 buried gold, you&apos;ll be searching for simple machines hidden around our campus. Solve
 riddles, work together, and have a blast discovering these mechanical wonders!
           </p>
-          <div className="py-2 flex items-center flex-col justify-center ">
-            <div className="py-3 flex flex-col items-center justify-center gap-y-2">
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
+          <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
+          <h1 className="text-2xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+          <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              
+              onClick={(event) =>
+                (window.location.href = "https://drive.google.com/file/d/1RgNY4BK_VPSTxi8lAOyLV8x2QxHOr4ic/view?usp=drive_link")
+              }
+            >
+              Click Here
+            </button>
+          </div>
+          
+        </div>
+            <div className="py-3 flex flex-col items-center justify-center gap-y-2" >
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Dates
                 </span>
                 {/* 9th February 2024 <span className="pl-3"> 4:30pm - 7pm</span> */}
-                Coming Soon...
+                7th Feb 2025, 6:00pm - 8:30pm
               </p>
-            </div>
-            <button
+              <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -153,6 +168,17 @@ riddles, work together, and have a blast discovering these mechanical wonders!
             >
               Register Now
             </button>
+            </div>
+            <Box sx={{display:"flex", flexDirection:"column",marginBottom:"10px "}}>
+        <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">Free (For IIEST students)</li>
+          <li>
+            <span className="font-bold text-xl">Rs.150</span> (For non-IIEST
+            students)
+          </li>
+        </Box>
           </div>
         </div>
         <div className="py-2  ">
@@ -250,7 +276,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
                 </td>
               </tr>
 
-              {/* <tr>
+              <tr>
                 <td className="pl-2 md:px-4 py-2 whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">
                     Prizes worth
@@ -259,16 +285,16 @@ riddles, work together, and have a blast discovering these mechanical wonders!
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.10000</span>
+                    <span className="font-bold ">Rs. 8000</span>
                   </div>
                 </td>
-              </tr> */}
+              </tr>
 
             </tbody>
           </table>
         </div>
 
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -283,7 +309,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
             </button>
           </div>
           
-        </div>
+        </div> */}
 
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Flow of the events</h1>
@@ -384,17 +410,17 @@ riddles, work together, and have a blast discovering these mechanical wonders!
             If any team faces any problem, they are supposed to report to the
             Event Co-Ordinator or Pool Volunteer without much delay.<br></br>
           </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
+          {/* <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
             Registration fee
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
             <span className="font-bold text-xl">Rs.150</span> (For non-IIEST
             students)
-          </li>
+          </li> */}
         </div>
         <Box>
-          <Box className="fee">
+          {/* <Box className="fee">
             <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
@@ -406,7 +432,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
                 Register Now
               </button>
             </Box>
-          </Box>
+          </Box> */}
           <Typography
             variant="h3"
             sx={{ textAlign: "center", marginTop: "20px" }}

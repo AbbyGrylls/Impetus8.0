@@ -1,13 +1,12 @@
+
 import { Typography, useTheme } from "@mui/material";
-import { Box, display } from "@mui/system";
+import { Box } from "@mui/system";
 import CarouselComp from "../components/CarouselComp";
 import ContactCard from "../components/ContactCard";
 import Contact from "../components/Contact";
 import Image from "next/image";
 import SponsorCard from "../components/SponsorCard";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import TakeawayTimeline from "../components/TkeawayTimeline";
-import BenifitsTimeline from "../components/BenifitsTimeline";
 const speakers = [
   {
     name: "Debajyoti Dhar",
@@ -51,8 +50,8 @@ const speakers = [
     img: "MrDeepayan.jpeg",
   },
   {
-    name: "Mr. Avelo Roy",
-    description: "Managing Director, Kolkata Ventures",
+    name: "Mr. Avelo Roy,",
+    description: "Managing Director, Kolkata Ventures",
     img: "MrAvelo.jpg",
   },
 ];
@@ -82,13 +81,6 @@ export default function IAMPage() {
         textAlign: "justify",
         margin: "30px",
       },
-    },
-    ".arrowheads":{
-      color: "rgb(24, 66, 255)", 
-      fontSize: "2rem", 
-      fontFamily: "Bebas Neue, sans-serif",
-      justifyContent: "flex-start", 
-      mb: 2, 
     },
     ".contact": {
       width: "100%",
@@ -154,215 +146,49 @@ export default function IAMPage() {
     person1: {},
     person2: {},
   };
-
   const sponsor = {
     sponsor1: { imgname: "IOCL.jpg", link: "https://iocl.com/" },
-    sponsor2: { imgname: "lal.jpeg", link: "https://lalbabagroup.com/" },
+    sponsor2: { imgname: "lal.jpeg" , link: "https://lalbabagroup.com/" },
   }
   return (
     <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
       <CarouselComp />
 
-
+      
       <div className="pt-8 mt-4 px-4 mx-auto max-w-screen-xl text-center  z-10 relative">
         <h1
           className="text-2xl md:text-3xl font-extrabold tracking-tight leading-none text-gray-50 md:text-4xl lg:text-5xl"
-          style={{
-            fontSize: "4rem",
-            fontFamily: "Bebas Neue",
-            letterSpacing: "2px",
-          }}
+          style={{ fontSize:"4rem",
+          fontFamily:"Bebas Neue",
+          letterSpacing:"2px", }}
         >
-          INDUSTRY-ACADEMIA MEET
+          INDUSTRY ACADEMIA MEET
         </h1>
         <p className=" text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48 " style={{
           fontSize: "1.25rem",
           // color: "#fff",
-          lineHeight: "1.75rem",
-          fontFamily: "Bebas Neue,sans-serif",
-          letterSpacing: "2px",
-          paddingTop: "0.5rem",
+          lineHeight:"1.75rem",
+          fontFamily:"Bebas Neue,sans-serif",
+          letterSpacing:"2px",
+          paddingTop:"0.5rem",
         }}>
           9th February, 2025 - 9AM to 6PM
-          {/* Venue- Institute Hall, IIEST Shibpur. */}
         </p>
       </div>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 10,
-          pt: 8,
-          mt: 4, 
-          px: 4, 
-          mx: "auto", 
-          maxWidth: "1200px", 
-          // textAlign: "left", 
-          zIndex: 10, 
-          position: "relative", 
-        }}
-      >
-        <h1
-          className="text-3xl md:text-4xl py-1 font-bold"
-          style={{
-            textAlign: "center",
-            marginTop: "10px",
-            fontFamily: "Rowdies",
-            marginBottom: "-50px",
-          }}
-        >
-         Past Event Sponsors
-        </h1>
-        <Box className="cards" style={{ width: "100%" }}>
-          <SponsorCard sponsor={sponsor.sponsor1} />
-          <SponsorCard sponsor={sponsor.sponsor2} />
-        </Box> 
-      <Box>
-          <Typography
-            variant="h2"
-            sx={{
-              color: "rgb(24, 66, 255)", 
-              fontSize: "2rem", 
-              fontFamily: "Bebas Neue, sans-serif",
-              justifyContent: "flex-start", 
-              mb: 2, 
-            }}
-          >
-            {">>"}Academia meets Industry - Insights that matter
-          </Typography>
-          <Typography
-            sx={{
-              color: "#fff", 
-              fontSize: "1rem", 
-              lineHeight: "1.6", 
-              fontFamily: "Roboto, sans-serif",
-              letterSpacing: "1px"
-            }}
-          >
-            The Industrial Academia Meet in IMPETUS is designed to establish a collaborative platform
-            for meaningful engagement between industry and academia. This initiative emphasizes the exchange
-            of knowledge and innovative ideas, fostering thought-provoking discussions around best practices,
-            employability trends across diverse engineering domains, and strategies to identify and
-            nurture talent during campus recruitment. It also seeks to bridge the gap between academic learning
-            and industrial expectations, ensuring students are equipped with real-world insights and skills.
-            With a lineup of esteemed speakers from leading industries, this event promises to be a
-            treasure trove of wisdom and inspiration. Get ready to meet the visionaries
-            who will ignite your curiosity and redefine your perspective!
-          </Typography>
-        </Box>
-        <Box>
-          <Typography
-            variant="h2"
-            sx={{
-              color: "rgb(24, 66, 255)", 
-              fontSize: "2rem", 
-              fontFamily: "Bebas Neue, sans-serif", 
-              mb: 2, 
-              textAlign: "right"
-            }}
-          >
-            From Innovation to Interaction – Dive Deep with Industry Experts{"<<"}
+      <Box style={{
+        textAlign:"center",
+        padding:"6rem 0",
+        marginBottom:"5rem",
+        fontSize:"2rem",
+        fontFamily:"Bebas Neue",
+        letterSpacing:"2px",
 
-          </Typography>
-          <Typography
-            sx={{
-              color: "#fff", 
-              fontSize: "1rem", 
-              lineHeight: "1.6", 
-              fontFamily: "Roboto, sans-serif", 
-              letterSpacing: "1px",
-              textAlign: "right"
-            }}
-          >
-            We are honored to host a distinguished panel of speakers at the Industry-Academia Meet,
-            bringing together leading industry experts and renowned academicians to share their
-            insights, experiences, and expertise.
-          </Typography>
-          <Typography sx={{
-            color: "#fff",
-            fontSize: "2.5rem",
-            lineHeight: "1.5",
-            textAlign: "center",
-            fontFamily: "Rowdies",
-            paddingTop: "15px",
-          }}>
-           Past Speakers
-          </Typography>
-        </Box>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 place-items-center" style={{ maxWidth: "850px", margin: "0 auto", gap: "100px", marginTop: "-60px" }}>
-          {speakers.map((x) => {
-            return (
-              <div
-                key={x.name}
-                className="w-full max-w-sm  rounded-lg shadow "
-              >
-                <div className="flex justify-end px-4 pt-4"></div>
-                <div className="flex flex-col items-center ">
-                  <Image
-                    className="rounded-full "
-                    src={"/images/" + x.img}
-                    alt="speaker1"
-                    width="250"
-                    height="250"
-                  />
-                  <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white" style={{ marginTop: "16px" }}>
-                    {x.name}
-                  </h5>
-                  <span className="text-md  text-center text-gray-400" style={{ width: "80%" }}>
-                    {x.description}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <Box>
-          <Typography sx={{
-            color: "rgb(24, 66, 255)", 
-            fontSize: "2rem", 
-            fontFamily: "Bebas Neue, sans-serif", 
-            mb: 2,
-            textAlign: "left"
-          }}>
-            {">>"}Our Aim at IMPETUS 8.0
-          </Typography>
-        </Box>
-        <Box sx={{
-          display: "flex", flexDirection: {
-            xs: "column",
-            md: "row",
-          },
-          justifyContent: "center",
-          gap: "175px"
-        }}>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <Typography variant="h2"
-              sx={{
-                color: "rgb(24, 66, 255)", 
-                fontSize: "2rem", 
-                fontFamily: "Bebas Neue, sans-serif", 
-                mb: 2, 
-                textAlign: "left"
-              }}>
-              {">>"}Takeaways for the corporate
-            </Typography>
-            <TakeawayTimeline />
-          </div>
-          <Box sx={{ display: "flex", flexDirection: "column", marginTop: { xs: "-100px", md: "0px" } }}>
-            <Typography variant="h2"
-              sx={{
-                color: "rgb(24, 66, 255)", 
-                fontSize: "2rem", 
-                fontFamily: "Bebas Neue, sans-serif", 
-                mb: 2, 
-                textAlign: "right"
-              }}>
-              Benifits for the institution{"<<"}
-            </Typography>
-            <BenifitsTimeline />
-          </Box>
-        </Box>
+         }}>Coming <span style={{
+          // color:"rgb(255 67 26)"
+          }}>Soon</span>...
       </Box>
+
+
       {/* <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">
 
       

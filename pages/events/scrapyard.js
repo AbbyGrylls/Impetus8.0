@@ -125,7 +125,23 @@ ideas that push the boundaries of conventional solutions. It&apos;s a celebratio
 imagination, and collaborative prowess. Join us for a journey into uncharted territories
 of innovation.
           </p>
-          <div className="py-2 flex items-center flex-col justify-center ">
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
+          <div className="py-3 mt-2 " style={{marginBottom:"1px"}}>
+          <h1 className="text-2xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+          <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              
+              onClick={(event) =>
+                (window.location.href = "https://drive.google.com/file/d/1RfJw_1AkHs68Y9I8AO2OnJbY0WajoJOe/view?usp=drive_link")
+              }
+            >
+              Click Here
+            </button>
+          </div>
+          
+        </div> 
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
@@ -133,7 +149,7 @@ of innovation.
                   Round 1
                 </span>
                 {/* 10th February, 2024 10:00 AM-11:00 AM */}
-                Coming Soon...
+                7th Feb 2025, 4:30pm - 5:30pm
               </p>
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
@@ -141,10 +157,9 @@ of innovation.
                   Round 2
                 </span>
                 {/* 10th February, 2024 1:00 PM-3:00 PM */}
-                Coming Soon...
+                8th Feb 2025, 4:00pm - 6:00pm
               </p>
-            </div>
-            <button
+              <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -153,6 +168,20 @@ of innovation.
             >
               Register Now
             </button>
+            </div>
+            <Box>
+            <div className="">
+          
+          <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">Free (For IIEST students)</li>
+          <li>
+            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
+            students)
+          </li>
+        </div>
+            </Box>
           </div>
         </div>
         <div className="py-2  ">
@@ -235,7 +264,7 @@ of innovation.
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.8000</span>
+                    <span className="font-bold ">Rs. 8000</span>
                   </div>
                 </td>
               </tr>
@@ -243,7 +272,7 @@ of innovation.
           </table>
         </div>
 
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -258,7 +287,7 @@ of innovation.
             </button>
           </div>
           
-        </div>
+        </div> */}
 
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Flow of the events</h1>
@@ -396,23 +425,10 @@ of innovation.
             </li>
           </ul>
         </Box> */}
-        <div className="">
-          <p className="text-lg font-semibold  text-gray-200  ">
-            NOTE:- EVENT COORDINATORS HAVE THE FINAL SAY IN ALL ASPECTS IN THIS
-            EVENT.<br></br>
-          </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
-            Registration fee
-          </h1>
-          <li className="py-1">Free (For IIEST students)</li>
-          <li>
-            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
-            students)
-          </li>
-        </div>
+        
         <Box>
           <Box className="fee">
-            <Box sx={{ width: "100%" }} className="py-4 center1">
+            {/* <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -422,7 +438,7 @@ of innovation.
               >
                 Register Now
               </button>
-            </Box>
+            </Box> */}
           </Box>
           <Typography
             variant="h3"

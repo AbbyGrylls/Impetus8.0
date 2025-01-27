@@ -9,9 +9,9 @@ const styles = {
     display: "grid",
     width: "100%",
     gridTemplateColumns: {
-      lg: "repeat(6,0.8fr) 1.5fr",
-      sm: "repeat(6,0.8fr) 1.65fr",
-      xs: "repeat(6,0.8fr) 1.6fr",
+      lg: "repeat(5,1fr) 1.5fr",
+      sm: "repeat(5,1fr) 1.65fr",
+      xs: "repeat(5,1fr) 1.6fr",
     },
     flexDirection: "row",
     a: {
@@ -73,14 +73,14 @@ export default function NavbarComp() {
               <span>About</span>
             </div>
           </Link>
-          <Link
+          {/* <Link
             href="/robowars"
             className={router.pathname === "/robowars" ? "active" : ""}
           >
             <div className="bor">
               <span>Robowars</span>
             </div>
-          </Link>
+          </Link> */}
           <Link
             href="/events"
             className={router.pathname === "/events" ? "active" : ""}
@@ -120,7 +120,7 @@ export default function NavbarComp() {
               router.pathname === "/industryacademiameet" ? "active" : ""
             }
           >
-            <div className="bor" style={{ width: "100%" }}>
+            <div className="bor" style={{ width: "250px" }}>
               <span>Industry Academia Meet</span>
             </div>
           </Link>
