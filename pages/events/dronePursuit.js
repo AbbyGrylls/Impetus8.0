@@ -1,7 +1,7 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { IconButton, Typography, useTheme } from "@mui/material";
+import { Button, IconButton, Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import Contact from "../../components/Contact";
@@ -89,13 +89,17 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Suyash Tiwari",
-      phone: "+91 8957958260",
+      name: "Varun Gautam",
+      phone: "+91 9368145959",
     },
     person2: {
-      name: "Ayan Paul",
-      phone: "+91 8910867945",
+      name: "Harsh Kumar",
+      phone: "+91 8240541513",
     },
+    person3: {
+      name:"Ritesh Gupta",
+      phone:"+91 8291164387",
+    }
   };
   return (
     <Box sx={{ width: "100vw", background:"black",background:"linear-gradient(180deg, #000000, #18192aab, #04040a)" }} className="mt-10 center1">
@@ -114,7 +118,22 @@ export default function CadathonPage() {
           Hobby aircraft are booming, and multi-rotors are no exception. IMPETUS along with ROBODARSHAN brings you the opportunity to showcase your talents through Drone Pursuit. Drone Pursuit includes a race course, where participants will fly their drones through a series of gates and obstacles to win the race. Amaze the audience with your models and make this competition a great success with your performances. You will be judged on both the aspects of a multi-rotor that is, on the expertise of your flying skills and the stability of your bot.
 
           </p>
-          <div className="py-2 flex items-center flex-col justify-center ">
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
+          <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
+          <h1 className="text-2xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+            
+          <a
+          href="/docs/Rulebook_dp.pdf"
+            target="_blank"
+            type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+          >
+            Click Here
+          </a>
+          </div>
+          
+        </div> 
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
@@ -122,10 +141,10 @@ export default function CadathonPage() {
                   Dates
                 </span>
                  {/* 10th February, 2024  4:00pm to 6:00pm */}
-                 Coming Soon...
+                 7Th Feb 2025, 6:00pm - 10:30pm<br></br>
+                 <p style={{marginLeft:"100px"}}>8Th Feb 2025, Starts at 8:30pm</p>
               </p>
-            </div>
-            {/* <button
+              <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -133,10 +152,21 @@ export default function CadathonPage() {
               }
             >
               Register Now
-            </button> */}
+            </button> 
+            </div>
+            <Box>
+          <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">Free (For IIEST students)</li>
+          <li>
+            <span className="font-bold text-xl">Rs. 500</span> (For non-IIEST
+            students)
+          </li>
+          </Box>
           </div>
         </div>
-        {/* <div className="py-2  ">
+         <div className="py-2  ">
           <h1 className="text-3xl py-1 font-bold ">Objective</h1>
           <p className="text-lg font-normal text-gray-200  ">
           The objective of this competition is to test the agility and manoeuverability of your drones . The drones are required to pass through a series of manoeuvre, such as passing through hoops, avoiding obstacles. You will be judged on the overall performance of your drones.
@@ -165,7 +195,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Team of 3-4 members
+                    Team of max 5 members
                   </div>
                 </td>
               </tr>
@@ -176,7 +206,7 @@ export default function CadathonPage() {
                   </div>
                 </td>
                 <td className=" pl-2 py-1">
-                  <div className="text-sm font-medium  md:text-lg ">1</div>
+                  <div className="text-sm font-medium  md:text-lg ">(Refer Rulebook)</div>
                 </td>
               </tr>
               <tr>
@@ -188,7 +218,7 @@ export default function CadathonPage() {
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.15000</span>
+                    <span className="font-bold ">Rs. 40,000</span>
                   </div>
                 </td>
               </tr>
@@ -198,7 +228,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Amenities
+                    Lords Ground, IIEST Shibpur.
                   </div>
                 </td>
               </tr>
@@ -206,7 +236,7 @@ export default function CadathonPage() {
           </table>
         </div>
 
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -221,7 +251,7 @@ export default function CadathonPage() {
             </button>
           </div>
           
-        </div> */}
+        </div>  */}
         {/* ***************************************************** */}
 
         {/* <div className="py-3 mt-2 ">
@@ -395,7 +425,7 @@ export default function CadathonPage() {
 
 
         {/* ***************************************************** */}
-        {/* <div className="">
+        <div className="">
           <p className="text-lg font-semibold  text-gray-200  ">
             If any team faces any problem, they are supposed to report to the
             Event Co-Ordinator or Pool Volunteer without much delay.<br></br>
@@ -404,18 +434,18 @@ export default function CadathonPage() {
           In case of any discrepancy, event coordinators decisions will be considered.
           <br></br>
           </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
+          {/* <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
             Registration fee
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.150</span> (For non-IIEST
+            <span className="font-bold text-xl">Rs. 500</span> (For non-IIEST
             students)
-          </li>
+          </li> */}
         </div>
         <Box>
           <Box className="fee">
-            <Box sx={{ width: "100%" }} className="py-4 center1">
+            {/* <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -425,7 +455,7 @@ export default function CadathonPage() {
               >
                 Register Now
               </button>
-            </Box>
+            </Box> */}
           </Box>
           <Typography
             variant="h3"
@@ -437,8 +467,9 @@ export default function CadathonPage() {
           <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
             <EventMag person={person.person1} />
             <EventMag person={person.person2} />
+            <EventMag person={person.person3} />
           </Box>
-        </Box> */}
+        </Box> 
       </section>
       <Contact />
     </Box>
