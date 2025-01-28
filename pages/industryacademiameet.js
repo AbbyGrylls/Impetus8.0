@@ -1,3 +1,4 @@
+
 import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import CarouselComp from "../components/CarouselComp";
@@ -50,7 +51,7 @@ const speakers = [
   },
   {
     name: "Mr. Avelo Roy,",
-    description: "Managing Director, Kolkata Ventures",
+    description: "Managing Director, Kolkata Ventures",
     img: "MrAvelo.jpg",
   },
 ];

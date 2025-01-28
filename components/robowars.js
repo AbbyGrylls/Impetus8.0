@@ -1,10 +1,10 @@
 import { Typography, useTheme, Button } from "@mui/material";
 import { Box, } from "@mui/system";
-import Contact from "../components/Contact";
+import Contact from "./Contact";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import Timeline from "../components/Timeline";
-import NoiseBackground from "../components/NoiseBackground";
+import Timeline from "./Timeline";
+import NoiseBackground from "./NoiseBackground";
 import { useEffect, useRef, useState } from "react";
 
 export default function ExpoPage() {

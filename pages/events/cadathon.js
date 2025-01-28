@@ -114,26 +114,32 @@ export default function CadathonPage() {
 structures on a CAD software. This event will be organized by the Society of Automotive Engineers
 (SAE), IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
           </p>
-          <div className="py-2 flex items-center flex-col justify-center ">
-            <div className="py-3 flex flex-col items-center justify-center gap-y-2">
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
+          <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
+          <h1 className="text-2xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+          <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              
+              onClick={(event) =>
+                (window.location.href = "https://drive.google.com/file/d/1RXkGg9k8WHokScmeVT3gms4xPVOC7mP6/view?usp=drive_link")
+              }
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+            <div className="py-3 flex flex-col mt-1 items-center justify-center gap-y-2">
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
-                  Round 1
+                  Round 1 & 2
                 </span>
-                {/* 9th February 2024 , 12:30pm - 2:00pm */}
-                Coming soon...
+                8th February 2025 , 2:30pm - 5:30pm
+                {/* Coming soon... */}
               </p>
-              <p className="text-lg">
-                <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
-                  <CalendarMonthIcon className="h-5" />
-                  Round 2
-                </span>
-                {/* 9th February 2024 ,   3:00pm - 4:30pm */}
-                Coming soon...
-              </p>
-            </div>
-            <button
+              <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
@@ -142,6 +148,17 @@ structures on a CAD software. This event will be organized by the Society of Aut
             >
               Register Now
             </button>
+            </div>
+        <Box sx={{display:"flex", flexDirection:"column",marginBottom:"10px "}}>
+        <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">Free (For IIEST students)</li>
+          <li>
+            <span className="font-bold text-xl">Rs.100</span> (For non-IIEST
+            students)
+          </li>
+          </Box>
           </div>
         </div>
         <div className="py-2  ">
@@ -187,7 +204,7 @@ software within the speculated time.
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                  Department building (Department of Mechanical Engineering, IIEST Shibpur)
+                   Department of Mechanical Engineering, IIEST Shibpur
                   </div>
                 </td>
               </tr>
@@ -234,14 +251,14 @@ software within the speculated time.
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.10,000</span>
+                    <span className="font-bold ">Rs. 8000</span>
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -256,7 +273,7 @@ software within the speculated time.
             </button>
           </div>
           
-        </div>
+        </div> */}
         
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Flow of the events</h1>
@@ -334,18 +351,18 @@ choice chosen by the participants through Google form.
             If any team faces any problem, they are supposed to report to the
             Event Co-Ordinator or Pool Volunteer without much delay.<br></br>
           </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
+          {/* <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
             Registration fee
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
             <span className="font-bold text-xl">Rs.50</span> (For non-IIEST
             students)
-          </li>
+          </li> */}
         </div>
         <Box>
           <Box className="fee">
-            <Box sx={{ width: "100%" }} className="py-4 center1">
+            {/* <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -355,7 +372,7 @@ choice chosen by the participants through Google form.
               >
                 Register Now
               </button>
-            </Box>
+            </Box> */}
           </Box>
           <Typography
             variant="h3"

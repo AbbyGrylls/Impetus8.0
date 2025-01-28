@@ -125,7 +125,7 @@ export default function CadathonPage() {
             mindsets. It would be pushing the out of the box thinking skills to your
             absolute limits.
           </p>
-          <div className="py-2 flex items-center flex-col justify-center ">
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
             {/* <div className="py-3  ">
               <h1 className="md:text-3xl text-2xl font-bold ">
                 Problem Statement
@@ -154,18 +154,33 @@ export default function CadathonPage() {
                 </ul>{" "}
               </ul>
             </Box> */}
+            <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
+          <h1 className="text-2xl font-bold ">Rule Book</h1>
+          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+          <button
+              type="button"
+              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+              
+              onClick={(event) =>
+                (window.location.href = "https://drive.google.com/file/d/1oMeiOvoQox9RTXw87p69wNUTAR5cP6AB/view?usp=sharing")
+              }
+            >
+              Click Here
+            </button>
+          </div>
+          
+        </div>
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
-                  Date
+                 Round 1 & 2
                 </span>
                 {/* 9th February 2024, */}
                 {/* <span className="pl-3"> 2:00pm - 4:00pm</span> */}
-                Coming Soon...
+                7th Feb 2025, 12:00am - 4:00pm
               </p>
-            </div>
-
+              
             <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -175,6 +190,17 @@ export default function CadathonPage() {
             >
               Register Now
             </button>
+            </div>
+            <Box>
+            <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+            Registration fee
+          </h1>
+          <li className="py-1">Free (For IIEST students)</li>
+          <li>
+            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
+            students)
+          </li>
+            </Box>
           </div>
         </div>
         <div className="py-2  ">
@@ -247,7 +273,7 @@ export default function CadathonPage() {
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs.8000</span>
+                    <span className="font-bold ">Rs. 8000</span>
                   </div>
                 </td>
               </tr>
@@ -268,7 +294,7 @@ export default function CadathonPage() {
           </table>
         </div>
 
-        <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
+        {/* <div className="py-3 mt-2 " style={{marginBottom:"30px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center"}}>
           <button
@@ -283,7 +309,7 @@ export default function CadathonPage() {
             </button>
           </div>
           
-        </div>
+        </div> */}
         {/* <div className="py-3 mt-2 ">
           <h1 className="text-3xl font-bold ">Flow of the events</h1>
           <p className="text-lg font-normal text-gray-200  ">
@@ -423,18 +449,10 @@ export default function CadathonPage() {
           <p className="text-lg font-semibold  text-gray-200  " style={{marginTop:"20px"}}>
           Rules are subject to change and decisions of the impetus team are absolute and binding.<br></br>
           </p>
-          <h1 className="text-xl  font-bold mt-2 md:text-3xl py-2">
-            Registration fee
-          </h1>
-          <li className="py-1">Free (For IIEST students)</li>
-          <li>
-            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
-            students)
-          </li>
         </div>
         <Box>
           <Box className="fee">
-            <Box sx={{ width: "100%" }} className="py-4 center1">
+            {/* <Box sx={{ width: "100%" }} className="py-4 center1">
               <button
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
@@ -444,7 +462,7 @@ export default function CadathonPage() {
               >
                 Register Now
               </button>
-            </Box>
+            </Box> */}
           </Box>
           <Typography
             variant="h3"
