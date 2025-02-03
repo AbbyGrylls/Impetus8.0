@@ -150,7 +150,7 @@ knowledge to technical expertise.
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               onClick={(event) =>
-                (window.location.href = "https://forms.gle/b3SgxfnNhuWQ3bFc6")
+                (window.location.href = "https://forms.gle/UFyehCr3btaQtvHx8")
               }
             >
               Register Now
@@ -348,7 +348,7 @@ knowledge to technical expertise.
                 type="button"
                 className=" font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
                 onClick={(event) =>
-                  (window.location.href = "https://forms.gle/b3SgxfnNhuWQ3bFc6")
+                  (window.location.href = "https://forms.gle/UFyehCr3btaQtvHx8")
                 }
               >
                 Register Now

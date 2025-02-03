@@ -54,7 +54,7 @@ export default function EventPage() {
       title: "IQ IGNITION",
       category: "Quizzing-&-Knowledge",
       description: "To instil the essence of quizzing, IMechE IIEST, Shibpur brings to you a Grand General Technical Quiz: ' Suspects' under the banner of Impetus 8.0 .The quiz tests and showcases students' technical knowledge and skills.",
-      regLink: "https://forms.gle/b3SgxfnNhuWQ3bFc6",
+      regLink: "https://forms.gle/UFyehCr3btaQtvHx8",
     },
     {
       id: 6,
