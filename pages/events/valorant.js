@@ -122,7 +122,7 @@ export default function CadathonPage() {
           <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
-          <button
+          {/* <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
@@ -131,7 +131,10 @@ export default function CadathonPage() {
               }
             >
               Click Here
-            </button>
+            </button> */}
+            <Typography>
+              To be decided by Riot Games   <br></br>{"("} Organisiers{")"}
+            </Typography>
           </div>
           
         </div>
@@ -206,7 +209,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Amenities
+                    (To be Decided)
                   </div>
                 </td>
               </tr>

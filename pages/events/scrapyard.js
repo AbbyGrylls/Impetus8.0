@@ -91,8 +91,8 @@ export default function CadathonPage() {
       phone: "+91 6232089966",
     },
     person2: {
-      name: "Sanjeev Kumar",
-      phone: "+91 8545898275",
+      name: "Tuhin Mondal",
+      phone: "+91 8100969909",
     },
   };
   const sponsor = {
@@ -134,7 +134,7 @@ of innovation.
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RfJw_1AkHs68Y9I8AO2OnJbY0WajoJOe/view?usp=drive_link")
+                (window.location.href = "https://drive.google.com/file/d/1BKiGP6CUycrdOrxl0h33QVn96IHq4K7_/view?usp=sharing")
               }
             >
               Click Here
@@ -149,7 +149,7 @@ of innovation.
                   Round 1
                 </span>
                 {/* 10th February, 2024 10:00 AM-11:00 AM */}
-                7th Feb 2025, 4:30pm - 5:30pm
+                7th Feb 2025, 4:00pm - 5:00pm
               </p>
               <p className="text-lg">
                 <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
@@ -157,7 +157,7 @@ of innovation.
                   Round 2
                 </span>
                 {/* 10th February, 2024 1:00 PM-3:00 PM */}
-                8th Feb 2025, 4:00pm - 6:00pm
+                7th Feb 2025, 7:00pm - 9:00pm
               </p>
               <button
               type="button"
@@ -177,7 +177,7 @@ of innovation.
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
+            <span className="font-bold text-xl">Free</span> (For non-IIEST
             students)
           </li>
         </div>

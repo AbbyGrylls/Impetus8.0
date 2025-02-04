@@ -85,8 +85,8 @@ export default function CadathonPage() {
   };
   const person = {
     person1: {
-      name: "Rajdeep",
-      phone: "+91 7980430746",
+      name: "Debolina",
+      phone: "+91 7003574009",
     },
     person2: {
       name: "Ritesh",
@@ -142,7 +142,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RgNY4BK_VPSTxi8lAOyLV8x2QxHOr4ic/view?usp=drive_link")
+                (window.location.href = "https://drive.google.com/file/d/1IL4DgjB3YG6bLnIEjYu9ScvjT-fGvr1h/view?usp=sharing")
               }
             >
               Click Here
@@ -157,7 +157,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
                   Dates
                 </span>
                 {/* 9th February 2024 <span className="pl-3"> 4:30pm - 7pm</span> */}
-                7th Feb 2025, 6:00pm - 8:30pm
+                7th Feb 2025, 5:00pm - 6:30pm
               </p>
               <button
               type="button"
@@ -175,7 +175,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.150</span> (For non-IIEST
+            <span className="font-bold text-xl">Free</span> (For non-IIEST
             students)
           </li>
         </Box>
@@ -234,7 +234,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Team of 3 members
+                    Max of 3 members in Team
                   </div>
                 </td>
               </tr>

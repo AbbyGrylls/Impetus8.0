@@ -162,7 +162,7 @@ export default function CadathonPage() {
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1oMeiOvoQox9RTXw87p69wNUTAR5cP6AB/view?usp=sharing")
+                (window.location.href = "https://drive.google.com/file/d/1U5Vlt1KY7pFV6PlwXdDzKuP7-Gk8kDJa/view?usp=sharing")
               }
             >
               Click Here
@@ -178,7 +178,7 @@ export default function CadathonPage() {
                 </span>
                 {/* 9th February 2024, */}
                 {/* <span className="pl-3"> 2:00pm - 4:00pm</span> */}
-                7th Feb 2025, 12:00am - 4:00pm
+                7th Feb 2025, 12:00pm - 4:00pm
               </p>
               
             <button
@@ -197,7 +197,7 @@ export default function CadathonPage() {
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.120</span> (For non-IIEST
+            <span className="font-bold text-xl">Rs. 50</span> (For non-IIEST
             students)
           </li>
             </Box>
@@ -242,7 +242,7 @@ export default function CadathonPage() {
                   </div>
                 </td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td className="pl-2 py-2 md:px-4  whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">
                     Expected number of participation:-
@@ -253,7 +253,7 @@ export default function CadathonPage() {
                     10+ 
                   </div>
                 </td>
-              </tr>
+              </tr> */}
               <tr>
                 <td className="pl-2 py-2 md:px-4  whitespace-nowrap ">
                   <div className="text-sm font-medium  md:text-lg ">

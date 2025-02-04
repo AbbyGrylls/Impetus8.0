@@ -141,8 +141,7 @@ export default function CadathonPage() {
                   Dates
                 </span>
                  {/* 10th February, 2024  4:00pm to 6:00pm */}
-                 7Th Feb 2025, 6:00pm - 10:30pm<br></br>
-                 <p style={{marginLeft:"100px"}}>8Th Feb 2025, Starts at 8:30pm</p>
+                 8Th Feb 2025, 5:30pm Onwards<br></br>
               </p>
               <button
               type="button"
@@ -160,7 +159,7 @@ export default function CadathonPage() {
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs. 500</span> (For non-IIEST
+            <span className="font-bold text-xl">Free </span> (For non-IIEST
             students)
           </li>
           </Box>

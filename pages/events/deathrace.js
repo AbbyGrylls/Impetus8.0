@@ -122,7 +122,7 @@ export default function CadathonPage() {
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RfiyE20W_TAXa6vMokDYQpMsSDBBQY0s/view?usp=drive_link")
+                (window.location.href = "https://drive.google.com/file/d/1tNbhJUp4CZlBG-ju11yQitiiDVakxMAh/view?usp=sharing")
               }
             >
               Click Here
@@ -136,7 +136,7 @@ export default function CadathonPage() {
                   <CalendarMonthIcon className="h-5" />
                   Date
                 </span>
-                8th February 2025 , 10:00am - 12:00am &<br></br><span style={{marginLeft:"90px"}}> 3:00pm - 6:00pm</span> 
+                8th February 2025 , 10:00am - 1:30pm {/* &<br></br><span style={{marginLeft:"90px"}}> 3:00pm - 6:00pm</span>  */}
                 {/* Coming Soon... */}
               </p>
               <button
@@ -155,7 +155,7 @@ export default function CadathonPage() {
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.250</span> (For non-IIEST
+            <span className="font-bold text-xl">Rs.150</span> (For non-IIEST
             students)
           </li>
         </div>

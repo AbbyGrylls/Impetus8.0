@@ -123,7 +123,7 @@ structures on a CAD software. This event will be organized by the Society of Aut
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RXkGg9k8WHokScmeVT3gms4xPVOC7mP6/view?usp=drive_link")
+                (window.location.href = "https://drive.google.com/file/d/1uhbbXAB3ktWwJ9C4mVjdk-5qnGr64x8u/view?usp=sharing")
               }
             >
               Click Here
@@ -136,7 +136,7 @@ structures on a CAD software. This event will be organized by the Society of Aut
                   <CalendarMonthIcon className="h-5" />
                   Round 1 & 2
                 </span>
-                8th February 2025 , 2:30pm - 5:30pm
+                8th February 2025 , 2:00pm - 4:30pm
                 {/* Coming soon... */}
               </p>
               <button
@@ -155,7 +155,7 @@ structures on a CAD software. This event will be organized by the Society of Aut
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.100</span> (For non-IIEST
+            <span className="font-bold text-xl">Free </span> (For non-IIEST
             students)
           </li>
           </Box>
@@ -204,7 +204,7 @@ software within the speculated time.
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                   Department of Mechanical Engineering, IIEST Shibpur
+                  Gallery 6, Department of Mechanical Engineering, IIEST Shibpur
                   </div>
                 </td>
               </tr>
@@ -226,7 +226,7 @@ software within the speculated time.
                 </td>
                 <td className="pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    90 minutes
+                     60 minutes
                   </div>
                 </td>
               </tr>

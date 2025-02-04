@@ -46,14 +46,15 @@ const speakersNew = [
   },
   {
     name: "Swapan Kumar Mondal",
-    description: "Educator at Unacademy",
+    description: "Top Educator at Unacademy",
     img: "iam/skMondal.jpeg",
   },
   {
     name: "Ramanuj Bhattacharya",
-    description: "",
-    img: "",
-  },
+    description: "Joint General Manager, MoD, ‎ Government of India",
+    img: "iam/ramanuj.jpeg",
+},
+
   {
     name: "Sarbajit Rakshit",
     description: "Master Innovator At IBM",
@@ -256,7 +257,7 @@ export default function IAMPage() {
           position: "relative",
         }}
       >
-        <h1
+       {/*  <h1
           className="text-3xl md:text-4xl py-1 font-bold"
           style={{
             textAlign: "center",
@@ -270,19 +271,18 @@ export default function IAMPage() {
         <Box className="cards" style={{ width: "100%" }}>
           <SponsorCard sponsor={sponsorNew.sponsor1} />
           <SponsorCard sponsor={sponsorNew.sponsor2} />
-        </Box>
+        </Box> */}
         <Box>
           <Typography
             variant="h2"
             sx={{
-              color: "rgb(24, 66, 255)",
               fontSize: "2rem",
               fontFamily: "Bebas Neue, sans-serif",
               justifyContent: "flex-start",
               mb: 2,
             }}
           >
-            {">>"}Academia meets Industry - Insights that matter
+            <span style={{color:"white"}}>{">>"}Academia meets Industry</span> <span style={{color:"rgb(255,67,24)"}}>- Insights that matter</span>
           </Typography>
           <Typography
             sx={{
@@ -312,10 +312,10 @@ export default function IAMPage() {
               fontSize: "2rem",
               fontFamily: "Bebas Neue, sans-serif",
               mb: 2,
-              textAlign: "right"
+              textAlign: "left"
             }}
           >
-            From Innovation to Interaction – Dive Deep with Industry Experts{"<<"}
+            <span style={{color:"white"}}>{">>"}From Innovation to Interaction</span> <span style={{color:"rgb(255,67,24)"}}> – Dive Deep with Industry Experts</span>
 
           </Typography>
           <Typography
@@ -325,7 +325,7 @@ export default function IAMPage() {
               lineHeight: "1.6",
               fontFamily: "Roboto, sans-serif",
               letterSpacing: "1px",
-              textAlign: "right"
+              textAlign: "left"
             }}
           >
             We are honored to host a distinguished panel of speakers at the Industry-Academia Meet,
@@ -507,11 +507,27 @@ export default function IAMPage() {
             <BenifitsTimeline />
           </Box>
         </Box>
+        
+        <h1
+          className="text-3xl md:text-4xl py-1 font-bold"
+          style={{
+            textAlign: "center",
+            marginTop: "10px",
+            fontFamily: "Rowdies",
+            marginBottom: "-50px",
+          }}
+        >
+          Past Sponsors
+        </h1>
+        <Box className="cards" style={{ width: "100%" }}>
+          <SponsorCard sponsor={sponsor.sponsor1} />
+          <SponsorCard sponsor={sponsor.sponsor2} />
+        </Box>
         <Box sx={{
           display: "flex",
           flexDirection: {
-            xs: "row",
-            md: "column",
+            sm: "column",
+            xs: "column",
             gap: "75px"
           },
         }}>
@@ -552,21 +568,6 @@ export default function IAMPage() {
               );
             })}
           </div>
-        </Box>
-        <h1
-          className="text-3xl md:text-4xl py-1 font-bold"
-          style={{
-            textAlign: "center",
-            marginTop: "10px",
-            fontFamily: "Rowdies",
-            marginBottom: "-50px",
-          }}
-        >
-          Past Sponsors
-        </h1>
-        <Box className="cards" style={{ width: "100%" }}>
-          <SponsorCard sponsor={sponsor.sponsor1} />
-          <SponsorCard sponsor={sponsor.sponsor2} />
         </Box>
       </Box>
       {/* <section className="bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-.svg')]">

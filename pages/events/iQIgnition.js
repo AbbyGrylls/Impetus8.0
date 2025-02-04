@@ -129,7 +129,7 @@ knowledge to technical expertise.
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
               onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RbPAJOwPjbLF78HItCrv129snU3M0LtT/view?usp=drive_link")
+                (window.location.href = "https://drive.google.com/file/d/1YTc_bKUsOa3fYqN0dgZiRwkDu6nVh3xR/view?usp=sharing")
               }
             >
               Click Here
@@ -144,7 +144,7 @@ knowledge to technical expertise.
                   Round 1 & 2
                 </span>
                 {/* 10th February 2024 , 11:00am - 12:00pm */}
-                8th Feb 2025, 10:00am - 12:00am
+                8th Feb 2025, 10:00am - 11:30am
               </p>
               <button
               type="button"
@@ -162,7 +162,7 @@ knowledge to technical expertise.
           </h1>
           <li className="py-1">Free (For IIEST students)</li>
           <li>
-            <span className="font-bold text-xl">Rs.75</span> (For non-IIEST
+            <span className="font-bold text-xl">Rs. 50</span> (For non-IIEST
             students)
           </li>
         </div>
@@ -215,7 +215,7 @@ knowledge to technical expertise.
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                  Gallery 6, Department of Mechanical Engineering (IIEST Shibpur)
+                  Alumni Seminar Hall, S&T First Floor, IIEST Shibpur.
                   </div>
                 </td>
               </tr>
@@ -237,7 +237,7 @@ knowledge to technical expertise.
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Round1- 30mins, Round2- 30mins
+                    Round 1- 45 mins, Round 2- 45 mins
                   </div>
                 </td>
               </tr>
@@ -250,7 +250,7 @@ knowledge to technical expertise.
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
                     {" "}
-                    <span className="font-bold ">Rs. 10,000</span>
+                    <span className="font-bold ">Rs. 8,000</span>
                   </div>
                 </td>
               </tr>

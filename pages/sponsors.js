@@ -108,20 +108,20 @@ export default function SponsorsPage() {
   };
 
   const sponsor = {
-    /* sponsor1: { imgname: "Gainwell.png", link: "https://www.gainwellengineering.com/" },
-    sponsor2: { imgname: "Mahr.jpg", link: "https://www.mahr.com/en-us/" },
-    sponsor3: { imgname: "Purahsara.png", link: "https://www.linkedin.com/company/purahsara/about/" },
-    sponsor4: { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
-    sponsor5: { imgname: "IOCL.jpg", link: "https://iocl.com/" },
-    sponsor6: { imgname: "ISHRAE.jpg", link: "https://ishrae.in/" },
-    sponsor7: { imgname: "Cognitive.jpg", link: "#" },
-    sponsor8: { imgname: "lal.jpeg", link: "https://lalbabagroup.com/" },
-    sponsor9: { imgname: "IMechE.jpg", link: "https://www.imeche.org/" },
+    sponsor1: { imgname: "sponsors/Tega.png", link: "https://www.tegaindustries.com/" },
+    sponsor2: { imgname: "sponsors/faradic.jpg", link: "https://www.linkedin.com/company/faradic/" },
+    sponsor3: { imgname: "sponsors/epaG.png", link: "https://epaglobal.com/" },
+    sponsor4: { imgname: "sponsors/imperial.jpg", link: "https://www.imperial-overseas.com/" },
+    sponsor5: { imgname: "sponsors/ims.png", link: "https://www.imsindia.com/" },
+    sponsor6: { imgname: "sponsors/valo.png", link: "https://playvalorant.com/en-gb/" },
+    sponsor7: { imgname: "sponsors/gems.png", link: "http://www.genexsolutions.in/" },
+    sponsor8: { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
+    /*sponsor9: { imgname: "IMechE.jpg", link: "https://www.imeche.org/" },
     sponsor10: { imgname: "BlackbirdRobotix_1.png", link: "https://blackbirdrobotix.in/" },
     sponsor11: { imgname: "StockEdge.jpg", link: "https://stockedge.com/" },
     sponsor12: { imgname: "GEMS.jpg", link: "https://www.linkedin.com/company/genex-engineering-management-solutions/about/" },
     sponsor13: { imgname: "Virel.jpg", link: "https://www.facebook.com/VIREL.Kolkata/about" },
-    sponsor14: { imgname: "McPro.png", link: "" }, */
+    sponsor14: { imgname: "McPro.png", link: "" },  */
   };
 
   const pastSponsors = [
@@ -208,21 +208,37 @@ export default function SponsorsPage() {
             display: "block", 
           }}
         />
-        {/* <Box className="center1" style={{ marginTop: "100px" }}>
+        <Box className="center1" style={{ marginTop: "100px" }}>
           <Typography variant="h1" sx={styles.h1}>Title Sponsor</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor1} />
           </Box>
-          <Typography variant="h1" sx={styles.h1}>Co-Sponsor</Typography>
+           <Typography variant="h1" sx={styles.h1}>Co-Sponsor</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor2} />
+          </Box>
+          <Typography variant="h1" sx={styles.h1}>Knowledge Partner</Typography>
+          <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor3} />
+          </Box>
+          <Typography variant="h1" sx={styles.h1}>Learning Partner</Typography>
+          <Box sx={styles.cardsContainer}>
+            <SponsorCard sponsor={sponsor.sponsor4} />
+            <SponsorCard sponsor={sponsor.sponsor5} />
+          </Box>
+          <Typography variant="h1" sx={styles.h1}>Gaming Collaborator</Typography>
+          <Box sx={styles.cardsContainer}>
+            <SponsorCard sponsor={sponsor.sponsor6} />
+          </Box>
+          <Typography variant="h1" sx={styles.h1}>Workshop Partner</Typography>
+          <Box sx={styles.cardsContainer}>
+            <SponsorCard sponsor={sponsor.sponsor7} />
           </Box>
           <Typography variant="h1" sx={styles.h1}>Media Partner</Typography>
           <Box sx={styles.cardsContainer}>
-            <SponsorCard sponsor={sponsor.sponsor4} />
+            <SponsorCard sponsor={sponsor.sponsor8} />
           </Box>
-          <Typography variant="h1" sx={styles.h1}>Event Partner</Typography>
+          {/*<Typography variant="h1" sx={styles.h1}>Event Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor5} />
             <SponsorCard sponsor={sponsor.sponsor6} />
@@ -243,8 +259,8 @@ export default function SponsorsPage() {
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor11} />
             <SponsorCard sponsor={sponsor.sponsor12} />
-          </Box>
-        </Box> */}
+          </Box> */}
+        </Box>
 
         {/* Past Sponsors - Static Display */}
         <Box className="center1" style={{ marginTop: "100px" }} sx={styles.glassOverlay}>
