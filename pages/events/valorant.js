@@ -122,7 +122,7 @@ export default function CadathonPage() {
           <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
           <h1 className="text-3xl font-bold ">Rule Book</h1>
           <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
-          <button
+          {/* <button
               type="button"
               className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
               
@@ -131,18 +131,21 @@ export default function CadathonPage() {
               }
             >
               Click Here
-            </button>
+            </button> */}
+            <Typography>
+              To be decided by Riot Games   <br></br>{"("} Organisiers{")"}
+            </Typography>
           </div>
           
         </div>
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
-                <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
+                <span className="py-3 px-0 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Dates{" "}
                 </span>
                 {/* 10th February, 2024 11:00 AM onwards */}
-                8th Feb 2025, Starts at 10:00am 
+                8th Feb 2025, 10:00am Onwards
               </p>
               <button
               type="button"
@@ -206,7 +209,7 @@ export default function CadathonPage() {
                 </td>
                 <td className=" pl-2 py-1">
                   <div className="text-sm font-medium  md:text-lg ">
-                    Amenities
+                    (To be Decided)
                   </div>
                 </td>
               </tr>

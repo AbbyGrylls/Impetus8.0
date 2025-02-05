@@ -97,7 +97,7 @@ const BenefitsTimeline = () => {
               >
                 <Typography
                   sx={{
-                    color: "rgb(255, 67, 24)",
+                    color: "#FF7000",
                     fontSize: "1.25rem",
                     fontWeight: 500,
                     textTransform: "uppercase",

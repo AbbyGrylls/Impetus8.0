@@ -87,7 +87,38 @@ export default function TeamPage() {
       insta: "https://www.instagram.com/rohitpal_18?igsh=MXhlNWd6N2pzZGZ6",
       link: "https://www.linkedin.com/in/rohit-pal-08443b222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    
+    person3: {
+      name: "Akshat Gupta",
+      phone: "+91 7548071485",
+      post: "Executive",
+      imgname: "team/akshat_spt.jpeg",
+      insta: "",
+      link: "",
+    },
+    person4: {
+      name: "Akash",
+      phone: "+91 9444265824",
+      post: "Executive",
+      imgname: "team/akashS.jpeg",
+      insta: "",
+      link: "",
+    },
+    person5: {
+      name: "Pratik",
+      phone: "+91 8956850808",
+      post: "Executive",
+      imgname: "team/pratik.jpg",
+      insta: "https://www.instagram.com/pratik._1525?igsh=aWR6a3QxY2lzdzFt",
+      link: "https://www.linkedin.com/in/pratik-kadam-30b198253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    person6: {
+      name: "Ritesh Gupta",
+      phone: "+91 8291164387",
+      post: "Executive",
+      imgname: "",
+      insta: "",
+      link: "",
+    },
   };
   const event_person = {
     
@@ -139,7 +170,78 @@ export default function TeamPage() {
       insta: "https://www.instagram.com/s.o.l.o.n.i.s.t/",
       link: "https://www.linkedin.com/in/sayan-mondal-5016511a0/",
     },
-
+    person9: {
+      name: "Debolina Das",
+      phone: "+91 7003574009",
+      post: "Executive",
+      imgname: "",
+      insta: "",
+      link: "",
+    },
+    person8: {
+      name: "Vizo",
+      phone: "+91 8787805856",
+      post: "Executive",
+      imgname: "team/vizo.jpeg",
+      insta: "",
+      link: "https://www.linkedin.com/in/diethozo-vizo/",
+    },
+    person7: {
+      name: "Ritesh Gupta",
+      phone: "+91 8291164387",
+      post: "Executive",
+      imgname: "",
+      insta: "",
+      link: "",
+    },
+    person10: {
+      name: "Shivansh",
+      phone: "+91 8545898275",
+      post: "Executive",
+      imgname: "",
+      insta: "",
+      link: "",
+    },
+    person11: {
+      name: "Tuhin Mondal",
+      phone: "+91 8100969909",
+      post: "Executive",
+      imgname: "team/tuhin.jpeg",
+      insta: "",
+      link: "https://www.linkedin.com/in/tmondal3901",
+    },
+    person12: {
+      name: "Harsh Kumar",
+      phone: "8240541513",
+      post: "Executive",
+      imgname: "team/harsh_kumar.jpeg",
+      insta: "",
+      link: "",
+    },
+    person13: {
+      name: "Rajdeep Sarkar",
+      phone: "+91 7980430746",
+      post: "Executive",
+      imgname: "team/rajdeep.jpeg",
+      insta: "https://www.instagram.com/rjstylerajdeep/profilecard/?igsh=YzJxdmg4OGVtb3Bz",
+      link: "https://www.linkedin.com/in/rajdeep-sarkar-1403b6257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    person14: {
+      name: "Debjit Maity",
+      phone: "+91 8167025227",
+      post: "Executive",
+      imgname: "team/debjit.jpeg",
+      insta: "",
+      link: "https://www.linkedin.com/in/debjit-maity-398069262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    person15: {
+      name: "Dibya Jyoti Das",
+      phone: "+91 7699249687",
+      post: "Executive",
+      imgname: "",
+      insta: "",
+      link: "",
+    },
   };
   const design_person = {
     person1: {
@@ -165,7 +267,15 @@ export default function TeamPage() {
       imgname: "team/Anurag.jpg",
       insta: "https://www.instagram.com/obla_diob_lada/profilecard/?igsh=ZTl3YTVuZXRuY3Qx",
       link: "#",
-    },   
+    },
+    person4: {
+      name:"Kishore Pal",
+      phone:"+91 9641435117",
+      post:"Executive",
+      imgname:"team/Kishore_pt.jpeg",
+      insta:"https://www.instagram.com/kishorepal.31?igsh=MTQ3ZjhkZzh1YXptZQ==",
+      link:"https://www.linkedin.com/in/kishore-pal-38463a264"
+    } 
     
   };
   const publicity_person = {
@@ -285,6 +395,14 @@ export default function TeamPage() {
       insta: "https://www.instagram.com/utsab_kundu5/",
       link: "https://www.linkedin.com/in/utsab-kundu-3a742421b/",
     },
+    person2:{
+      name: "Abhishek Kumar",
+      phone:"+91 9959387572",
+      post:"Executive",
+      imgname:"team/abhishek.jpg",
+      insta:"",
+      link:""
+    }
   };
   const videoPhoto_person = {
     person1: {
@@ -336,8 +454,13 @@ export default function TeamPage() {
         <TabPanel value={value} index={6} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Sponsorship Team*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={sponsorship_person.person1} />
-            <ContactCard person={sponsorship_person.person2} />
+            {/* <ContactCard person={sponsorship_person.person1} />
+            <ContactCard person={sponsorship_person.person2} /> */}
+            <Box>
+            <ContactCard person={sponsorship_person.person3} />
+            <ContactCard person={sponsorship_person.person4} />
+            <ContactCard person={sponsorship_person.person5} />
+            <ContactCard person={sponsorship_person.person6} /></Box>
           </Box>
             {/* <ContactCard person={sponsorship_person.person5} /> */}
           <br style={{ width: "100%" }}></br>
@@ -354,6 +477,17 @@ export default function TeamPage() {
             <ContactCard person={event_person.person4} />
             <ContactCard person={event_person.person1} />
             <ContactCard person={event_person.person2} />
+            <Box>
+            <ContactCard person={event_person.person7} />
+            <ContactCard person={event_person.person8} />
+            <ContactCard person={event_person.person9} />
+            <ContactCard person={event_person.person10} />
+            <ContactCard person={event_person.person11} />
+            <ContactCard person={event_person.person12} />
+            <ContactCard person={event_person.person13} />
+            <ContactCard person={event_person.person14} />
+            <ContactCard person={event_person.person15} /></Box>
+            
           </Box>
           {/* <ContactCard person={event_person.person6} /> */}
         </TabPanel>
@@ -361,9 +495,11 @@ export default function TeamPage() {
         <TabPanel value={value} index={3} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Technical Team*/}
 
-          <Box style={{ width: "100%", marginBottom: "80px" }}>
+          <Box style={{ width: "100%", marginBottom: "0px" }}>
             <ContactCard person={webD_person.person1} />
           </Box>
+          <Box>
+          <ContactCard person={webD_person.person2} /></Box>
           {/* <ContactCard person={webD_person.person2} /> */}
         </TabPanel>
 
@@ -374,6 +510,9 @@ export default function TeamPage() {
             <ContactCard person={design_person.person2} />
             <ContactCard person={design_person.person1} />
           </Box>
+          <Box sx={{marginTop:"-75px"}}>
+            <ContactCard person={design_person.person4} />
+            </Box>
             {/* <ContactCard person={design_person.person6} /> */}
         </TabPanel>
 
@@ -384,7 +523,7 @@ export default function TeamPage() {
             <ContactCard person={publicity_person.person2} />
           </Box>
           {/* <ContactCard person={publicity_person.person6} /> */}
-          
+            
         </TabPanel>
 
         <TabPanel value={value} index={1} className="contactCards">

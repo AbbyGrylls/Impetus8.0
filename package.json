@@ -26,6 +26,7 @@
     "element-visible-percentage": "^1.0.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
+    "firebase": "^11.2.0",
     "framer-motion": "^8.4.6",
     "lodash": "^4.17.21",
     "next": "^13.1.1",
