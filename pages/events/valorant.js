@@ -140,12 +140,12 @@ export default function CadathonPage() {
         </div>
             <div className="py-3 flex flex-col items-center justify-center gap-y-2">
               <p className="text-lg">
-                <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
+                <span className="py-3 px-0 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
                   <CalendarMonthIcon className="h-5" />
                   Dates{" "}
                 </span>
                 {/* 10th February, 2024 11:00 AM onwards */}
-                8th Feb 2025, Starts at 10:00am 
+                8th Feb 2025, 10:00am Onwards
               </p>
               <button
               type="button"

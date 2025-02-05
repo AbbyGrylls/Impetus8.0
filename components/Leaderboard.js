@@ -54,6 +54,7 @@ const Leaderboard = () => {
         margin: "20px auto",
         color: "#f0f0f0",
         fontFamily: "'Inter', sans-serif",
+        maxHeight: "300px",
       }}
     >
       <h2
@@ -70,7 +71,7 @@ const Leaderboard = () => {
       {leaderboard.length > 0 ? (
         <div
           style={{
-            maxHeight: "250px", // Fixed height for the leaderboard
+            maxHeight: "200px", // Fixed height for the leaderboard
             overflowY: "auto", // Make it scrollable
             scrollbarWidth: "thin", // For Firefox
             scrollbarColor: "#00aaff #2c2c2c", // For Firefox scrollbar color (blue track with dark thumb)

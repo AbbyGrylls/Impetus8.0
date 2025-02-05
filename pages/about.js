@@ -254,7 +254,7 @@ export default function AboutPage() {
         </Typography>
         <br></br>
         <ImageListComp />
-        <Box sx={{marginTop:"100px",backgroundColor:"#999",border:"solid #333 5px",borderRadius:"20px"}}>
+        <Box sx={{marginTop:"100px",/* backgroundColor:"#999",border:"solid #333 5px", */borderRadius:"20px"}}>
           <Typography sx={{fontFamily:"Rowdies", textAlign:"center",fontSize:"5rem"}}>Quizz</Typography>
         <Box sx={{display:"flex", flexDirection:{
           lg:"row",
