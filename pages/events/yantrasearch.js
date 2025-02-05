@@ -104,6 +104,10 @@ export default function CadathonPage() {
       name: "Shivansh",
       phone: "+91 8545898275",
     },
+    person6: {
+      name: "Debolina Das",
+      phone: "+91 7003574001",
+    },
   };
   const sponsor = {
     sponsor1: {
@@ -454,6 +458,7 @@ riddles, work together, and have a blast discovering these mechanical wonders!
           </Box>
           <Box className=" flex items-center md:flex-row flex-col justify-center md:gap-x-4 gap-y-4 mt-4">
             <EventMag person={person.person5} />
+            <EventMag person={person.person6} />
             {/* <EventMag person={person.person2} /> */}
           </Box>
         </Box>

@@ -94,8 +94,8 @@ export default function CadathonPage() {
       phone: "+91 7980430746",
     },
     person2: {
-      name: "Someshwar das",
-      phone: "+91 8787805856",
+      name: "Debolina Das",
+      phone: "+91 7003574001",
     },
   };
 
@@ -110,55 +110,55 @@ export default function CadathonPage() {
       <section className="py-10 max-w-screen-lg md:px-10 px-4" style={content_style}>
         <div className="py-2  ">
           <p className="text-lg font-normal text-gray-200  ">
-          This competition aims to develop the idea of Engineering Drawing and modelling of 3D
-structures on a CAD software. This event will be organized by the Society of Automotive Engineers
-(SAE), IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
+            This competition aims to develop the idea of Engineering Drawing and modelling of 3D
+            structures on a CAD software. This event will be organized by the Society of Automotive Engineers
+            (SAE), IIEST Shibpur under the banner of &quot;Impetus 8.0&quot;.
           </p>
-          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto md:gap-[60px]">
-          <div className="py-3 mt-2 " style={{marginBottom:"10px"}}>
-          <h1 className="text-2xl font-bold ">Rule Book</h1>
-          <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
-          <button
-              type="button"
-              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-              
-              onClick={(event) =>
-                (window.location.href = "https://drive.google.com/file/d/1RXkGg9k8WHokScmeVT3gms4xPVOC7mP6/view?usp=drive_link")
-              }
-            >
-              Click Here
-            </button>
-          </div>
-        </div>
-            <div className="py-3 flex flex-col mt-1 items-center justify-center gap-y-2">
-              <p className="text-lg">
-                <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
-                  <CalendarMonthIcon className="h-5" />
-                  Round 1 & 2
-                </span>
-                8th February 2025 , 2:30pm - 5:30pm
-                {/* Coming soon... */}
-              </p>
-              <button
-              type="button"
-              className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
-              onClick={(event) =>
-                (window.location.href = "https://forms.gle/ZTjNRtyFgKXEV2Tv7")
-              }
-            >
-              Register Now
-            </button>
-            </div>
-        <Box sx={{display:"flex", flexDirection:"column",marginBottom:"10px "}}>
-        <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
-            Registration fee
-          </h1>
-          <li className="py-1">Free (For IIEST students)</li>
-          <li>
-            <span className="font-bold text-xl">Rs.100</span> (For non-IIEST
-            students)
-          </li>
-          </Box>
+          <div className="py-2 flex items-center flex-col md:flex-row justify-center gap-auto " style={{display:"flex"}}>
+              <div className="py-3 mt-2 " style={{marginBottom:"10px" , flex:"1", borderRight:"1px solid #fff", textAlign:"center"}}>
+                <h1 className="text-2xl font-bold ">Rule Book</h1>
+                <div style={{display:"flex", justifyContent:"center",marginTop:"5px"}}>
+                <button
+                    type="button"
+                    className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                    
+                    onClick={(event) =>
+                      (window.location.href = "https://drive.google.com/file/d/1RXkGg9k8WHokScmeVT3gms4xPVOC7mP6/view?usp=drive_link")
+                    }
+                  >
+                    Click Here
+                  </button>
+                </div>
+              </div>
+              <div className="py-3 flex flex-col mt-1 items-center justify-center gap-y-2" style={{flex:"1", borderRight:"1px solid #fff"}}>
+                  <p className="text-lg">
+                    <span className="py-3 px-2.5 me-2  md:text-lg text-md font-medium rounded-lg   bg-gray-800 text-gray-400  ">
+                      <CalendarMonthIcon className="h-5" />
+                      Round 1 & 2
+                    </span>
+                    8th February 2025 , 2:30pm - 5:30pm
+                    {/* Coming soon... */}
+                  </p>
+                  <button
+                  type="button"
+                  className="mt-2 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+                  onClick={(event) =>
+                    (window.location.href = "https://forms.gle/ZTjNRtyFgKXEV2Tv7")
+                  }
+                >
+                  Register Now
+                </button>
+              </div>
+              <Box sx={{flex:"1",display:"flex", flexDirection:"column",marginBottom:"10px "}}>
+                <h1 className="text-xl  font-bold mt-2 md:text-2xl py-2">
+                  Registration fee
+                </h1>
+                <li className="py-1">Free (For IIEST students)</li>
+                <li>
+                  <span className="font-bold text-xl">Rs.100</span> (For non-IIEST
+                  students)
+                </li>
+              </Box>
           </div>
         </div>
         <div className="py-2  ">
