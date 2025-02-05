@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { getDatabase, ref, set, get, push, query as rtdbQuery, orderByChild } from "firebase/database";
-import { db } from "../scripts/FirebaseSetup";
+import { db , rtdb } from "../scripts/FirebaseSetup";
 import { TextField, Button, Typography, Box, List, Container } from "@mui/material";
 
 const Quizz = () => {
@@ -16,7 +16,8 @@ const Quizz = () => {
   const [timer, setTimer] = useState(30);
   const [scoreSubmitted, setScoreSubmitted] = useState(false);
 
-  const rtdb = getDatabase();
+  // console.log(rtdb);
+  // const rtdb = getDatabase();
 
   // Function to shuffle and select 10 random questions
   const getRandomQuestions = (questionsArray) => {
@@ -143,7 +144,7 @@ const Quizz = () => {
   if (!showQuiz) {
     return (
       <Container maxWidth="sm" sx={{ textAlign: "center", mt: 4 }}>
-        <Box sx={{ padding: "100px", marginTop: "-20px" }}>
+        <Box sx={{ padding: "10%", marginTop: "-20px" }}>
           <Typography variant="h4" gutterBottom>
             Enter Your Details
           </Typography>
@@ -208,14 +209,15 @@ const Quizz = () => {
       <Typography variant="h6" sx={{ color: "#999",marginTop:"-10px" }} gutterBottom>
         ⏲️ {timer}
       </Typography>
-      <Box sx={{marginLeft:"20px",justifyItems:"center",marginTop:"-25px"}}>
-      <List>
+      <Box sx={{marginLeft:"20px",justifyItems:"center",marginTop:"40px"}}>
+      <List style={{width:"100%",maxWidth:"400px"}}>
         {currentQuestion.options.map((option, index) => (
           <Button
           key={index}
           onClick={() => handleOptionClick(index)}
           sx={{
-            margin:"20px",
+            marginBottom:"20px",
+            width:"100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -223,17 +225,18 @@ const Quizz = () => {
             borderRadius: "12px",
             backgroundColor: "#f5f5f5",
             color: "#333",
-            fontWeight: "bold",
+            // fontWeight: "bold",
             fontSize: "1rem",
             textTransform: "none",
             transition: "0.3s ease-in-out",
             "&:hover": {
-              backgroundColor: "#00aaff",
+              // backgroundColor: "#00aaff",
+              backgroundColor: "grey",
               color: "#fff",
-              transform: "scale(1.05)",
+              // transform: "scale(1.01)",
             },
             "&:active": {
-              transform: "scale(0.98)",
+              // transform: "scale(0.98)",
             },
           }}
         >

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
+// import { rtdb } from "../scripts/FirebaseSetup"; // Import from your setup
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);

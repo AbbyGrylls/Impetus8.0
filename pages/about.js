@@ -9,8 +9,8 @@ import Image from "next/image";
 import ImageListComp from "../components/ImageListComp";
 import Divider2 from "../components/Divider2";
 
-// import QuizComponent from "../components/Quizz";
-// import Leaderboard from "../components/Leaderboard";
+import QuizComponent from "../components/Quizz";
+import Leaderboard from "../components/Leaderboard";
 
 export default function AboutPage() {
   const videoRef = useRef(null);
@@ -259,9 +259,9 @@ export default function AboutPage() {
         <ImageListComp />
 
         {/* QUIZZ section */}
-        {/* <Box 
-          sx={{marginTop:"100px",
-          backgroundColor:"#999",
+        <Box className="quizzBox"
+          sx={{margin:"100px 50px 100px 50px",
+          // backgroundColor:"#999",
           border:"solid #333 5px",
           borderRadius:"20px"}}>
           <Typography sx={{fontFamily:"Rowdies", textAlign:"center",fontSize:"5rem"}}>Quizz</Typography>
@@ -269,12 +269,12 @@ export default function AboutPage() {
             lg:"row",
             xs:"column"
           }}}>
-            <Box sx={{marginRight:"10px",width:"600px"}}>
+            <Box className="quizzBox_inner" style={{marginRight:"10px",width:"70%",maxWidth:"600px", minWidth:"280px", margin:"0 auto", flex:"0.7"}}>
               <QuizComponent />
             </Box>
           <Leaderboard />
           </Box>
-        </Box> */}
+        </Box>
         
       </Box>
       <Contact />

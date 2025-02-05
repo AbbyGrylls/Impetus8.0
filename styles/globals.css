@@ -448,6 +448,30 @@ img:hover {
   }
   
 }
+@media screen and (max-width: 1000px){
+  /* .quizzBox{
+    margin:100px 30px;
+  } */
+  .quizzBox .quizzBox_inner{
+    width:90% !important;
+  }
+}
+@media screen and (max-width: 500px){
+  .quizzBox{
+    margin:100px 30px !important;
+  }
+  .quizzBox .quizzBox_inner{
+    min-width:400px !important;
+  }
+}
+@media screen and (max-width: 400px){
+  .quizzBox{
+    margin:100px 30px !important;
+  }
+  .quizzBox .quizzBox_inner{
+    min-width:350px !important;
+  }
+}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++EVENTS++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .events_body{
