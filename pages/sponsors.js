@@ -116,6 +116,7 @@ export default function SponsorsPage() {
     sponsor6: { imgname: "sponsors/valo.png", link: "https://playvalorant.com/en-gb/" },
     sponsor7: { imgname: "sponsors/gems.png", link: "http://www.genexsolutions.in/" },
     sponsor8: { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
+    sponsor9: { imgname: "sponsors/evepaperLgt.png", link: "https://evepaper.com/" },
     /*sponsor9: { imgname: "IMechE.jpg", link: "https://www.imeche.org/" },
     sponsor10: { imgname: "BlackbirdRobotix_1.png", link: "https://blackbirdrobotix.in/" },
     sponsor11: { imgname: "StockEdge.jpg", link: "https://stockedge.com/" },
@@ -237,6 +238,7 @@ export default function SponsorsPage() {
           <Typography variant="h1" sx={styles.h1}>Media Partner</Typography>
           <Box sx={styles.cardsContainer}>
             <SponsorCard sponsor={sponsor.sponsor8} />
+            <SponsorCard sponsor={sponsor.sponsor9} />
           </Box>
           {/*<Typography variant="h1" sx={styles.h1}>Event Partner</Typography>
           <Box sx={styles.cardsContainer}>

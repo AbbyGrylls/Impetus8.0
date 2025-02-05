@@ -182,9 +182,9 @@ export default function TeamPage() {
       name: "Vizo",
       phone: "+91 8787805856",
       post: "Executive",
-      imgname: "",
+      imgname: "team/vizo.jpeg",
       insta: "",
-      link: "",
+      link: "https://www.linkedin.com/in/diethozo-vizo/",
     },
     person7: {
       name: "Ritesh Gupta",
@@ -206,9 +206,9 @@ export default function TeamPage() {
       name: "Tuhin Mondal",
       phone: "+91 8100969909",
       post: "Executive",
-      imgname: "",
+      imgname: "team/tuhin.jpeg",
       insta: "",
-      link: "",
+      link: "https://www.linkedin.com/in/tmondal3901",
     },
     person12: {
       name: "Harsh Kumar",
@@ -222,17 +222,17 @@ export default function TeamPage() {
       name: "Rajdeep Sarkar",
       phone: "+91 7980430746",
       post: "Executive",
-      imgname: "",
-      insta: "",
-      link: "",
+      imgname: "team/rajdeep.jpeg",
+      insta: "https://www.instagram.com/rjstylerajdeep/profilecard/?igsh=YzJxdmg4OGVtb3Bz",
+      link: "https://www.linkedin.com/in/rajdeep-sarkar-1403b6257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     person14: {
       name: "Debjit Maity",
       phone: "+91 8167025227",
       post: "Executive",
-      imgname: "",
+      imgname: "team/debjit.jpeg",
       insta: "",
-      link: "",
+      link: "https://www.linkedin.com/in/debjit-maity-398069262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     person15: {
       name: "Dibya Jyoti Das",
@@ -398,7 +398,7 @@ export default function TeamPage() {
     person2:{
       name: "Abhishek Kumar",
       phone:"+91 9959387572",
-      post:"Technical Executive",
+      post:"Executive",
       imgname:"team/abhishek.jpg",
       insta:"",
       link:""
@@ -454,8 +454,8 @@ export default function TeamPage() {
         <TabPanel value={value} index={6} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Sponsorship Team*/}
           <Box style={{ width: "100%", marginBottom: "80px" }}>
-            <ContactCard person={sponsorship_person.person1} />
-            <ContactCard person={sponsorship_person.person2} />
+            {/* <ContactCard person={sponsorship_person.person1} />
+            <ContactCard person={sponsorship_person.person2} /> */}
             <Box>
             <ContactCard person={sponsorship_person.person3} />
             <ContactCard person={sponsorship_person.person4} />
@@ -495,10 +495,11 @@ export default function TeamPage() {
         <TabPanel value={value} index={3} className="contactCards">
           {/*--------------------------------------------------------------------------------------------------------------------Technical Team*/}
 
-          <Box style={{ width: "100%", marginBottom: "80px" }}>
+          <Box style={{ width: "100%", marginBottom: "0px" }}>
             <ContactCard person={webD_person.person1} />
-            <ContactCard person={webD_person.person2} />
           </Box>
+          <Box>
+          <ContactCard person={webD_person.person2} /></Box>
           {/* <ContactCard person={webD_person.person2} /> */}
         </TabPanel>
 
