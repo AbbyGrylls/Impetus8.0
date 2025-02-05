@@ -8,9 +8,10 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ImageListComp from "../components/ImageListComp";
 import Divider2 from "../components/Divider2";
-import QuizComponent from "../components/Quizz";
 
-import Leaderboard from "../components/Leaderboard";
+// import QuizComponent from "../components/Quizz";
+// import Leaderboard from "../components/Leaderboard";
+
 export default function AboutPage() {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
@@ -252,19 +253,28 @@ export default function AboutPage() {
         >
           SOME MOMENTS OF PREVIOUS EDITIONS
         </Typography>
+
         <br></br>
+
         <ImageListComp />
-        <Box sx={{marginTop:"100px",/* backgroundColor:"#999",border:"solid #333 5px", */borderRadius:"20px"}}>
+
+        {/* QUIZZ section */}
+        {/* <Box 
+          sx={{marginTop:"100px",
+          backgroundColor:"#999",
+          border:"solid #333 5px",
+          borderRadius:"20px"}}>
           <Typography sx={{fontFamily:"Rowdies", textAlign:"center",fontSize:"5rem"}}>Quizz</Typography>
-        <Box sx={{display:"flex", flexDirection:{
-          lg:"row",
-          xs:"column"
-        }}}>
-          <Box sx={{marginRight:"10px",width:"600px"}}>
-          <QuizComponent /></Box>
-        <Leaderboard />
-        </Box>
-        </Box>
+          <Box sx={{display:"flex", flexDirection:{
+            lg:"row",
+            xs:"column"
+          }}}>
+            <Box sx={{marginRight:"10px",width:"600px"}}>
+              <QuizComponent />
+            </Box>
+          <Leaderboard />
+          </Box>
+        </Box> */}
         
       </Box>
       <Contact />
