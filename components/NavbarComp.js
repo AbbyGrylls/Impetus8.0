@@ -9,9 +9,9 @@ const styles = {
     display: "grid",
     width: "100%",
     gridTemplateColumns: {
-      lg: "repeat(5,1fr) 1.5fr",
-      sm: "repeat(5,1fr) 1.65fr",
-      xs: "repeat(5,1fr) 1.6fr",
+      lg: "repeat(6,0.8fr) 1.5fr",
+      sm: "repeat(6,0.8fr) 1.65fr",
+      xs: "repeat(6,0.8fr) 1.6fr",
     },
     flexDirection: "row",
     a: {
@@ -114,13 +114,21 @@ export default function NavbarComp() {
             </div>
           </Link>
           <Link
+            href="/gallery"
+            className={router.pathname === "/gallery" ? "active" : ""}
+          >
+            <div className="bor">
+              <span>Gallery</span>
+            </div>
+          </Link>
+          <Link
             href="/industryacademiameet"
             style={{ textAlign: "center" }}
             className={
               router.pathname === "/industryacademiameet" ? "active" : ""
             }
           >
-            <div className="bor" style={{ width: "250px" }}>
+            <div className="bor" style={{ width: "200%" }}>
               <span>Industry Academia Meet</span>
             </div>
           </Link>
