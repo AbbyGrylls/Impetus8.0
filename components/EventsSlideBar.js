@@ -7,7 +7,7 @@ import SponsorCard from "./SponsorCard";
 
 export default function EventsSlideBar() {
   const events = [
-    { imgname: "CADposter.png", link: "events/cadathon" },
+    { imgname: "CADPoster.png", link: "events/cadathon" },
     { imgname: "DeathRace.png", link: "events/deathrace" },
     { imgname: "DronePursuit.png", link: "events/dronePursuit" },
     { imgname: "HEATOVATION.png", link: "events/heatovation" },
