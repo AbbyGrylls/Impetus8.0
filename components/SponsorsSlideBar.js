@@ -25,15 +25,29 @@ export default function SponsorsSlideBar() {
         gap: { xs: 0.3, md: 0.5 },
       },
    }
-  const settings = {
+   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 2000, 
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 600, 
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ],
     beforeChange: (current, next) => {
       document.querySelectorAll(".slick-slide").forEach((slide) => {
         slide.style.transform = "scale(1)";

@@ -112,7 +112,7 @@ export default function TeamPage() {
       link: "https://www.linkedin.com/in/pratik-kadam-30b198253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     person6: {
-      name: "Ritesh Gupta",
+      name: "Ritesh Premchand Gupta",
       phone: "+91 8291164387",
       post: "Executive",
       imgname: "",
@@ -187,7 +187,7 @@ export default function TeamPage() {
       link: "https://www.linkedin.com/in/diethozo-vizo/",
     },
     person7: {
-      name: "Ritesh Gupta",
+      name: "Ritesh Premchand Gupta",
       phone: "+91 8291164387",
       post: "Executive",
       imgname: "",

@@ -6,7 +6,6 @@ import ContactCard from "../components/ContactCard";
 import Contact from "../components/Contact";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import ImageListComp from "../components/ImageListComp";
 import Divider2 from "../components/Divider2";
 
 import QuizComponent from "../components/Quizz";
@@ -243,20 +242,7 @@ export default function AboutPage() {
         </Box>
       </Box>
       <Box>
-        <Typography
-          variant="h2"
-          style={{
-            fontFamily: "Rowdies",
-            margin: "0 30px",
-            textAlign: "center",
-          }}
-        >
-          SOME MOMENTS OF PREVIOUS EDITIONS
-        </Typography>
-
-        <br></br>
-
-        <ImageListComp />
+        
 
         {/* QUIZZ section */}
         <Box className="quizzBox"

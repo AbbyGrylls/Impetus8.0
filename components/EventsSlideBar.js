@@ -5,16 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import SponsorCard from "./SponsorCard";
 
-export default function SponsorsSlideBar() {
+export default function EventsSlideBar() {
   const events = [
-    { imgname: "sponsors/Tega.png", link: "https://www.tegaindustries.com/" },
-    { imgname: "sponsors/faradic.jpg", link: "https://www.linkedin.com/company/faradic/" },
-    { imgname: "sponsors/epaG.png", link: "https://epaglobal.com/" },
-    { imgname: "sponsors/imperial.jpg", link: "https://www.imperial-overseas.com/" },
-    { imgname: "sponsors/ims.png", link: "https://www.imsindia.com/" },
-    { imgname: "sponsors/valo.png", link: "https://playvalorant.com/en-gb/" },
-    { imgname: "sponsors/gems.png", link: "http://www.genexsolutions.in/" },
-    { imgname: "Edugraph.jpg", link: "https://www.telegraphindia.com/edugraph" },
+    { imgname: "CADposter.png", link: "events/cadathon" },
+    { imgname: "DeathRace.png", link: "events/deathrace" },
+    { imgname: "DronePursuit.png", link: "events/dronePursuit" },
+    { imgname: "HEATOVATION.png", link: "events/heatovation" },
+    { imgname: "iQigni.png", link: "events/iQignition" },
+    { imgname: "Scrapyard.png", link: "events/scrapyard" },
+    { imgname: "ValorantPoster.png", link: "events/valorant" },
+    { imgname: "Yantrasearch.png", link: "events/yantrasearch" },
   ];
    const styles={
     cardsContainer: {
@@ -33,6 +33,20 @@ export default function SponsorsSlideBar() {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600, 
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ],
     beforeChange: (current, next) => {
       document.querySelectorAll(".slick-slide").forEach((slide) => {
         slide.style.transform = "scale(1)";
@@ -52,7 +66,7 @@ export default function SponsorsSlideBar() {
            marginBottom:"30px",
            fontSize:"3rem"
         }}
-        > Our Sponsors</Typography>
+        > Our Events</Typography>
       <Slider {...settings}>
         {events.map((event, index) => (
           <Box
@@ -76,7 +90,7 @@ export default function SponsorsSlideBar() {
                     borderRadius: "10px",
                     boxShadow: 2,
                     transition: "0.3s",
-                }} src={"/images/"+event.imgname} /></Box>
+                }} src={"/images/EventPosters/"+event.imgname} /></Box>
                 
             </Button> 
           </Box>

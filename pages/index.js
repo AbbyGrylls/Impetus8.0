@@ -9,6 +9,8 @@ import { useLoading } from "../components/LoadingContext";
 import MerchandiseComp from "../components/MerchandiseComp";
 import VideoText from "../components/VideoText";
 import HomePageVideo from "../components/HomePageVideo";
+import EventsSlideBar from "../components/EventsSlideBar"
+import SponsorsSlideBar from "../components/SponsorsSlideBar"; 
 
 const styles = {
   minHeight: "100vh",
@@ -76,6 +78,10 @@ export default function HomePage() {
       {loading && <LoadingComp />}
       <HomePageVideo />
       <VideoText hideIt={hideIt} />
+      <Box sx={{display:"flex", flexDirection:"column",gap:"95px",overflow:"hidden"}}>
+        <EventsSlideBar />
+        <SponsorsSlideBar />
+      </Box>
       <MerchandiseComp />
       {aboutContent.map((el) => (
         <HomePageAbout1 key={el.name} {...el} />

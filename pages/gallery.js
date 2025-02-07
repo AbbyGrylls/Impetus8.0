@@ -1,8 +1,10 @@
+import { Container, Box, Button, Typography} from "@mui/material";
+import ImageListComp from "../components/ImageListComp";
 
 export default function Gallery(){
   return(
-    <Box>
-        <Typography
+    <Box sx={{marginTop:"100px"}}>
+        {/* <Typography
           variant="h2"
           style={{
             fontFamily: "Rowdies",
@@ -11,7 +13,7 @@ export default function Gallery(){
           }}
         >
           SOME MOMENTS OF PREVIOUS EDITIONS
-        </Typography>
+        </Typography> */}
         <br></br>
         <ImageListComp />
         
