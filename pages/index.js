@@ -78,7 +78,14 @@ export default function HomePage() {
       {loading && <LoadingComp />}
       <HomePageVideo />
       <VideoText hideIt={hideIt} />
-      <Box sx={{display:"flex", flexDirection:"column",gap:"95px",overflow:"hidden"}}>
+      <Box sx={{
+        display:"flex",
+         flexDirection:"column",
+         gap:{
+          sm:"-5px",
+          md:"95px",
+         },
+         overflow:"hidden"}}>
         <EventsSlideBar />
         <SponsorsSlideBar />
       </Box>
