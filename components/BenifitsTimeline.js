@@ -43,7 +43,7 @@ const BenefitsTimeline = () => {
             //md: "60%",
           },
           width: "6px",
-          backgroundColor: "red",
+          backgroundColor: "#c75700",
           zIndex: 0,
         }}
       />

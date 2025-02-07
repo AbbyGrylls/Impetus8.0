@@ -433,7 +433,7 @@ export default function IAMPage() {
                   },
                 }}
               >
-                <Box sx={{ display: "flex", justifyContent: "center",filter:"grayscale(1)",width:"70px" }}>
+                <Box sx={{ display: "flex", justifyContent: "center",filter:"grayscale(1)",width:"55px" }}>
                   <Image
                     src={"/images/" + x.img}
                     alt="Icons"
