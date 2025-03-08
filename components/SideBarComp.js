@@ -49,7 +49,7 @@ export default function SideBarComp() {
         {[
           "Home",
           "About",
-          /* "Robowars", */
+          "Robowars",
           "Events",
           "Industry Academia Meet",
           "Sponsors",

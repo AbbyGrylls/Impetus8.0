@@ -9,9 +9,9 @@ const styles = {
     display: "grid",
     width: "100%",
     gridTemplateColumns: {
-      lg: "repeat(5,0.8fr) 1.5fr",
-      sm: "repeat(5,0.8fr) 1.65fr",
-      xs: "repeat(5,0.8fr) 1.6fr",
+      lg: "repeat(6,0.9fr) 1.5fr",
+      sm: "repeat(6,0.9fr) 1.65fr",
+      xs: "repeat(6,0.9fr) 1.6fr",
     },
     flexDirection: "row",
     a: {
@@ -73,14 +73,14 @@ export default function NavbarComp() {
               <span>About</span>
             </div>
           </Link>
-          {/* <Link
+          <Link
             href="/robowars"
             className={router.pathname === "/robowars" ? "active" : ""}
           >
             <div className="bor">
               <span>Robowars</span>
             </div>
-          </Link> */}
+          </Link>
           <Link
             href="/events"
             className={router.pathname === "/events" ? "active" : ""}
